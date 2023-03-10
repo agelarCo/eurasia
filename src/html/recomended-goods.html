@@ -1,0 +1,41 @@
+<section class="py-15 py-lg-40">
+  <div class="container position-relative">
+    <div class="box-title">
+      <div class="box-title__container">
+        <div class="box-title__title-decorate"></div>
+        <h2 class="box-title__title">Рекомендуемые товары</h2>
+      </div>
+    </div>
+    <div class="swiper-slider recomended-goods-slider overflow-hidden">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          @@include('./card-block.html', { 'id': 'question' })
+        </div>
+        <div class="swiper-slide">
+          @@include('./card-block.html', { 'id': 'question' })
+        </div>
+        <div class="swiper-slide">
+          @@include('./card-block.html', { 'id': 'question' })
+        </div>
+        <div class="swiper-slide">
+          @@include('./card-block.html', { 'id': 'question' })
+        </div>
+        <div class="swiper-slide">
+            @@include('./card-block.html', { 'id': 'question' })
+          </div>
+      </div>
+    </div>
+    <div class="slider-navigation-container">
+      <div class="recomended-goods-slider-button-prev slider-button-prev">
+        <svg class="img">
+          <use xlink:href="images/icons/icons.svg#prev"></use>
+        </svg>
+      </div>
+      <div class="recomended-goods-slider-button-next slider-button-next">
+        <svg class="img">
+          <use xlink:href="images/icons/icons.svg#next"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,383 @@
+.header {
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease-in, backdrop-filter 0.3s ease-in;
+  &--main-page {
+  }
+  &--fixed {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    transition: background-color 0.3s ease-in, backdrop-filter 0.3s ease-in;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  &__logo {
+    display: block;
+    & img {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  &__menu {
+  }
+}
+.header-logo {
+  &__desc {
+    background-color: $thrity;
+    padding: 5px 12px;
+    color: $secondary;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+}
+.header-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 60px;
+    justify-content: flex-end;
+  }
+  &__list-item {
+    a {
+      font-size: 20px;
+    }
+    & > a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      & > svg {
+        display: none;
+        width: 13px;
+        height: 8px;
+      }
+    }
+    
+  }
+  &__list-item--deep {
+    & > a {
+      & > svg {
+        display: block;
+      }
+    }
+  }
+}
+.header-menu-close-button {
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  width: fit-content;
+  top: 5px;
+  left: 10px;
+  display: none;
+  & svg {
+    height: 15px;
+    width: 15px;
+  }
+}
+.header-icon-button {
+  display: none;
+  cursor: pointer;
+  & svg {
+    color: $secondary;
+    width: 20px;
+    height: 20px;
+    transition: 0.3s ease;
+  }
+  &:hover {
+    & svg {
+      color: $primary;
+    }
+  }
+}
+
+.header-menu-vertical-separator {
+  height: 30px;
+  width: 1px;
+  background-color: $opposite;
+}
+.header-menu-vidgets {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 30px;
+  &__tel {
+    font-size: 24px;
+    color: $body-color;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  &__callback {
+  }
+  &__get-btn {
+    padding: 10px 30px;
+  }
+  &__toponim {
+    display: flex;
+    gap: 10px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+    &__logo {
+      & img {
+        width: 150px;
+      }
+    }
+  }
+  .header-icon-button {
+    display: block;
+  }
+  .header-menu-close-button {
+    display: block;
+  }
+  .header-menu-vertical-separator {
+    display: none;
+  }
+  .header-logo {
+    &__desc {
+      display: none;
+    }
+  }
+  .header-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    padding: 54px 15px;
+    left: -100%;
+    gap: 15px;
+    transition: left 0.5s ease;
+    overflow-y: auto;
+    &--visible {
+      left: 0;
+      transition: left 0.5s ease;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      order: -1;
+      gap: 15px;
+      justify-content: flex-start;
+    }
+    &__list-item {
+      a {
+        font-size: 20px;
+      }
+    }
+    &__list-item--deep {
+    }
+  }
+  .header-menu-vidgets {
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid $opposite;
+    &__toponim {
+      display: none;
+    }
+  }
+}
+.header-menu-dropdown-btn-expand {
+  color: $primary;
+  cursor: pointer;
+  font-size: 14px;
+  display: list-item !important;
+}
+.header-menu-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  height: 550px;
+  padding: 30px;
+  display: none;
+  &:hover {
+    display: block;
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 25px;
+    background: transparent;
+    position: absolute;
+    top: -25px;
+    left: 0;
+    z-index: 10;
+  }
+  &__scrollbox {
+    height: 100%;
+  }
+  &__container {
+    max-width: 1380px;
+    margin: 0 auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+
+  &__box {
+    display: flex;
+    gap: 15px;
+  }
+  &__inner-image {
+    width: 120px;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__title-list {
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    color: $body-color;
+    margin-bottom: 15px;
+  }
+  &__list-link {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    ul {
+      margin: 0;
+      padding-left: 10px;
+      list-style: none;
+    }
+    & > li:nth-child(n + 10) {
+      display: none;
+    }
+    a {
+      font-size: 14px;
+    }
+    & li.down > ul {
+      display: none;
+    }
+    & li.down > a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    & li.down > a svg {
+      width: 13px;
+      height: 8px;
+    }
+    & li.down:hover > a svg {
+      transform: rotate(180deg);
+    }
+    & li.active > a {
+      color: $primary;
+    }
+    & li.active > a svg {
+      transform: rotate(180deg);
+    }
+    & li.active > ul {
+      display: block;
+    }
+    & li.down:hover > ul {
+      display: block;
+    }
+  }
+  &__list-link--expand {
+    & > li:nth-child(n + 10) {
+      display: list-item;
+    }
+  }
+}
+
+.header-menu {
+  &__list {
+  }
+  &__list-item {
+    a {
+    }
+    & > a {
+    }
+    &:hover {
+      color: blue;
+    }
+    &:hover > .header-menu-dropdown {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .header-menu-dropdown {
+    position: relative;
+    top: 0;
+    background-color: white;
+    height: 550px;
+    padding: 30px;
+    &__scrollbox {
+      height: 100%;
+      max-width: 1380px;
+      margin: 0 auto;
+    }
+    &__container {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+
+    &__box {
+      display: flex;
+      gap: 15px;
+    }
+    &__inner-image {
+      width: 45px;
+    }
+    &__image {
+      width: 100%;
+    }
+    &__title-list {
+    }
+    &__title {
+      font-weight: 700;
+      font-size: 20px;
+      color: $body-color;
+      margin-bottom: 15px;
+    }
+    &__list-link {
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .header-menu-dropdown {
+    padding: 0;
+  }
+}

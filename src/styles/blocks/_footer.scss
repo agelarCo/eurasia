@@ -1,0 +1,171 @@
+.footer {
+  padding-top: 140px;
+  &__container {
+    padding: 80px 0;
+  }
+}
+
+.footer-menu {
+  &__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  &__list-link {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: white;
+    }
+  }
+  &__contact-list {
+    & div,
+    & a {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: white;
+      margin-bottom: 10px;
+      font-size: 14px;
+      svg {
+        width: 14px;
+        height: 20px;
+      }
+    }
+  }
+  &__list-social {
+  }
+}
+.footer-menu--contact {
+}
+.list-social {
+  display: flex;
+  gap: 10px;
+  &__item {
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.footer-form {
+  border: 3px solid #002643;
+  border-radius: 5px;
+  background-color: white;
+  position: absolute;
+  padding: 77px 216px 77px 80px;
+  right: -185px;
+  top: -150px;
+  left: 0;
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__inputs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 65px;
+    margin-bottom: 30px;
+  }
+  &__input {
+  }
+  &__submit-agree {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 1999px) {
+  .footer-form {
+    border: 3px solid #002643;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+    padding: 50px;
+    right: 0px;
+    top: -150px;
+    left: 0;
+  }
+}
+
+@media (max-width: 1600px) {
+}
+
+@media (max-width: 1410px) {
+}
+@media (max-width: 1200px) {
+  .footer {
+    padding-top: 415px;
+    &__container {
+      padding: 30px 0;
+    }
+  }
+
+  .footer-form {
+    top: -425px;
+    &__inputs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px 65px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    padding-top: 390px;
+    &__container {
+      padding: 30px 0;
+    }
+  }
+
+  .footer-form {
+    top: -395px;
+    padding: 30px;
+    &__title {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .footer {
+    &__container {
+    }
+  }
+
+  .footer-form {
+    padding: 15px;
+    margin: 0 12px;
+  }
+}
+
+@media (max-width: 475px) {
+  .footer {
+    padding-top: 360px;
+    &__container {
+    }
+  }
+
+  .footer-form {
+    padding: 15px;
+    top: -360px;
+  }
+
+  .footer-menu {
+    &__title {
+      margin-bottom: 10px;
+    }
+    &__list-link {
+      
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

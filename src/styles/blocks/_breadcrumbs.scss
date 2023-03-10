@@ -1,0 +1,70 @@
+.container {
+}
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 50px;
+  gap: 5px 13px;
+  &__link {
+    background-color: $system-component;
+    display: flex;
+    align-items: center;
+    padding: 5px 17px 5px 10px;
+    position: relative;
+    border-radius: 5px 0px 0px 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    &::before {
+      content: "";
+      display: block;
+      clip-path: polygon(100% 50%, 0 0, 0 100%);
+      background-color: $system-component;
+      position: absolute;
+      width: 13px;
+      height: 100%;
+      top: 0;
+      right: -12.9px;
+    }
+  }
+
+  &__link--active {
+  }
+  &__link:hover &__sublinks {
+    display: block;
+  }
+  &__sublinks {
+    position: absolute;
+    top: 34px;
+    left: 0;
+    padding: 20px 30px;
+    background-color: $system-component;
+    width: 260px;
+    height: 230px;
+    border-radius: 5px;
+    display: none;
+    &::before {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        top: -3px;
+        left: 0;
+    }
+    & a {
+      display: block;
+    }
+    a + a {
+      margin-top: 15px;
+    }
+  }
+  &__sublinks-scrollbox {
+    height: 100%;
+  }
+  &__link:hover &__sublinks {
+    display: block;
+  }
+  &__sublinks:hover {
+    display: block;
+  }
+}

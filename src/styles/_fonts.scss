@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "FactorA";
+  font-weight: 400;
+  src: local("FactorA-Regular"),
+    url("../fonts/FactorA-Regular.woff2") format("woff2"),
+    url("../fonts/FactorA-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "FactorA";
+  font-weight: 500;
+  src: local("FactorA-Medium"),
+    url("../fonts/FactorA-Medium.woff2") format("woff2"),
+    url("../fonts/FactorA-Medium.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "FactorA";
+  font-weight: 700;
+  src: local("FactorA-Bold"), url("../fonts/FactorA-Bold.woff2") format("woff2"),
+    url("../fonts/FactorA-Bold.woff") format("woff");
+  font-display: swap;
+}
+

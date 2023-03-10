@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Главная' })
+  <body class="page">
+    <main class="main">
+      @@include('html/header.html', { 'main-page': 'header--main-page'
+      })@@include('html/bradcrumbs.html', { })
+      <section>
+        <div class="container">
+          <div class="d-flex gap-30 align-items-center mb-15 mb-lg-30">
+            <h1 class="mb-0">Нержавеющая сталь</h1>
+            <span class="fs-7 text-secondary d-lg-inline d-none"
+              >1200 товаров</span
+            >
+          </div>
+        </div>
+      </section>
+      @@include('html/float-menu.html', { })
+      @@include('html/category-line.html', { }) @@include('html/tags-line.html',
+      { }) @@include('html/filter-line.html', { }) @@include('html/filter.html',
+      { })
+      <section>
+        <div class="container">
+          <div class="products-grid products-grid--row">
+            @@include('html/card-block.html', { 'id': 'question' })
+            @@include('html/card-block.html', { 'id': 'question' })
+            @@include('html/card-block.html', { 'id': 'question' })
+            @@include('html/card-block.html', { 'id': 'question' })
+            @@include('html/card-block.html', { 'id': 'question' })
+            @@include('html/card-block.html', { 'id': 'question' })
+            @@include('html/card-block.html', { 'id': 'question' })
+            @@include('html/card-block.html', { 'id': 'question' })
+          </div>
+        </div>
+      </section>
+      <section class="minor-page-section">
+        <div class="container">
+          <p>
+            Приятно, граждане, наблюдать, как независимые государства освещают
+            чрезвычайно интересные особенности картины в целом, однако
+            конкретные выводы, разумеется, объявлены нарушающими
+            общечеловеческие нормы этики и морали. Идейные соображения высшего
+            порядка, а также синтетическое тестирование способствует повышению
+            качества прогресса профессионального сообщества. Также как
+            убеждённость некоторых оппонентов играет определяющее значение для
+            переосмысления внешнеэкономических политик. Также как
+            высококачественный прототип будущего проекта в значительной степени.
+          </p>
+        </div>
+      </section>
+
+      @@include('html/table.html', {}) @@include('html/table.html', {})
+
+      <section class="minor-page-section">
+        <div class="container">
+          <p>
+            Приятно, граждане, наблюдать, как независимые государства освещают
+            чрезвычайно интересные особенности картины в целом, однако
+            конкретные выводы, разумеется, объявлены нарушающими
+            общечеловеческие нормы этики и морали. Идейные соображения высшего
+            порядка, а также синтетическое тестирование способствует повышению
+            качества прогресса профессионального сообщества. Также как
+            убеждённость некоторых оппонентов играет определяющее значение для
+            переосмысления внешнеэкономических политик. Также как
+            высококачественный прототип будущего проекта в значительной степени.
+          </p>
+        </div>
+      </section>
+      @@include('html/reused-slider.html',
+      { 'title': 'Рекомендуемые товары', 'slider' : 'recomended-slider', 'slider-prev' : 'recomended-slider-button-prev', 'slider-next' : 'recomended-slider-button-next'})
+
+      <section class="minor-page-section">
+        <div class="container">
+          <p>
+            Приятно, граждане, наблюдать, как независимые государства освещают
+            чрезвычайно интересные особенности картины в целом, однако
+            конкретные выводы, разумеется, объявлены нарушающими
+            общечеловеческие нормы этики и морали. Идейные соображения высшего
+            порядка, а также синтетическое тестирование способствует повышению
+            качества прогресса профессионального сообщества. Также как
+            убеждённость некоторых оппонентов играет определяющее значение для
+            переосмысления внешнеэкономических политик. Также как
+            высококачественный прототип будущего проекта в значительной степени.
+          </p>
+        </div>
+      </section>
+
+      @@include('html/tags-line.html', { })
+      @@include('html/reused-slider.html',
+      { 'title': 'Ранее вы смотрели', 'slider' : 'previously-viewed-slider', 'slider-prev' : 'previously-viewed-slider-button-prev', 'slider-next' : 'previously-viewed-slider-button-next'})
+      @@include('html/modal.html', {}) @@include('html/script.html', {})
+    </main>
+      @@include('html/footer.html', {}) @@include('html/modal.html', {})
+      @@include('html/script.html', {})
+  </body>
+</html>

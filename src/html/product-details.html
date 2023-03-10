@@ -1,0 +1,160 @@
+<section>
+  <div class="container">
+    <div class="row gx-30 gy-15">
+      <div class="col-xxl-5 col-12">
+        <div class="product-details">
+          <div
+            class="product-details__inner-image responsive-img box-aspect box-aspect--square"
+          >
+            <img
+              class="responsive-img__image"
+              src="images/products/product-1.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-4 col-lg-6">
+        <div class="product-details-content">
+          <div class="product-details-content__head mb-15">
+            <div class="reviwes-stars">
+              <div class="reviwes-stars__star reviwes-stars__star--active">
+                @@include('./sprite.html', { 'id': 'star' })
+              </div>
+              <div class="reviwes-stars__star reviwes-stars__star--active">
+                @@include('./sprite.html', { 'id': 'star' })
+              </div>
+              <div class="reviwes-stars__star reviwes-stars__star--active">
+                @@include('./sprite.html', { 'id': 'star' })
+              </div>
+              <div class="reviwes-stars__star reviwes-stars__star--active">
+                @@include('./sprite.html', { 'id': 'star' })
+              </div>
+              <div class="reviwes-stars__star">
+                @@include('./sprite.html', { 'id': 'star' })
+              </div>
+              <span class="text-dark ms-15">4,5</span>
+            </div>
+            <div
+              class="products-card-content__stock products-card-content__stock--stock"
+            >
+              В наличии
+            </div>
+          </div>
+          <p class="fs-6 fs-lg-5">Характеристики</p>
+          <div class="product-details-content-chars">
+            <div class="product-details-content-chars__name">
+              Тип производства
+            </div>
+            <div class="product-details-content-chars__char">
+              Холоднокатаный
+            </div>
+            <div class="product-details-content-chars__name">Покрытие</div>
+            <div class="product-details-content-chars__char">Без покрытия</div>
+            <div class="product-details-content-chars__name">Ширина, мм</div>
+            <div class="product-details-content-chars__char">
+              1000;1250;1500
+            </div>
+            <div class="product-details-content-chars__name">Марка стали</div>
+            <div class="product-details-content-chars__char">2.6 мм</div>
+            <div class="product-details-content-chars__name">Толщина, мм</div>
+            <div class="product-details-content-chars__char">2.6 мм</div>
+            <div class="product-details-content-chars__name">ГОСТ</div>
+            <div class="product-details-content-chars__char">
+              ГОСТ 19904-90, ГОСТ 16523-97, ГОСТ 30246-94, ГОСТ 11268-76, ГОСТ
+              17066-94, ГОСТ 9045-93, ГОСТ Р 51393-99
+            </div>
+          </div>
+          <div class="text-decoration-underline more-char-btn mt-15">
+            Все характеристики
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-3 col-lg-6">
+        <div class="product-details-in-cart">
+          <div class="product-details-in-cart__price mb-30">
+            <span class="text-decoration-line-through text-secondary fs-7"
+              >76200 ₽/т</span
+            >
+            <div class="d-flex gap-30 align-items-end width-100">
+              <span class="text-secondary fs-7">Цена</span>
+              <p
+                class="mb-0 fw-bold fs-5 text-body-color"
+                style="line-height: 100%"
+              >
+                76200 ₽/т
+              </p>
+            </div>
+          </div>
+          <div class="product-details-in-cart__controls">
+            <div class="cart-control-value">
+              <span class="cart-control-value__decr">-</span>
+              <input class="cart-control-value__input" type="text" />
+              <span class="cart-control-value__increm">+</span>
+            </div>
+            <div
+              class="btn btn-system-component border-primary py-10 px-15 text-primary d-flex align-items-center justify-content-center gap-10 ws-nowrap"
+            >
+              <svg width="22" height="24" class="img">
+                <use xlink:href="images/icons/icons.svg#shop"></use>
+              </svg>
+              В корзину
+            </div>
+          </div>
+        </div>
+        <div class="d-flex gap-10 mt-15 mt-lg-30">
+          <div
+            class="btn btn-system-component border-secondary py-10 px-15 text-secondary"
+            style="width: min-content !important"
+          >
+            <svg width="15" height="24" class="img">
+              <use xlink:href="images/icons/icons.svg#question"></use>
+            </svg>
+          </div>
+          <div
+            class="btn btn-system-component border-secondary py-10 px-15"
+            style="width: 100% !important"
+          >
+            Заказать в 1 клик
+          </div>
+        </div>
+        <div class="product-details-adventages mt-15 mt-lg-30">
+          <a
+            href="#"
+            class="d-flex gap-15 align-items-center text-secondary mb-15"
+          >
+            @@include('./sprite.html', { 'id': 'product-details-adventages-1',
+            'width': '65', 'height': '65' })
+            <div>
+              <p class="fw-bold mb-0">Точное соответсвие ГОСТ</p>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="d-flex gap-15 align-items-center text-secondary mb-15"
+          >
+            @@include('./sprite.html', { 'id': 'product-details-adventages-2',
+            'width': '65', 'height': '65' })
+            <div>
+              <p class="fw-bold mb-0">Скачать документацию</p>
+              <span>Документация на товар</span>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="d-flex gap-15 align-items-center text-secondary mb-15"
+          >
+            @@include('./sprite.html', { 'id': 'product-details-adventages-3',
+            'width': '65', 'height': '65' })
+            <div>
+              <p class="fw-bold mb-0">Скачать каталог</p>
+              <span>Общий каталог компании</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    @@include('./tabs-product.html', { })
+  </div>
+</section>

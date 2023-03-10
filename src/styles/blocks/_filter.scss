@@ -1,0 +1,268 @@
+.filter {
+  padding: 15px 0;
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    color: $secondary;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  &__close {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+}
+
+.filter-block {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-right: 50px;
+  &--rolled .filter-btn:nth-child(n + 23) {
+    display: none;
+  }
+}
+.filter-btn {
+  border-radius: 5px;
+  border: 1px solid $opposite;
+  padding: 10px;
+  position: relative;
+  color: $secondary;
+  cursor: pointer;
+  &:hover .filter-btn-dropdown {
+    display: block;
+  }
+ 
+  &__title {
+    font-size: 14px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    white-space: nowrap;
+    &  svg {
+      transition: transform .3s ease;
+    }
+  }
+
+
+  &:hover &__title {
+    &  svg {
+      transition: transform .3s ease;
+      transform: rotate(180deg);
+    }
+  }
+  &__dropdown {
+  }
+  &--more {
+    border: 1px solid $primary;
+    padding: 10px 25px;
+    color: $body-color;
+    display: flex !important;
+  }
+  &--more &__title {
+    margin-bottom: 0;
+  }
+
+  &--inside-active {
+    background-color: $primary;
+    color: white;
+  }
+}
+.filter-btn-dropdown {
+  position: absolute;
+  top: 44px;
+  display: none;
+  left: 0;
+  padding: 20px 15px;
+  z-index: 10;
+  background-color: $system-component;
+  border-radius: 5px;
+  &__scroller {
+    height: 260px;
+    width: 260px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: -2px;
+    left: 0;
+  }
+  &:hover {
+    display: block;
+  }
+}
+
+.filter-btn--inside-active {
+}
+.filter-btn--down {
+}
+
+
+.filter-btn-dropdown-range {
+  &__box-input {
+    position: relative;
+    border: 1px solid $secondary;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  span {
+    color: $secondary;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-45%);
+    left: 10px;
+    font-size: 12px;
+  }
+  &__input {
+    margin-left: 25px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    position: relative;
+    color: $body-color;
+  }
+  &__input--from {
+  }
+  &__input--to {
+  }
+  &__input-range {
+  }
+  &__input-range--from {
+  }
+  &__input-range--to {
+  }
+
+
+  
+  
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    pointer-events: all;
+    width: 15px;
+    height: 15px;
+    background-color: $primary;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #C6C6C6;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb:hover {
+    background: $primary;
+  }
+  
+  input[type=range]::-webkit-slider-thumb:active {
+    box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+    -webkit-box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+  }
+  
+
+  
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button {  
+     opacity: 1;
+  }
+  
+  input[type="range"] {
+    -webkit-appearance: none; 
+    appearance: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    background-color: #E6E6E6;
+    pointer-events: none;
+    border-radius: 5px;
+  }
+  
+  &__input-range--from {
+    height: 0;
+    z-index: 1;
+  }
+}
+
+.filter-btn-dropdown-range {
+  
+}
+
+
+
+@media (max-width: 1200px) {
+  .filter {
+    padding: 15px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    &__close {
+      display: block;
+    }
+    &__title {
+    }
+    &.filter--show {
+      transition: left 0.3s ease;
+      left: 0;
+    }
+  }
+
+  .filter-block {
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+
+  .filter-btn {
+    width: 100%;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    &:hover .filter-btn-dropdown {
+      display: block;
+    }
+    &__title {
+      justify-content: space-between;
+    }
+    &__dropdown {
+    }
+    &--more {
+      justify-content: center;
+    }
+  }
+
+  .filter-btn-dropdown {
+    position: static;
+    width: 100%;
+    display: none;
+    padding: 10px;
+    z-index: 10;
+    border-radius: 5px;
+    
+    &__scroller {
+      width: 100%;
+      height: 190px;
+    }
+    &__container {
+    }
+    &::before {
+      display: none;
+    }
+    &:hover {
+      display: block;
+    }
+  }
+}

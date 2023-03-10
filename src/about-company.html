@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Главная' })
+  <body class="page">
+    <main class="main">
+      @@include('html/header.html', { 'main-page': 'header--main-page'
+      })@@include('html/bradcrumbs.html', { }) @@include('html/float-menu.html',
+      { })
+      <section class="minor-page-section">
+        <div class="container">
+          <h1>О компании</h1>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row gx-30">
+          <div class="col-xl-3 d-none d-xl-block">
+            @@include('html/left-menu.html', { })
+          </div>
+          <div class="col-xl-9">
+            <div class="about-company-content">
+              <div class="float-lg-start d-inline">
+                <div class="about-image responsive-img float-lg-end">
+                  <img
+                    class="responsive-img__image"
+                    src="images/about-company.png"
+                    alt=""
+                  />
+                </div>
+                <p>
+                  Металлобаза Евразия крупнейший торго-складской и
+                  производительный комплекс в России.
+                </p>
+                <p>
+                  Разнообразный и богатый опыт говорит нам, что сплочённость
+                  команды профессионалов предоставляет широкие возможности для
+                  вывода текущих активов. В целом, конечно, постоянное
+                  информационно-пропагандистское обеспечение нашей деятельности
+                  способствует подготовке и реализации распределения внутренних
+                  резервов и ресурсов. В частности, консультация с широким
+                  активом представляет собой интересный эксперимент.
+                </p>
+                <p>
+                  Разнообразный и богатый опыт говорит нам, что сплочённость
+                  команды профессионалов предоставляет широкие возможности для
+                  вывода текущих активов. В целом, конечно, постоянное
+                  информационно-пропагандистское обеспечение нашей деятельности
+                  способствует подготовке и реализации распределения внутренних
+                  резервов и ресурсов. В частности, консультация с широким
+                  активом представляет собой интересный эксперимент.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="row gx-30 gy-5 py-15 mt-15 py-lg-30 bg-system-component"
+            >
+              <div class="col-md-4">
+                <div
+                  class="advantages-block d-flex flex-column text-center text-md-start"
+                >
+                  <span class="fs-6 fs-md-5"> Большой выбор продукции</span>
+                  <p
+                    class="text-primary fs-md-2 mt-md-5 fs-5 mt-0 fw-bold fw-md-normal mb-0"
+                  >
+                    > 1 500 позиций
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="advantages-block d-flex flex-column text-center text-md-start"
+                >
+                  <span class="fs-6 fs-md-5">Опытные специалисты</span>
+                  <p
+                    class="text-primary fs-md-2 mt-md-5 fs-5 mt-0 fw-bold fw-md-normal mb-0"
+                  >
+                    от 5 лет стаж
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="advantages-block d-flex flex-column text-center text-md-start"
+                >
+                  <span class="fs-6 fs-md-5">Быстрый отклик на заявку</span>
+                  <p
+                    class="text-primary fs-md-2 mt-md-5 fs-5 mt-0 fw-bold fw-md-normal mb-0"
+                  >
+                    в течение 5 минут
+                  </p>
+                </div>
+              </div>
+            </div>
+            @@include('html/our-partners.html', {})
+            <div class="box-title">
+              <div class="box-title__container">
+                <div class="box-title__title-decorate"></div>
+                <h2 class="box-title__title">Отзывы о магазине</h2>
+              </div>
+            </div>
+            <section class="minor-page-section">
+              <p>
+                Наша компания уже 5 лет реализует металлопрокат и оказывает
+                услуги по его обработке. Результат нашей работы — сотни
+                довольных клиентов по всей стране и десятки долгосрочных
+                соглашений о совместном сотрудничестве.
+              </p>
+            </section>
+            <div class="d-flex justify-content-center mb-15 mb-lg-30">
+              <div
+                class="btn btn-system-component border-secondary text-primary py-15 px-45"
+              >
+                Написать отзыв
+              </div>
+            </div>
+            <div>
+              @@include('html/reviwe-block.html', {})
+              @@include('html/reviwe-block.html', {})
+            </div>
+            <div class="d-flex mt-15 mt-lg-30 justify-content-center">
+              <div
+                class="btn btn-system-component border-secondary  py-15"
+              >
+              Все отзывы о магазине
+              </div>
+            </div>
+            <div class="box-title mt-15 mt-lg-30">
+              <div class="box-title__container">
+                <div class="box-title__title-decorate"></div>
+                <h2 class="box-title__title">Реквизиты</h2>
+              </div>
+            </div>
+            <section class="minor-page-section">
+              <p>
+                Наша компания уже 5 лет реализует металлопрокат и оказывает услуги по его обработке. Результат нашей работы — сотни довольных клиентов по всей стране и десятки долгосрочных соглашений о совместном сотрудничестве.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      @@include('html/footer.html', {}) @@include('html/modal.html', {})
+      @@include('html/script.html', {})
+    </main>
+  </body>
+</html>

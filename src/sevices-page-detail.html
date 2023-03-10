@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Главная' })
+  <body class="page">
+    <main class="main">
+      @@include('html/header.html', { 'main-page': 'header--main-page'
+      })@@include('html/bradcrumbs.html', { }) @@include('html/float-menu.html',
+      { })
+      <section class="minor-page-section">
+        <div class="container">
+          <h1>Плазменная резка</h1>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row gx-30">
+          <div class="col-xl-3 d-none d-xl-block">
+            @@include('html/left-menu.html', { })
+          </div>
+          <div class="col-xl-9">
+            <div class="responsive-img service-about-image mb-15 mb-lg-30">
+              <picture>
+                <source srcset="images/about-mobile.png" media="(max-width: 1200px)" />
+                <img class="responsive-img__image service-about-image__image" src="images/about-desctop.png " alt="" />
+              </picture>
+            </div>
+            <section class="minor-page-section mb-15 mb-lg-30">
+                <div class="container">
+                  <p>
+                    Приятно, граждане, наблюдать, как независимые государства освещают
+                    чрезвычайно интересные особенности картины в целом, однако
+                    конкретные выводы, разумеется, объявлены нарушающими
+                    общечеловеческие нормы этики и морали. Идейные соображения высшего
+                    порядка, а также синтетическое тестирование способствует повышению
+                    качества прогресса профессионального сообщества. Также как
+                    убеждённость некоторых оппонентов играет определяющее значение для
+                    переосмысления внешнеэкономических политик. Также как
+                    высококачественный прототип будущего проекта в значительной степени.
+                  </p>
+                </div>
+              </section>
+              @@include('html/table.html', {}) @@include('html/table.html', {})
+              <section class="minor-page-section">
+                <div class="container">
+                  <p>
+                    Приятно, граждане, наблюдать, как независимые государства освещают
+                    чрезвычайно интересные особенности картины в целом, однако
+                    конкретные выводы, разумеется, объявлены нарушающими
+                    общечеловеческие нормы этики и морали. Идейные соображения высшего
+                    порядка, а также синтетическое тестирование способствует повышению
+                    качества прогресса профессионального сообщества. Также как
+                    убеждённость некоторых оппонентов играет определяющее значение для
+                    переосмысления внешнеэкономических политик. Также как
+                    высококачественный прототип будущего проекта в значительной степени.
+                  </p>
+                </div>
+              </section>
+              <div class="d-flex mt-15 mt-lg-30">
+                <a href="#" class="d-flex gap-10 py-15 rounded-5 border border-primary px-20 align-items-center">
+                    @@include('./html/sprite.html', { 'id': 'back', 'width': '20', 'height': '17' })
+                    Назад к списку
+                </a>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      @@include('html/footer.html', {}) @@include('html/modal.html', {})
+      @@include('html/script.html', {})
+    </main>
+  </body>
+</html>

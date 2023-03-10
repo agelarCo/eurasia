@@ -1,0 +1,235 @@
+<div
+  class="modal fade"
+  id="modalCallback"
+  tabindex="-1"
+  aria-labelledby="modalCallback"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <form class="modal-custom modal-content">
+      <div class="modal-custom-close" data-bs-dismiss="modal">
+        @@include('./sprite.html', { 'id': 'close' })
+      </div>
+      <p class="modal-custom__title">Перезвоните мне</p>
+      <div>
+        <input
+          type="text"
+          class="text-center custom-input text-xl-start mb-30"
+          placeholder="Имя"
+        />
+        <input
+          type="text"
+          class="text-center custom-input text-xl-start mb-30"
+          placeholder="+7 (       )         -       - "
+        />
+      </div>
+      <div class="submit-agree fs-8 fs-lg-7 mb-30">
+        <label class="custom-checkbox">
+          <input type="checkbox" name="agree" />
+          <svg class="img">
+            <use xlink:href="images/icons/icons.svg#check-mark"></use>
+          </svg> </label
+        >Согласен на обработку персональных данных
+      </div>
+      <div class="d-flex justify-content-center">
+        <input
+          class="btn btn-outline-primary bg-primary-hover text-body-color text-white-hover"
+          value="Отправить"
+          type="submit"
+        />
+      </div>
+    </form>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="modalGetPrice"
+  tabindex="-1"
+  aria-labelledby="modalGetPrice"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <form class="modal-custom modal-content">
+      <div class="modal-custom-close" data-bs-dismiss="modal">
+        @@include('./sprite.html', { 'id': 'close' })
+      </div>
+      <p class="modal-custom__title">Заказать прайс</p>
+      <div>
+        <input
+          type="text"
+          class="text-center custom-input text-xl-start mb-30"
+          placeholder="Имя"
+        />
+        <input
+          type="text"
+          class="text-center custom-input text-xl-start mb-30"
+          placeholder="+7 (       )         -       - "
+        />
+      </div>
+      <div class="submit-agree fs-8 fs-lg-7 mb-30">
+        <label class="custom-checkbox">
+          <input type="checkbox" name="agree" />
+          <svg class="img">
+            <use xlink:href="images/icons/icons.svg#check-mark"></use>
+          </svg> </label
+        >Согласен на обработку персональных данных
+      </div>
+      <div class="d-flex justify-content-center">
+        <input
+          class="btn btn-outline-primary bg-primary-hover text-body-color text-white-hover"
+          value="Отправить"
+          type="submit"
+        />
+      </div>
+    </form>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="modalGetPrice"
+  tabindex="-1"
+  aria-labelledby="modalGetPrice"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <form class="modal-custom modal-content">
+      <div class="modal-custom-close" data-bs-dismiss="modal">
+        @@include('./sprite.html', { 'id': 'close' })
+      </div>
+      <p class="modal-custom__title">Заказать в один клик</p>
+      <div>
+        <input
+          type="text"
+          class="text-center custom-input text-xl-start mb-30"
+          placeholder="Имя"
+        />
+        <input
+          type="text"
+          class="text-center custom-input mb-30"
+          placeholder="@"
+        />
+        <input
+          type="text"
+          class="text-center custom-input text-xl-start mb-30"
+          placeholder="+7 (       )         -       - "
+        />
+      </div>
+      <div class="submit-agree fs-8 fs-lg-7 mb-30">
+        <label class="custom-checkbox">
+          <input type="checkbox" name="agree" />
+          <svg class="img">
+            <use xlink:href="images/icons/icons.svg#check-mark"></use>
+          </svg> </label
+        >Согласен на обработку персональных данных
+      </div>
+      <div class="d-flex justify-content-center">
+        <input
+          class="btn btn-outline-primary bg-primary-hover text-body-color text-white-hover"
+          value="Отправить"
+          type="submit"
+        />
+      </div>
+    </form>
+  </div>
+</div>
+
+<div
+  class="modal fade modal-lg"
+  id="modalReview"
+  tabindex="-1"
+  aria-labelledby="modalReview"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <form class="modal-custom modal-content px-15 px-sm-60">
+      <div class="modal-custom-close" data-bs-dismiss="modal">
+        @@include('./sprite.html', { 'id': 'close' })
+      </div>
+      <p class="modal-custom__title">Вы можете написать отзыв о покупке</p>
+      <div>
+        <input
+          type="text"
+          class="text-center custom-input text-xl-start mb-30"
+          placeholder="Имя"
+        />
+        <div class="modal-custom-attach mb-30">
+            <div class="modal-custom-attach__inner-image"></div>
+            <label class="modal-custom-attach__button">
+                <input type="file" class="input-file d-none">
+                @@include('./sprite.html', { 'id': 'attach' })
+                Прикрепить аватар
+            </label>
+        </div>
+        <div class="d-flex mb-30 gap-30 flex-column flex-lg-row">
+          <input type="text" class="text-center custom-input" placeholder="@" />
+          <div class="d-flex align-items-center gap-5  flex-column flex-sm-row ">
+            <p class="ws-nowrap d-flex flex-row flex-sm-column mb-0"
+              ><span>На сколько вы </span> <span>довольны покупкой?</span>
+              </p
+            >
+            <div class="reviwes-stars reviwes-stars--big">
+                <div class="reviwes-stars__star reviwes-stars__star--active">
+                    @@include('./sprite.html', { 'id': 'star' })
+                </div>
+                <div class="reviwes-stars__star reviwes-stars__star--active">
+                    @@include('./sprite.html', { 'id': 'star' })
+                </div>
+                <div class="reviwes-stars__star reviwes-stars__star--active">
+                    @@include('./sprite.html', { 'id': 'star' })
+                </div>
+                <div class="reviwes-stars__star reviwes-stars__star--active">
+                    @@include('./sprite.html', { 'id': 'star' })
+                </div>
+                <div class="reviwes-stars__star">
+                    @@include('./sprite.html', { 'id': 'star' })
+                </div>
+            </div>
+          </div>
+        </div>
+        <textarea
+          type="text"
+          class="custom-input mb-30"
+          style="height: 100px; resize: none;"
+          placeholder="Текст отзыва"
+        ></textarea>
+      </div>
+      
+      <div class="d-flex justify-content-between flex-column flex-sm-row align-items-center">
+        <div class="submit-agree fs-8 fs-lg-7 mb-10 mb-sm-0">
+            <label class="custom-checkbox">
+              <input type="checkbox" name="agree" />
+              <svg class="img">
+                <use xlink:href="images/icons/icons.svg#check-mark"></use>
+              </svg> </label
+            >Согласен на обработку персональных данных
+          </div>
+        <input
+          class="btn btn-outline-primary bg-primary-hover text-body-color text-white-hover"
+          value="Отправить"
+          type="submit"
+        />
+      </div>
+    </form>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="modalThank"
+  tabindex="-1"
+  aria-labelledby="modalThank"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <form class="modal-custom modal-content">
+      <p class="modal-custom__title">Спасибо за обращение!</p>
+      <p class="mb-0">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis doloribus
+        debitis itaque modi deserunt! Dignissimos fugit corporis voluptates
+        mollitia, dolor obcaecati rem.
+      </p>
+    </form>
+  </div>
+</div>

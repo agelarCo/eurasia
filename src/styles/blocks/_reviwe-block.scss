@@ -1,0 +1,41 @@
+.reviwe-block {
+  &__inner-image {
+    width: 90px;
+    flex-shrink: 0;
+    border-radius: 5px;
+  }
+  &__text {
+    font-size: 14px;
+    color: $secondary;
+    padding-right: 10px;
+  }
+  &__date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+  }
+}
+
+.reviwe-block-scroller {
+  height: 215px;
+  padding-left: 120px;
+}
+
+@media (max-width: 992px) {
+  .reviwe-block-scroller {
+    height: 100px;
+    padding-left: 0px;
+  }
+  .reviwe-block {
+    &__inner-image {
+
+    }
+    &__text {
+
+    }
+    &__date {
+        display: none;
+    }
+  }
+}

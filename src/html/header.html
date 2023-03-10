@@ -1,0 +1,423 @@
+<header class="header @@main-page">
+  <div class="header__container container">
+    <div
+      class="header-icon-button header-icon-button--burger-menu header-menu-close"
+    >
+      @@include('./sprite.html', { 'id': 'burger' })
+    </div>
+    <div class="header-logo">
+      <a
+        href="#"
+        class="header__logo"
+        data-bs-toggle="modal"
+        data-bs-target="#modalReview"
+        ><img src="images/logo.svg" alt=""
+      /></a>
+      <div class="header-logo__desc">
+        Оптовая торговля металлопрокатом<br />
+        Доставка по всей России
+      </div>
+    </div>
+    <div
+      class="header-icon-button header-icon-button--callback-menu"
+      data-bs-toggle="modal"
+      data-bs-target="#modalCallback"
+    >
+      @@include('./sprite.html', { 'id': 'callback' })
+    </div>
+    <nav class="header__menu header-menu">
+      <div class="header-menu-close-button header-menu-close">
+        @@include('./sprite.html', { 'id': 'close' })
+      </div>
+      <div class="header-menu-vidgets">
+        <a class="header-menu-vidgets__tel" href="tel:+7 (499) 302-36-30"
+          >+7 (499) 302-36-30</a
+        >
+        <div class="header-menu-vidgets__container">
+          <div class="header-menu-vertical-separator"></div>
+          <div
+            class="header-menu-vidgets__callback text-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#modalCallback"
+          >
+            Заказать звонок
+          </div>
+          <div class="header-menu-vertical-separator"></div>
+          <div
+            class="header-menu-vidgets__get-btn btn btn-primary text-white py-10"
+            data-bs-toggle="modal"
+            data-bs-target="#modalGetPrice"
+          >
+            Запросить прайс
+          </div>
+          <div class="header-menu-vertical-separator"></div>
+        </div>
+        <div class="header-menu-vidgets__toponim">
+          @@include('./sprite.html', { 'id': 'gps' }) Москва
+        </div>
+      </div>
+      <ul class="header-menu__list">
+        <li class="header-menu__list-item header-menu__list-item--deep">
+          <a href="#" class=""
+            >Каталог @@include('./sprite.html', { 'id': 'down' })</a
+          >
+          <div class="header-menu-dropdown">
+            <div class="header-menu-dropdown__scrollbox">
+              <div class="header-menu-dropdown__container">
+                <div class="header-menu-dropdown__box">
+                  <div class="header-menu-dropdown__inner-image">
+                    <img
+                      class="header-menu-dropdown__image"
+                      src="images/catalog/catalog-1.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="header-menu-dropdown__title-list">
+                    <a href="#" class="header-menu-dropdown__title"
+                      >Цветной прокат</a
+                    >
+                    <ul class="header-menu-dropdown__list-link">
+                      <li><a href="#">Круг нержавеющий</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li class="down active">
+                        <a href="#">Лист нержавеющий @@include('./sprite.html', { 'id': 'down' })</a>
+                        <ul>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li class="down active">
+                            <a href="#">awdadwad @@include('./sprite.html', { 'id': 'down' })</a>
+                            <ul>
+                              <li><a href="#">awdadwad</a></li>
+                              <li class="active"><a href="#"> awdadwad</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                        </ul>
+                      </li>
+                      <li class="header-menu-dropdown-btn-expand">Ещё</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header-menu-dropdown__box">
+                  <div class="header-menu-dropdown__inner-image">
+                    <img
+                      class="header-menu-dropdown__image"
+                      src="images/catalog/catalog-2.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="header-menu-dropdown__title-list">
+                    <a href="#" class="header-menu-dropdown__title"
+                      >Цветной прокат</a
+                    >
+                    <ul class="header-menu-dropdown__list-link">
+                      <li><a href="#">Круг нержавеющий</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li class="down active">
+                        <a href="#">Лист нержавеющий @@include('./sprite.html', { 'id': 'down' })</a>
+                        <ul>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li class="down active">
+                            <a href="#">awdadwad @@include('./sprite.html', { 'id': 'down' })</a>
+                            <ul>
+                              <li><a href="#">awdadwad</a></li>
+                              <li class="active"><a href="#"> awdadwad</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                        </ul>
+                      </li>
+                      <li class="header-menu-dropdown-btn-expand">Ещё</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header-menu-dropdown__box">
+                  <div class="header-menu-dropdown__inner-image">
+                    <img
+                      class="header-menu-dropdown__image"
+                      src="images/catalog/catalog-3.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="header-menu-dropdown__title-list">
+                    <a href="#" class="header-menu-dropdown__title"
+                      >Цветной прокат</a
+                    >
+                    <ul class="header-menu-dropdown__list-link">
+                      <li><a href="#">Круг нержавеющий</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li class="down active">
+                        <a href="#">Лист нержавеющий @@include('./sprite.html', { 'id': 'down' })</a>
+                        <ul>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li class="down active">
+                            <a href="#">awdadwad @@include('./sprite.html', { 'id': 'down' })</a>
+                            <ul>
+                              <li><a href="#">awdadwad</a></li>
+                              <li class="active"><a href="#"> awdadwad</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                        </ul>
+                      </li>
+                      <li class="header-menu-dropdown-btn-expand">Ещё</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header-menu-dropdown__box">
+                  <div class="header-menu-dropdown__inner-image">
+                    <img
+                      class="header-menu-dropdown__image"
+                      src="images/catalog/catalog-4.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="header-menu-dropdown__title-list">
+                    <a href="#" class="header-menu-dropdown__title"
+                      >Цветной прокат</a
+                    >
+                    <ul class="header-menu-dropdown__list-link">
+                      <li><a href="#">Круг нержавеющий</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li class="down active">
+                        <a href="#">Лист нержавеющий @@include('./sprite.html', { 'id': 'down' })</a>
+                        <ul>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li class="down active">
+                            <a href="#">awdadwad @@include('./sprite.html', { 'id': 'down' })</a>
+                            <ul>
+                              <li><a href="#">awdadwad</a></li>
+                              <li class="active"><a href="#"> awdadwad</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                        </ul>
+                      </li>
+                      <li class="header-menu-dropdown-btn-expand">Ещё</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header-menu-dropdown__box">
+                  <div class="header-menu-dropdown__inner-image">
+                    <img
+                      class="header-menu-dropdown__image"
+                      src="images/catalog/catalog-5.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="header-menu-dropdown__title-list">
+                    <a href="#" class="header-menu-dropdown__title"
+                      >Цветной прокат</a
+                    >
+                    <ul class="header-menu-dropdown__list-link">
+                      <li><a href="#">Круг нержавеющий</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li class="down active">
+                        <a href="#">Лист нержавеющий @@include('./sprite.html', { 'id': 'down' })</a>
+                        <ul>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li class="down active">
+                            <a href="#">awdadwad @@include('./sprite.html', { 'id': 'down' })</a>
+                            <ul>
+                              <li><a href="#">awdadwad</a></li>
+                              <li class="active"><a href="#"> awdadwad</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                        </ul>
+                      </li>
+                      <li class="header-menu-dropdown-btn-expand">Ещё</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header-menu-dropdown__box">
+                  <div class="header-menu-dropdown__inner-image">
+                    <img
+                      class="header-menu-dropdown__image"
+                      src="images/catalog/catalog-6.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="header-menu-dropdown__title-list">
+                    <a href="#" class="header-menu-dropdown__title"
+                      >Цветной прокат</a
+                    >
+                    <ul class="header-menu-dropdown__list-link">
+                      <li><a href="#">Круг нержавеющий</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li class="down active">
+                        <a href="#">Лист нержавеющий @@include('./sprite.html', { 'id': 'down' })</a>
+                        <ul>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li class="down active">
+                            <a href="#">awdadwad @@include('./sprite.html', { 'id': 'down' })</a>
+                            <ul>
+                              <li><a href="#">awdadwad</a></li>
+                              <li class="active"><a href="#"> awdadwad</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                        </ul>
+                      </li>
+                      <li class="header-menu-dropdown-btn-expand">Ещё</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header-menu-dropdown__box">
+                  <div class="header-menu-dropdown__inner-image">
+                    <img
+                      class="header-menu-dropdown__image"
+                      src="images/catalog/catalog-7.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="header-menu-dropdown__title-list">
+                    <a href="#" class="header-menu-dropdown__title"
+                      >Цветной прокат</a
+                    >
+                    <ul class="header-menu-dropdown__list-link">
+                      <li><a href="#">Круг нержавеющий</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li><a href="#">Труба нержавеющая</a></li>
+                      <li class="down active">
+                        <a href="#">Лист нержавеющий @@include('./sprite.html', { 'id': 'down' })</a>
+                        <ul>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li class="down active">
+                            <a href="#">awdadwad @@include('./sprite.html', { 'id': 'down' })</a>
+                            <ul>
+                              <li><a href="#">awdadwad</a></li>
+                              <li class="active"><a href="#"> awdadwad</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                          <li><a href="#">awdadwad</a></li>
+                        </ul>
+                      </li>
+                      <li class="header-menu-dropdown-btn-expand">Ещё</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="header-menu__list-item header-menu__list-item--deep">
+          <a href="#">Услуги</a>
+          
+        </li>
+        <li class="header-menu__list-item">
+          <a href="#">Компания</a>
+        </li>
+        <li class="header-menu__list-item">
+          <a href="#">Информация</a>
+        </li>
+        <li class="header-menu__list-item">
+          <a href="#">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
