@@ -21,7 +21,7 @@
       { })
       <section>
         <div class="container">
-          <div class="products-grid products-grid--row">
+          <div class="products-grid mt-15">
             @@include('html/card-block.html', { 'id': 'question' })
             @@include('html/card-block.html', { 'id': 'question' })
             @@include('html/card-block.html', { 'id': 'question' })
@@ -30,6 +30,55 @@
             @@include('html/card-block.html', { 'id': 'question' })
             @@include('html/card-block.html', { 'id': 'question' })
             @@include('html/card-block.html', { 'id': 'question' })
+            <div class="products-grid-image">
+              <picture>
+                <source
+                  srcset="images/product-bunner-mobile.png"
+                  media="(max-width: 768px)"
+                />
+                <img class="wp-100" src="images/product-bunner.png" alt="" />
+              </picture>
+            </div>
+            @@include('html/card-block.html', { 'id': 'question' })
+            @@include('html/card-block.html', { 'id': 'question' })
+            @@include('html/card-block.html', { 'id': 'question' })
+            @@include('html/card-block.html', { 'id': 'question' })
+            @@include('html/card-block.html', { 'id': 'question' })
+            @@include('html/card-block.html', { 'id': 'question' })
+            @@include('html/card-block.html', { 'id': 'question' })
+            @@include('html/card-block.html', { 'id': 'question' })
+          </div>
+          <div class="custom-pagnation-container my-15 my-lg-30">
+            <a href="#" class="custom-pagnation-prev"
+              ><svg class="img">
+                <use xlink:href="images/icons/icons.svg#prev"></use></svg
+            ></a>
+            <div>
+              <a
+                class="custom-pagnation-link custom-pagnation-link--active"
+                href="#"
+                >1</a
+              >
+              <a
+                class="custom-pagnation-link"
+                href="#"
+                >2</a
+              >
+              <a
+                class="custom-pagnation-link"
+                href="#"
+                >3</a
+              >
+              <a
+                class="custom-pagnation-link"
+                href="#"
+                >4</a
+              >
+            </div>
+            <a href="#" class="custom-pagnation-next"
+              ><svg class="img">
+                <use xlink:href="images/icons/icons.svg#next"></use></svg
+            ></a>
           </div>
         </div>
       </section>
@@ -66,8 +115,10 @@
           </p>
         </div>
       </section>
-      @@include('html/reused-slider.html',
-      { 'title': 'Рекомендуемые товары', 'slider' : 'recomended-slider', 'slider-prev' : 'recomended-slider-button-prev', 'slider-next' : 'recomended-slider-button-next'})
+      @@include('html/reused-slider.html', { 'title': 'Рекомендуемые товары',
+      'slider' : 'recomended-slider', 'slider-prev' :
+      'recomended-slider-button-prev', 'slider-next' :
+      'recomended-slider-button-next'})
 
       <section class="minor-page-section">
         <div class="container">
@@ -85,12 +136,12 @@
         </div>
       </section>
 
-      @@include('html/tags-line.html', { })
-      @@include('html/reused-slider.html',
-      { 'title': 'Ранее вы смотрели', 'slider' : 'previously-viewed-slider', 'slider-prev' : 'previously-viewed-slider-button-prev', 'slider-next' : 'previously-viewed-slider-button-next'})
-      @@include('html/modal.html', {}) @@include('html/script.html', {})
+      @@include('html/tags-line.html', { }) @@include('html/reused-slider.html',
+      { 'title': 'Ранее вы смотрели', 'slider' : 'previously-viewed-slider',
+      'slider-prev' : 'previously-viewed-slider-button-prev', 'slider-next' :
+      'previously-viewed-slider-button-next'}) 
     </main>
-      @@include('html/footer.html', {}) @@include('html/modal.html', {})
-      @@include('html/script.html', {})
+    @@include('html/footer.html', {}) @@include('html/modal.html', {})
+    @@include('html/script.html', {})
   </body>
 </html>

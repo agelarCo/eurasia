@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Главная' })
+  <body class="page">
+    <main class="main">
+      @@include('html/header.html', { 'main-page': 'header--main-page'
+      })@@include('html/bradcrumbs.html', { }) @@include('html/float-menu.html',
+      { })
+      <section class="minor-page-section">
+        <div class="container">
+          <h1>Контакты</h1>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row gx-30 mb-30">
+          <div class="col-lg-5 contact-content pt-15 pt-lg-30">
+            <div class="d-flex gap-10 mb-15 mb-lg-40">
+              @@include('html/sprite.html', { 'id': 'map-contact', 'width':
+              '40', 'height': '40' })
+              <div>
+                <span class="fs-7 fs-lg-8 text-secondary">Офис в Москве</span>
+                <p class="fs-6 fs-lg-5 mb-0">Волгоградский проспект, д. 45</p>
+              </div>
+            </div>
+            <div class="d-flex gap-10 mb-15 mb-lg-30">
+              @@include('html/sprite.html', { 'id': 'house', 'width': '40',
+              'height': '40' })
+              <div>
+                <span class="fs-7 fs-lg-8 text-secondary">Склад</span>
+                <p class="fs-6 fs-lg-5 mb-0">Волгоградский проспект, д. 45</p>
+              </div>
+            </div>
+            <div class="d-flex gap-10 mb-15 mb-lg-30">
+              @@include('html/sprite.html', { 'id': 'phone-2', 'width': '40',
+              'height': '40' })
+              <div class="d-flex flex-column">
+                <span class="fs-7 fs-lg-8 text-secondary"
+                  >Пн-пт 8.00-18.00</span
+                >
+                <a href="#" class="fs-6 fs-lg-5 mb-0 text-body-color"
+                  >+7 (499) 302-36-30</a
+                >
+              </div>
+            </div>
+            <div class="d-flex gap-10 mb-15 mb-lg-30">
+              @@include('html/sprite.html', { 'id': 'mail', 'width': '40',
+              'height': '40' })
+              <div class="d-flex flex-column">
+                <span class="fs-7 fs-lg-8 text-secondary">Email</span>
+                <a href="$" class="fs-6 fs-lg-5 mb-0 text-body-color"
+                  >info@site.ru</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 contact-map">
+            <!-- !! У карты не обязательно указывать точные атрибуты размеров !! -->
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Af066845e1d544956d3021f2a0c150fd872a9b5f1db8905de9a68708c4ad91955&amp;source=constructor"
+              width="100%"
+              height="450"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </div>
+        <div
+          class="border border-dark mx-auto mt-15 mt-lg-30 mb-15 mb-lg-40"
+          style="max-width: 840px; border-radius: 5px"
+        >
+          <form class="modal-custom modal-content px-15 px-sm-60">
+            <p class="modal-custom__title">
+              Вы можете написать отзыв о покупке
+            </p>
+            <div>
+              <input
+                type="text"
+                class="text-center custom-input text-xl-start mb-30"
+                placeholder="Имя"
+              />
+
+              <div class="d-flex mb-30 gap-30 flex-column flex-lg-row">
+                <input
+                  type="text"
+                  class="text-center custom-input text-xl-start "
+                  placeholder="+7 (       )         -       -          "
+                />
+                <input
+                  type="text"
+                  class="text-center custom-input"
+                  placeholder="@"
+                />
+              </div>
+
+              <textarea
+                type="text"
+                class="custom-input mb-30"
+                style="height: 100px; resize: none"
+                placeholder="Текст отзыва"
+              ></textarea>
+            </div>
+
+            <div
+              class="d-flex justify-content-between flex-column flex-sm-row align-items-center"
+            >
+              <div class="submit-agree fs-8 fs-lg-7 mb-10 mb-sm-0">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="agree" />
+                  <svg class="img">
+                    <use xlink:href="images/icons/icons.svg#check-mark"></use>
+                  </svg> </label
+                >Согласен на обработку персональных данных
+              </div>
+              <input
+                class="btn btn-outline-primary bg-primary-hover text-body-color text-white-hover"
+                value="Отправить"
+                type="submit"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="box-title">
+          <div class="box-title__container">
+            <div class="box-title__title-decorate"></div>
+            <h2 class="box-title__title">Реквизиты</h2>
+          </div>
+        </div>
+        <section class="minor-page-section">
+          <p>
+            Наша компания уже 5 лет реализует металлопрокат и оказывает услуги
+            по его обработке. Результат нашей работы — сотни довольных клиентов
+            по всей стране и десятки долгосрочных соглашений о совместном
+            сотрудничестве.
+          </p>
+        </section>
+      </div>
+
+      @@include('html/footer.html', {}) @@include('html/modal.html', {})
+      @@include('html/script.html', {})
+    </main>
+  </body>
+</html>

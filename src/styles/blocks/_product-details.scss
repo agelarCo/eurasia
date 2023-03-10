@@ -108,3 +108,9 @@
         }
       }
 }
+
+
+
+.product-detail-tabs-qa__container div[aria-expanded=true] svg {
+  transform: rotate(-90deg);
+}

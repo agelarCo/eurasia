@@ -1,13 +1,3 @@
-/*
-!(i) 
-
-
-Код попадает в итоговый файл, только когда вызвана функция, например FLSFunctions.spollers();
-Или когда импортирован весь файл, например import "files/script.js";
-Неиспользуемый (не вызванный) код в итоговый файл не попадает.
-
-Если мы хотим добавить модуль следует его расскоментировать
-*/
 import {
   isWebp,
   headerFixed,
@@ -21,6 +11,7 @@ import Swiper, { Navigation, Pagination } from "swiper";
 import SimpleBar from "simplebar";
 import Tabs from "./tabs.js";
 import { Modal } from "bootstrap";
+import aaa from './filter/filter'
 
 if (document.querySelector(".product-detail-tabs")) {
   new Tabs(".product-detail-tabs");
@@ -148,11 +139,7 @@ document
     new SimpleBar(elem);
   });
 
-document
-  .querySelectorAll(".filter-btn-dropdown__scroller")
-  .forEach((elem, index) => {
-    new SimpleBar(elem);
-  });
+
 
 let filterBtnMore = document.querySelector(".filter-btn--more");
 let filterBlock = document.querySelector(".filter-block");
@@ -172,6 +159,17 @@ if (filterBtnMore) {
     filterBlock.classList.toggle("filter-block--rolled");
   });
 }
+
+/* Переключатель вида карточек ниже */
+
+/* if (document.querySelector('.products-grid')) {
+  document.querySelectorAll(".filter-line-btn--expand-toggler").forEach((elem, index) => {
+  elem.addEventListener('click', () => {
+    document.querySelector('.products-grid').classList.toggle('products-grid--row')
+  })
+});
+}
+ */
 
 let headerMenuDropdownListsLinks = document.querySelectorAll(
   ".header-menu-dropdown__list-link"
@@ -201,10 +199,6 @@ headerMenuDropdownListsLinks.forEach((element) => {
     element.classList.toggle("header-menu-dropdown__list-link--expand");
   });
 });
-/* headerMenuDropdownListsLinks.forEach((element, index), () => {
-  
-})
- */
 
 document.querySelectorAll(".products-card-char-list").forEach((elem, index) => {
   new SimpleBar(elem);
@@ -239,7 +233,7 @@ let floatMenu = document.querySelector(".float-menu");
 let currentScroll;
 window.addEventListener("scroll", () => {
   currentScroll = window.pageYOffset;
-  if (Number(currentScroll) > 150) {
+  if (Number(currentScroll) > 0) {
     headerContainer.classList.add("header--fixed");
   } else {
     headerContainer.classList.remove("header--fixed");
@@ -326,29 +320,6 @@ const recomendedGoodsSlider = new Swiper(".recomended-goods-slider", {
   },
 });
 
-/* const reusedSlider = new Swiper(".reused-slider", {
-  modules: [Navigation],
-  slidesPerView: 4,
-  spaceBetween: 30,
-  navigation: {
-    prevEl: ".reused-slider-button-prev",
-    nextEl: ".reused-slider-button-next",
-  },
-  breakpoints: {
-    1440: {
-      slidesPerView: 4,
-    },
-    992: {
-      spaceBetween: 30,
-      slidesPerView: 3,
-    },
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 15,
-    },
-  },
-});
- */
 let usefullArticlesSlider = new Swiper(".usefull-articles-slider", {
   modules: [Navigation],
   spaceBetween: 30,
@@ -547,51 +518,4 @@ inputFile.addEventListener("input", (e) => {
   };
 });
 
-/* Раскомментировать для использования */
-// import { MousePRLX } from './libs/parallaxMouse'
-
-/* Раскомментировать для использования */
-// import AOS from 'aos'
-
-// Включить/выключить FLS (Full Logging System) (в работе)
 window["FLS"] = location.hostname === "localhost";
-
-/* Проверка поддержки webp, добавление класса webp или no-webp для HTML
-! (i) необходимо для корректного отображения webp из css 
-*/
-isWebp();
-/* Добавление класса touch для HTML если браузер мобильный */
-/* Раскомментировать для использования */
-// addTouchClass();
-/* Добавление loaded для HTML после полной загрузки страницы */
-/* Раскомментировать для использования */
-// addLoadedClass();
-/* Модуль для работы с меню (Бургер) */
-/* Раскомментировать для использования */
-// menuInit()
-
-/* Библиотека для анимаций ===============================================================================
- *  документация: https://michalsnik.github.io/aos
- */
-// AOS.init();
-// =======================================================================================================
-
-// Паралакс мышей ========================================================================================
-// const mousePrlx = new MousePRLX({})
-// =======================================================================================================
-
-// Фиксированный header ==================================================================================
-// headerFixed()
-// =======================================================================================================
-
-/* Открытие/закрытие модальных окон ======================================================================
-* Чтобы модальное окно открывалось и закрывалось
-* На окно повешай атрибут data-type="<название окна>"
-* И на кнопку, которая вызывает окно так же повешай атрибут data-type="<название окна>"
-
-* На обертку(враппер) окна добавь класс _overlay-bg
-* На кнопку для закрытия окна добавь класс button-close
-*/
-/* Раскомментировать для использования */
-// togglePopupWindows()
-// =======================================================================================================

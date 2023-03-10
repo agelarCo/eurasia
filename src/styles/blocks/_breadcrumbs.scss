@@ -9,7 +9,8 @@
     background-color: $system-component;
     display: flex;
     align-items: center;
-    padding: 5px 17px 5px 10px;
+    padding: 5px 15px 5px 10px;
+    gap: 5px;
     position: relative;
     border-radius: 5px 0px 0px 5px;
     white-space: nowrap;
@@ -25,9 +26,17 @@
       top: 0;
       right: -12.9px;
     }
+    & svg {
+      transition: .3s ease;
+    }
   }
 
   &__link--active {
+  }
+  &__link:hover svg {
+    color: $primary;
+    transition: .3s ease;
+    transform: rotate(-180deg);
   }
   &__link:hover &__sublinks {
     display: block;
@@ -41,7 +50,7 @@
     width: 260px;
     height: 230px;
     border-radius: 5px;
-    display: none;
+    display: none;z-index: 10;
     &::before {
         content: "";
         display: block;
