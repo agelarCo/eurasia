@@ -11,7 +11,7 @@ import Swiper, { Navigation, Pagination } from "swiper";
 import SimpleBar from "simplebar";
 import Tabs from "./tabs.js";
 import { Modal } from "bootstrap";
-import aaa from './filter/filter'
+import aaa from "./filter/filter";
 
 if (document.querySelector(".product-detail-tabs")) {
   new Tabs(".product-detail-tabs");
@@ -107,13 +107,13 @@ fromInput.oninput = () =>
   controlFromInput(fromSlider, fromInput, toInput, toSlider);
 toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
 
-let headerMenu = document.querySelector(".header-menu");
+*/ let headerMenu = document.querySelector(".header-menu");
 let headerButtonsClose = document.querySelectorAll(".header-menu-close");
 headerButtonsClose.forEach((elem) => {
   elem.addEventListener("click", () => {
     headerMenu.classList.toggle("header-menu--visible");
   });
-}); */
+});
 document
   .querySelectorAll(".header-menu-dropdown__scrollbox")
   .forEach((elem, index) => {
@@ -138,8 +138,6 @@ document
   .forEach((elem, index) => {
     new SimpleBar(elem);
   });
-
-
 
 let filterBtnMore = document.querySelector(".filter-btn--more");
 let filterBlock = document.querySelector(".filter-block");
