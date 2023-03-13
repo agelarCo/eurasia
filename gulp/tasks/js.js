@@ -1,5 +1,6 @@
 import webpack from 'webpack-stream'
 import { webpackConfig } from '../../webpack.config.js'
+import terser from 'gulp-terser'
 
 export const js = () =>
   app.gulp
@@ -14,4 +15,5 @@ export const js = () =>
     )
     .pipe(webpack({ config: webpackConfig(app.isDev) }))
     .pipe(app.gulp.dest(app.path.build.js))
+    .pipe(terser())
     .pipe(app.plugins.browserSync.stream())
