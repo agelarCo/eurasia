@@ -1,4 +1,4 @@
-class ItcTabs {
+class Tabs {
   constructor(target, config) {
     const defaultConfig = {};
     this._config = Object.assign(defaultConfig, config);
@@ -47,4 +47,4 @@ class ItcTabs {
   }
 }
 
-export default ItcTabs;
+export default Tabs;

@@ -63,6 +63,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "photoswipe": "^5.3.6",
     "simplebar": "^6.2.1",
     "swiper": "^9.1.0",
     "vanilla-lazyload": "^17.8.3"

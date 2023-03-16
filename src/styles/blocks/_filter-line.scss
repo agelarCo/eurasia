@@ -58,6 +58,12 @@
 .filter-line-btn--filter {
   display: none;
 }
+
+.filter-line-btn--active {
+  svg {
+    color: $primary;
+  }
+}
 .filter-line-btn--col {
 }
 .filter-line-btn--row {

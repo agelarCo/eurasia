@@ -17,3 +17,6 @@ export const js = () =>
     .pipe(app.gulp.dest(app.path.build.js))
     .pipe(terser())
     .pipe(app.plugins.browserSync.stream())
+
+
+
