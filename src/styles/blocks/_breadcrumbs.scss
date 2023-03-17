@@ -27,15 +27,19 @@
       right: -12.9px;
     }
     & svg {
-      transition: .3s ease;
+      transition: 0.3s ease;
+      color: $primary;
     }
   }
 
   &__link--active {
+    & > a {
+      color: $primary;
+    }
   }
   &__link:hover svg {
     color: $primary;
-    transition: .3s ease;
+    transition: 0.3s ease;
     transform: rotate(-180deg);
   }
   &__link:hover &__sublinks {
@@ -50,15 +54,16 @@
     width: 260px;
     height: 230px;
     border-radius: 5px;
-    display: none;z-index: 10;
+    display: none;
+    z-index: 10;
     &::before {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 100%;
-        position: absolute;
-        top: -3px;
-        left: 0;
+      content: "";
+      display: block;
+      height: 3px;
+      width: 100%;
+      position: absolute;
+      top: -3px;
+      left: 0;
     }
     & a {
       display: block;

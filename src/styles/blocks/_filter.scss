@@ -116,6 +116,7 @@
     border: 1px solid $secondary;
     padding: 10px;
     border-radius: 5px;
+    width: 50%;
   }
   span {
     color: $secondary;
@@ -133,14 +134,13 @@
     font-size: 14px;
     position: relative;
     color: $body-color;
+    width: 100%;
   }
   &__input--from {
   }
   &__input--to {
   }
   &__input-range {
-  }
-  &__input-range--from {
   }
   &__input-range--to {
   }
@@ -164,8 +164,7 @@
   }
   
   input[type=range]::-webkit-slider-thumb:active {
-    box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
-    -webkit-box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+    box-shadow: inset 0 0 3px red, 0 0 9px $primary;
   }
   
 
@@ -193,7 +192,7 @@
 }
 
 .filter-btn-dropdown-range {
-  
+  min-width: 260px;
 }
 
 
