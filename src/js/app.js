@@ -133,14 +133,17 @@ const fromInput = document.querySelector(
   ".filter-btn-dropdown-range__input--from"
 );
 const toInput = document.querySelector(".filter-btn-dropdown-range__input--to");
-fillSlider(fromSlider, toSlider, "transparent", "#ff3048", toSlider);
-setToggleAccessible(toSlider);
 
-fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
-toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
-fromInput.oninput = () =>
-  controlFromInput(fromSlider, fromInput, toInput, toSlider);
-toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+if (toInput) {
+  fillSlider(fromSlider, toSlider, "transparent", "#ff3048", toSlider);
+  setToggleAccessible(toSlider);
+  fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
+  toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+  fromInput.oninput = () =>
+    controlFromInput(fromSlider, fromInput, toInput, toSlider);
+  toInput.oninput = () =>
+    controlToInput(toSlider, fromInput, toInput, toSlider);
+}
 
 const btnColExpand = document.querySelector(".filter-line-btn--col");
 const btnRowExpand = document.querySelector(".filter-line-btn--row");
@@ -303,24 +306,28 @@ boxForfilterCheckboxes.forEach(boxForcheckboxes => {
 
 let productCart = document.querySelectorAll(".products-card");
 let productOverflow = document.querySelectorAll(".products-card__overflow");
-let productOverflowButtonToggle = document.querySelectorAll(
+/* let productOverflowButtonToggle = document.querySelectorAll(
   ".products-card-overflow-toggle"
-);
+); */
 
-productCart.forEach((elem, indexOne) => {
+/* productCart.forEach((elem, indexOne) => {
   elem
-    .querySelectorAll(".products-card-overflow-toggle")
+    .querySelectorAll(".products-card__inner-image")
     .forEach((element, indexTwo) => {
-      element.addEventListener("click", () => {
+      element.addEventListener("mouseover", () => {
+        productOverflow[indexOne].classList.toggle(
+          "products-card__overflow--active"
+        );
+      });
+      element.addEventListener("mouseout", () => {
         productOverflow[indexOne].classList.toggle(
           "products-card__overflow--active"
         );
       });
     });
-});
+}); */
 
 let headerContainer = document.querySelector(".header");
-let floatMenu = document.querySelector(".float-menu");
 let currentScroll;
 window.addEventListener("scroll", () => {
   currentScroll = window.pageYOffset;
@@ -330,11 +337,11 @@ window.addEventListener("scroll", () => {
     headerContainer.classList.remove("header--fixed");
   }
 
-  if (Number(currentScroll) > 150) {
+  /* if (Number(currentScroll) > 150) {
     floatMenu.classList.add("float-menu--visible");
   } else {
     floatMenu.classList.remove("float-menu--visible");
-  }
+  } */
 });
 
 const certSlider = new Swiper(".cert-slider", {
