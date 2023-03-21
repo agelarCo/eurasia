@@ -11,12 +11,8 @@
   top: 250px;
   right: 200px;
   z-index: 10;
-  opacity: 0;
   transition: opacity 0.2s ease-in-out;
-  &--visible {
-    transition: opacity 0.2s ease-in-out;
-    opacity: 1;
-  }
+
   &__btn {
     background-color: $secondary;
     border-radius: 5px;
