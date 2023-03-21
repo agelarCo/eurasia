@@ -12,7 +12,7 @@ import SimpleBar from "simplebar";
 import Tabs from "./tabs.js";
 import { Modal } from "bootstrap";
 import LazyLoad from "vanilla-lazyload";
-
+console.log("")
 var lazyLoadInstance = new LazyLoad({});
 
 import PhotoSwipeLightbox from "photoswipe/lightbox";
