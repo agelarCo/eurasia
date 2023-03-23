@@ -226,6 +226,16 @@ document.querySelectorAll(".header-menu-simple-dropdown__scroller").forEach((ele
 });
 
 
+if (window.innerWidth <= 1200) {
+  let buttonHeaderForExpand = document.querySelectorAll('.header-menu__list-item--deep')
+  buttonHeaderForExpand.forEach((btn, idx) => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('header-menu__list-item--active-js')
+    })
+  })
+}
+
+
 document
   .querySelectorAll(".breadcrumb-list__sublinks-scrollbox")
   .forEach((elem, index) => {
