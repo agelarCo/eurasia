@@ -57,8 +57,7 @@
           <div class="d-flex gap-5 align-items-center">
             <a href="catalog.html" class="">Каталог </a>
             <div class="header-menu__list-item-arrow">
-              @@include('./sprite.html', { 'id':
-                          'down' })
+              @@include('./sprite.html', { 'id': 'down' })
             </div>
           </div>
           <div class="header-menu-dropdown">
@@ -460,8 +459,22 @@
             </div>
           </div>
         </li>
-        <li class="header-menu__list-item header-menu__list-item--deep">
-          <a href="sevices-page.html">Услуги</a>
+        <li class="header-menu__list-item header-menu__list-item--deep position-relative">
+          <div class="d-flex gap-5 align-items-center">
+            <a href="sevices-page.html" class="">Услуги </a>
+            <div class="header-menu__list-item-arrow">
+              @@include('./sprite.html', { 'id': 'down' })
+            </div>
+          </div>
+          <div class="header-menu-simple-dropdown">
+            <div class="header-menu-simple-dropdown__scroller">
+              <ul>
+                <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                
+              </ul>
+            </div>
+          </div>
         </li>
         <li class="header-menu__list-item">
           <a href="about-company.html">Компания</a>
