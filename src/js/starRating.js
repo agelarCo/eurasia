@@ -1,50 +1,54 @@
-const ratings = document.querySelectorAll(".rating");
-if (ratings.length > 0) {
-  initRatings();
-}
-// Основная функция
-function initRatings() {
-  let ratingActive, ratingValue;
-  // "Бегаем" по всем рейтингам на странице
-  for (let index = 0; index < ratings.length; index++) {
-    const rating = ratings[index];
-    initRating(rating);
-  }
 
-  function initRating(rating) {
-    initRatingVars(rating);
-    setRatingActiveWidth();
-
-    if (rating.classList.contains("rating--set")) {
-      setRating(rating);
-    }
+class RatingStars {
+  constructor(ratingHTMLContainer) {
+    this.ratingActive;
+    this.ratingValue;
+    this.ratingHTMLContainer = ratingHTMLContainer;
+    this._init();
   }
-  function initRatingVars(rating) {
-    ratingActive = rating.querySelector(".rating__active");
-    ratingValue = rating.querySelector(".rating__value");
+  _initRatingVars(rating) {
+    this.ratingActive = rating.querySelector(".rating__active");
+    this.ratingValue = rating.querySelector(".rating__value");
   }
-
-  function setRatingActiveWidth(index = ratingValue.innerHTML) {
+  _setRatingActiveWidth(index = this.ratingValue.innerHTML) {
+    console.log(index);
+    
     const ratingActiveWidth = index / 0.05;
-    ratingActive.style.width = `${ratingActiveWidth}%`;
+    this.ratingActive.style.width = `${ratingActiveWidth}%`;
   }
 
-  function setRating(rating) {
+  _setRating(rating) {
     const ratingItems = rating.querySelectorAll(`.rating__items`);
     for (let index = 0; index < ratingItems.length; index++) {
       const ratingItem = ratingItems[index];
       ratingItem.addEventListener("mouseenter", (e) => {
-        initRatingVars(rating);
-        setRatingActiveWidth(ratingItem.value);
+        console.log('entr');
+        
+        this._initRatingVars(rating);
+        this._setRatingActiveWidth(ratingItem.value);
       });
       ratingItem.addEventListener("mouseleave", (e) => {
-        setRatingActiveWidth();
+        console.log('leave');
+        
+        this._setRatingActiveWidth();
       });
       ratingItem.addEventListener("click", (e) => {
-        initRatingVars(rating);
-        ratingValue.innerHTML = index + 1;
-        setRatingActiveWidth();
+        this._initRatingVars(rating);
+        this.ratingValue.innerHTML = index + 1;
+        this._setRatingActiveWidth();
       });
     }
   }
+
+  _init() {
+    this._initRatingVars(this.ratingHTMLContainer);
+    this._setRatingActiveWidth();
+    if (this.ratingHTMLContainer.classList.contains("rating--set")) {
+      this._setRating(this.ratingHTMLContainer);
+    }
+    console.log(12312213);
+  }
 }
+
+
+export default RatingStars

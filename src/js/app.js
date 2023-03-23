@@ -12,7 +12,16 @@ import SimpleBar from "simplebar";
 import Tabs from "./tabs.js";
 import { Modal } from "bootstrap";
 import LazyLoad from "vanilla-lazyload";
-import './starRating.js'
+import StarRating from './starRating.js'
+
+
+let ratings = document.querySelectorAll('.rating')
+if (ratings) {
+  ratings.forEach((elem, index) => {
+    new StarRating(elem)
+  })
+}
+
 
 var lazyLoadInstance = new LazyLoad({});
 
