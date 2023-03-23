@@ -1,20 +1,26 @@
-
-  <nav class="float-menu">
-    <a href="#" class="float-menu__btn float-menu__btn--shop float-menu__btn--shop-active">
-      <span>9</span>
-      @@include('./sprite.html', { 'id': 'shop' })
-    </a>
-    <a href="#" class="float-menu__btn">
-      @@include('./sprite.html', { 'id': 'phone' })
-    </a>
-    <a href="#" class="float-menu__btn">
-      @@include('./sprite.html', { 'id': 'ruble' })
-    </a>
-    <a href="#" class="float-menu__btn">
-      @@include('./sprite.html', { 'id': 'question' })
-    </a>
-  </nav>
-
+<nav class="float-menu">
+  <a
+    href="#"
+    class="float-menu__btn float-menu__btn--shop float-menu__btn--shop-active"
+  >
+    <span>9</span>
+    @@include('./sprite.html', { 'id': 'shop' })
+  </a>
+  <a href="#" class="float-menu__btn">
+    @@include('./sprite.html', { 'id': 'phone' })
+  </a>
+  <a href="#" class="float-menu__btn">
+    @@include('./sprite.html', { 'id': 'ruble' })
+  </a>
+  <a
+    href="#"
+    class="float-menu__btn"
+    data-bs-toggle="modal"
+    data-bs-target="#modalQuestion"
+  >
+    @@include('./sprite.html', { 'id': 'question' })
+  </a>
+</nav>
 
 <!-- 
 <div class="float-menu-container">
