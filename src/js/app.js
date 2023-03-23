@@ -220,6 +220,12 @@ document.querySelectorAll(".table-scroller").forEach((elem, index) => {
   new SimpleBar(elem);
 });
 
+
+document.querySelectorAll(".header-menu-simple-dropdown__scroller").forEach((elem, index) => {
+  new SimpleBar(elem);
+});
+
+
 document
   .querySelectorAll(".breadcrumb-list__sublinks-scrollbox")
   .forEach((elem, index) => {
