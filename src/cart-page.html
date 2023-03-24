@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Главная' })
+  <body class="page">
+    @@include('html/header.html', { 'main-page': 'header--main-page'})
+
+    <main class="main">
+      @@include('html/bradcrumbs.html', { })
+      <section>
+        <div class="container">
+          <div class="d-flex gap-30 align-items-center mb-15 mb-lg-30">
+            <h1 class="mb-0">Корзина</h1>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container" id="msCart">
+          <div class="item-in-cart-block mb-15 mb-lg-30">
+            <a
+              href="#"
+              class="item-in-cart-block__inner-image box-aspect box-aspect--square responsive-img"
+            >
+              <img class="responsive-img__image" src="" alt="" />
+            </a>
+            <a href="#" class="item-in-cart-block__name">
+              Рулон холоднокатаный 2.6 мм
+            </a>
+            <form
+              method="post"
+              class="item-in-cart-block__inner-control ms2_form"
+              role="form"
+            >
+              <div class="cart-control-value">
+                <button
+                  data-type="minus"
+                  data-field="count-388-1"
+                  class="cart-control-value__decr cart-control-value__btn"
+                  style="appearance: none"
+                >
+                  -
+                </button>
+                <input
+                  class="cart-control-value__input"
+                  value="1"
+                  type="text"
+                  name="count"
+                  id="count-388-1"
+                  value="1"
+                  data-min="1"
+                  data-max="99999999"
+                />
+                <button
+                  data-type="plus"
+                  data-field="count-388-1"
+                  class="cart-control-value__increm cart-control-value__btn"
+                >
+                  +
+                </button>
+              </div>
+              <div class="item-in-cart-block__price">1200 руб.</div>
+            </form>
+            <div class="d-flex justify-content-center">
+              <form method="post" class="ms2_form">
+                <input
+                  type="hidden"
+                  name="key"
+                  value="f4cdb1ddc6a08b0fd324a60bdc90da26"
+                />
+                <button
+                  class="item-in-cart-block__btn-del btn"
+                  type="submit"
+                  name="ms2_action"
+                  value="cart/remove"
+                  title="Удалить"
+                >
+                  <span class="d-lg-none d-inline-block">Удалить</span>
+                  <svg
+                    style="width: 15px; height: 15px"
+                    class="d-lg-inline-block d-none"
+                  >
+                    <use xlink:href="images/icons/icons.svg#close"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="cart-total-wrapper">
+            <div class="d-flex gap-5 mb-15">
+              <div class="fs-5">
+                <span>Итого: </span>
+                <span class="total_count">
+                  <span class="ms2_total_count fw-bold">5</span>
+                  шт.
+                </span>
+                на сумму
+              </div>
+              <span class="total_cost fs-4">
+                <span class="ms2_total_cost fw-bold">36 450</span>
+                ₽
+              </span>
+            </div>
+            <div class="d-flex gap-5">
+              <form method="post" style="display: inline">
+                <button
+                  class="btn-outline-danger btn d-flex align-items-center"
+                  type="submit"
+                  name="ms2_action"
+                  value="cart/clean"
+                  title="Очистить корзину"
+                >
+                @@include('./html/sprite.html', { 'id': 'trashs', 'width': '18px', 'height': '24px' })
+                </button>
+              </form>
+              <a
+                href="sluzhebnyie-straniczyi/oformlenie-zakaza"
+                class="btn btn-primary text-white"
+                >Оформить заказ</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/footer.html', {}) @@include('html/modal.html', {})
+      @@include('html/script.html', {})
+    </main>
+  </body>
+</html>
