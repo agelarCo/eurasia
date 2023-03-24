@@ -12,7 +12,21 @@ import SimpleBar from "simplebar";
 import Tabs from "./tabs.js";
 import { Modal } from "bootstrap";
 import LazyLoad from "vanilla-lazyload";
+<<<<<<< HEAD
 console.log("")
+=======
+import StarRating from './starRating.js'
+
+
+let ratings = document.querySelectorAll('.rating')
+if (ratings) {
+  ratings.forEach((elem, index) => {
+    new StarRating(elem)
+  })
+}
+
+
+>>>>>>> 210cff1c6f5bc99d67f6079401d401caf9610801
 var lazyLoadInstance = new LazyLoad({});
 
 import PhotoSwipeLightbox from "photoswipe/lightbox";
