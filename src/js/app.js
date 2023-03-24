@@ -655,8 +655,6 @@ if(inputFile){
     };
   });
 }
-window["FLS"] = location.hostname === "localhost";
-
 
 let btnsByOneClick = document.querySelectorAll("[data-bs-target='#modalOrder']");
 btnsByOneClick.forEach(function(el){
@@ -668,3 +666,7 @@ btnsByOneClick.forEach(function(el){
     }
   }
 });
+
+window["FLS"] = location.hostname === "localhost";
+
+
