@@ -12,6 +12,7 @@ import SimpleBar from "simplebar";
 import Tabs from "./tabs.js";
 import { Modal } from "bootstrap";
 import LazyLoad from "vanilla-lazyload";
+
 import StarRating from './starRating.js'
 
 
@@ -21,6 +22,7 @@ if (ratings) {
     new StarRating(elem)
   })
 }
+
 
 
 var lazyLoadInstance = new LazyLoad({});
@@ -226,8 +228,18 @@ document
 document.querySelectorAll(".reviwe-block-scroller").forEach((elem, index) => {
   new SimpleBar(elem);
 });
-document.querySelectorAll(".table-scroller").forEach((elem, index) => {
-  new SimpleBar(elem);
+document.querySelectorAll("table").forEach((elem, index) => {
+  if(elem.dataset.tableScroller == false || elem.parentElement.parentElement.classList.contains("table-scroller")) return;
+
+  let scrollerContainer = document.createElement("div");
+  scrollerContainer.classList.add("table-scroller");
+  elem.parentElement.insertBefore(scrollerContainer, elem);
+  let containerTable = document.createElement("div");
+  containerTable.classList.add("table-custom");
+  containerTable.appendChild(elem);
+  scrollerContainer.appendChild(containerTable);
+
+  new SimpleBar(scrollerContainer);
 });
 
 
@@ -625,21 +637,36 @@ let inputFile = document.querySelector(".input-file");
 let blockContainer = document.querySelector(
   ".modal-custom-attach__inner-image"
 );
-inputFile.addEventListener("input", (e) => {
-  const unraw = e.target.files[0];
-  let image = blockContainer.querySelector("img");
-  if (image) {
-    image.remove();
+if(inputFile){
+  inputFile.addEventListener("input", (e) => {
+    const unraw = e.target.files[0];
+    let image = blockContainer.querySelector("img");
+    if (image) {
+      image.remove();
+    }
+    let reader = new FileReader();
+    reader.readAsDataURL(unraw);
+    reader.onload = (e) => {
+      let images = document.createElement("img");
+      images.width = 150;
+      images.style.cssText = "margin: 10px 0";
+      images.src = e.target.result;
+      blockContainer.append(images);
+    };
+  });
+}
+
+let btnsByOneClick = document.querySelectorAll("[data-bs-target='#modalOrder']");
+btnsByOneClick.forEach(function(el){
+  let form = document.querySelectorAll(el.dataset.bsTarget + ' form');
+  if(form){
+    let input = form.querySelector("[name='product']");
+    if(input && el.dataset.product){
+      input.value = el.dataset.product;
+    }
   }
-  let reader = new FileReader();
-  reader.readAsDataURL(unraw);
-  reader.onload = (e) => {
-    let images = document.createElement("img");
-    images.width = 150;
-    images.style.cssText = "margin: 10px 0";
-    images.src = e.target.result;
-    blockContainer.append(images);
-  };
 });
 
 window["FLS"] = location.hostname === "localhost";
+
+
