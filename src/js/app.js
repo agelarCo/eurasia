@@ -12,9 +12,7 @@ import SimpleBar from "simplebar";
 import Tabs from "./tabs.js";
 import { Modal } from "bootstrap";
 import LazyLoad from "vanilla-lazyload";
-<<<<<<< HEAD
-console.log("")
-=======
+
 import StarRating from './starRating.js'
 
 
@@ -26,7 +24,7 @@ if (ratings) {
 }
 
 
->>>>>>> 210cff1c6f5bc99d67f6079401d401caf9610801
+
 var lazyLoadInstance = new LazyLoad({});
 
 import PhotoSwipeLightbox from "photoswipe/lightbox";
@@ -658,3 +656,15 @@ if(inputFile){
   });
 }
 window["FLS"] = location.hostname === "localhost";
+
+
+let btnsByOneClick = document.querySelectorAll("[data-bs-target='#modalOrder']");
+btnsByOneClick.forEach(function(el){
+  let form = document.querySelectorAll(el.dataset.bsTarget + ' form');
+  if(form){
+    let input = form.querySelector("[name='product']");
+    if(input && el.dataset.product){
+      input.value = el.dataset.product;
+    }
+  }
+});
