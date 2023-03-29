@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Главная' })
+  <body class="page">
+    @@include('html/header.html', { 'main-page': 'header--main-page'})
+
+    <main class="main">
+      @@include('html/bradcrumbs.html', { })
+      <section>
+        <div class="container">
+          <div class="d-flex gap-30 align-items-center mb-20 mb-lg-30">
+            <h1 class="mb-0">Оформление заказа</h1>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="d-flex gap-5 fs-5 fw-bold mb-30">
+                @@include('html/sprite.html', { 'id': 'user', 'width': '20px',
+                'height': '20px' }) Заполните контактную информацию:
+              </div>
+              <input
+                type="text"
+                class="custom-input custom-input--error mb-20"
+                placeholder="Получатель"
+              />
+              <input
+                type="text"
+                class="custom-input custom-input--error mb-20"
+                placeholder="Телефон"
+              />
+              <input
+                type="text"
+                class="custom-input custom-input--error mb-20"
+                placeholder="Email"
+              />
+              <input
+                type="text"
+                class="custom-input custom-input--error mb-20"
+                placeholder="Город"
+              />
+              <input
+                type="text"
+                class="custom-input custom-input--error mb-20"
+                placeholder="Улица"
+              />
+              <div class="d-flex gap-10 mb-20 flex-column flex-lg-row">
+                <input
+                  type="text"
+                  class="custom-input custom-input--error"
+                  placeholder="Дом"
+                />
+                <input
+                  type="text"
+                  class="custom-input custom-input--error"
+                  placeholder="Квартира"
+                />
+              </div>
+              <textarea
+                type="text"
+                class="mb-30 custom-input"
+                style="height: 100px; resize: none"
+                placeholder="Текст отзыва"
+              ></textarea>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex gap-5 fs-5 fw-bold align-items-center mb-30">
+                @@include('html/sprite.html', { 'id': 'delivery', 'width':
+                '20px', 'height': '20px' }) Выберите вариант доставки:
+              </div>
+              <label class="custom-checkbox mb-15">
+                <div>
+                  <input type="checkbox" name="var" />
+                  <svg style="width: @@width; height: @@height" class="img">
+                    <use xlink:href="images/icons/icons.svg#check-mark"></use>
+                  </svg>
+                </div>
+                <span class="text-body-color  fs-5">Самовывоз с ул. Ленина, 18</span>
+              </label>
+              <label class="custom-checkbox mb-15">
+                <div>
+                  <input type="checkbox" name="var" />
+                  <svg style="width: @@width; height: @@height" class="img">
+                    <use xlink:href="images/icons/icons.svg#check-mark"></use>
+                  </svg>
+                </div>
+                <span class="text-body-color  fs-5">Самовывоз с ул. Ленина, 18</span>
+              </label>
+              <label class="custom-checkbox mb-15">
+                <div>
+                  <input type="checkbox" name="var" />
+                  <svg style="width: @@width; height: @@height" class="img">
+                    <use xlink:href="images/icons/icons.svg#check-mark"></use>
+                  </svg>
+                </div>
+                <span class="text-body-color fs-5">Самовывоз с ул. Ленина, 18</span>
+              </label>
+              <p>Стоимость зависит от пункта назначения.
+                Тарифы можно посмотреть на сайте 
+                <a href="#">Почты России</a>
+                </p>
+
+
+                <div class="d-flex gap-5 fs-5 fw-bold align-items-center mb-30">
+                    @@include('html/sprite.html', { 'id': 'debit-card', 'width':
+                    '25px', 'height': '20px' }) Способы оплаты:
+                  </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/footer.html', {}) @@include('html/modal.html', {})
+      @@include('html/script.html', {})
+    </main>
+  </body>
+</html>
