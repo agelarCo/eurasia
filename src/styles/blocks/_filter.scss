@@ -3,6 +3,7 @@
   background-color: $system-component;
   position: absolute;
   top: -80px;
+  border-radius: 10px;
   left: 0;
   z-index: 100;
   &::after {
@@ -33,9 +34,16 @@
 
 @media (max-width: 1200px) {
   .filter-btn-details-avialable {
+    top: 100%;
     
     left: 50%;
     transform: translateX(-50%);
+
+    &::after { 
+      top: auto;
+      bottom: 67px;
+      transform: rotate(180deg);
+    }
     &__inner-state {
       text-align: center;
     }
