@@ -13,8 +13,8 @@ import Tabs from "./tabs.js";
 import { Modal } from "bootstrap";
 import LazyLoad from "vanilla-lazyload";
 
-import StarRating from './starRating.js'
-
+import StarRating from './starRating.js';
+import easyComm from './easyComm.js';
 
 let ratings = document.querySelectorAll('.rating')
 if (ratings) {
@@ -23,7 +23,9 @@ if (ratings) {
   })
 }
 
-
+document.addEventListener("DOMContentLoaded", function(){
+  easyComm.initialize();
+});
 
 var lazyLoadInstance = new LazyLoad({});
 
@@ -656,9 +658,9 @@ if(inputFile){
   });
 }
 
-let btnsByOneClick = document.querySelectorAll("[data-bs-target='#modalOrder']");
+let btnsByOneClick = document.querySelectorAll("[data-bs-target='#modalOrder'], [data-bs-target='#modalQuestionProduct'], [data-bs-target='#modalGetPriceProduct']");
 btnsByOneClick.forEach(function(el){
-  let form = document.querySelectorAll(el.dataset.bsTarget + ' form');
+  let form = document.querySelector(el.dataset.bsTarget + ' form');
   if(form){
     let input = form.querySelector("[name='product']");
     if(input && el.dataset.product){

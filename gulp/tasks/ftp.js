@@ -17,5 +17,4 @@ export const ftp = () => {
       )
     )
     .pipe(ftpConnect.dest(`/${app.path.ftp}/public_html/html/`));
-    .pipe(ftpConnect.dest(`/${app.path.ftp}/public_html/html`));
 };
