@@ -12,7 +12,8 @@ import SimpleBar from "simplebar";
 import Tabs from "./tabs.js";
 import { Modal } from "bootstrap";
 import LazyLoad from "vanilla-lazyload";
-
+import $ from 'jquery'
+import './filter/Filter.js'
 import StarRating from './starRating.js'
 
 

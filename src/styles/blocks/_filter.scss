@@ -1,3 +1,55 @@
+.filter-btn-details-avialable {
+  padding: 10px;
+  background-color: $system-component;
+  position: absolute;
+  top: -80px;
+  left: 0;
+  z-index: 100;
+  &::after {
+    content: '';
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 10px solid $system-component;
+  }
+  &__inner-state {
+    text-align: center;
+  }
+  &__find-value {
+    span {
+      font-weight: bold;
+    }
+  }
+  &__link {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 1200px) {
+  .filter-btn-details-avialable {
+    
+    left: 50%;
+    transform: translateX(-50%);
+    &__inner-state {
+      text-align: center;
+    }
+    &__find-value {
+      span {
+        font-weight: bold;
+      }
+    }
+    &__link {
+      text-decoration: underline;
+    }
+  }
+}
+
 .filter {
   padding: 15px 0;
   &__title {
@@ -36,22 +88,21 @@
   &:hover .filter-btn-dropdown {
     display: block;
   }
- 
+
   &__title {
     font-size: 14px;
     display: flex;
     gap: 15px;
     align-items: center;
     white-space: nowrap;
-    &  svg {
-      transition: transform .3s ease;
+    & svg {
+      transition: transform 0.3s ease;
     }
   }
 
-
   &:hover &__title {
-    &  svg {
-      transition: transform .3s ease;
+    & svg {
+      transition: transform 0.3s ease;
       transform: rotate(180deg);
     }
   }
@@ -109,7 +160,6 @@
 .filter-btn--down {
 }
 
-
 .filter-btn-dropdown-range {
   &__box-input {
     position: relative;
@@ -145,46 +195,40 @@
   &__input-range--to {
   }
 
-
-  
-  
-  
-  input[type=range]::-webkit-slider-thumb {
+  input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     pointer-events: all;
     width: 15px;
     height: 15px;
     background-color: $primary;
     border-radius: 50%;
-    box-shadow: 0 0 0 1px #C6C6C6;
+    box-shadow: 0 0 0 1px #c6c6c6;
     cursor: pointer;
   }
-  input[type=range]::-webkit-slider-thumb:hover {
+  input[type="range"]::-webkit-slider-thumb:hover {
     background: $primary;
   }
-  
-  input[type=range]::-webkit-slider-thumb:active {
+
+  input[type="range"]::-webkit-slider-thumb:active {
     box-shadow: inset 0 0 3px red, 0 0 9px $primary;
   }
-  
 
-  
-  input[type=number]::-webkit-inner-spin-button, 
-  input[type=number]::-webkit-outer-spin-button {  
-     opacity: 1;
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
   }
-  
+
   input[type="range"] {
-    -webkit-appearance: none; 
+    -webkit-appearance: none;
     appearance: none;
     height: 5px;
     width: 100%;
     position: absolute;
-    background-color: #E6E6E6;
+    background-color: #e6e6e6;
     pointer-events: none;
     border-radius: 5px;
   }
-  
+
   &__input-range--from {
     height: 0;
     z-index: 1;
@@ -194,8 +238,6 @@
 .filter-btn-dropdown-range {
   min-width: 260px;
 }
-
-
 
 @media (max-width: 1200px) {
   .filter {
@@ -250,7 +292,7 @@
     padding: 10px;
     z-index: 10;
     border-radius: 5px;
-    
+
     &__scroller {
       width: 100%;
       height: 190px;
