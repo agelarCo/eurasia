@@ -9,6 +9,7 @@
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "deployFTP": "gulp deployFTP --build",
+    "deployJS": "gulp deployJS --build",
     "svgSprive": "gulp svgSprive",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build",

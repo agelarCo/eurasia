@@ -23,6 +23,7 @@ if (ratings) {
   })
 }
 
+
 document.addEventListener("DOMContentLoaded", function(){
   easyComm.initialize();
 });
@@ -639,34 +640,21 @@ let inputFile = document.querySelector(".input-file");
 let blockContainer = document.querySelector(
   ".modal-custom-attach__inner-image"
 );
-if(inputFile){
-  inputFile.addEventListener("input", (e) => {
-    const unraw = e.target.files[0];
-    let image = blockContainer.querySelector("img");
-    if (image) {
-      image.remove();
-    }
-    let reader = new FileReader();
-    reader.readAsDataURL(unraw);
-    reader.onload = (e) => {
-      let images = document.createElement("img");
-      images.width = 150;
-      images.style.cssText = "margin: 10px 0";
-      images.src = e.target.result;
-      blockContainer.append(images);
-    };
-  });
-}
-
-let btnsByOneClick = document.querySelectorAll("[data-bs-target='#modalOrder'], [data-bs-target='#modalQuestionProduct'], [data-bs-target='#modalGetPriceProduct']");
-btnsByOneClick.forEach(function(el){
-  let form = document.querySelector(el.dataset.bsTarget + ' form');
-  if(form){
-    let input = form.querySelector("[name='product']");
-    if(input && el.dataset.product){
-      input.value = el.dataset.product;
-    }
+inputFile.addEventListener("input", (e) => {
+  const unraw = e.target.files[0];
+  let image = blockContainer.querySelector("img");
+  if (image) {
+    image.remove();
   }
+  let reader = new FileReader();
+  reader.readAsDataURL(unraw);
+  reader.onload = (e) => {
+    let images = document.createElement("img");
+    images.width = 150;
+    images.style.cssText = "margin: 10px 0";
+    images.src = e.target.result;
+    blockContainer.append(images);
+  };
 });
 
 window["FLS"] = location.hostname === "localhost";

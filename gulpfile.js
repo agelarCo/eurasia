@@ -14,6 +14,7 @@ import { otfToTtf, ttfToWoff, fontStyle } from './gulp/tasks/fonts.js'
 import { svgSprive } from './gulp/tasks/svgSprive.js'
 import { zip } from './gulp/tasks/zip.js'
 import { ftp } from './gulp/tasks/ftp.js'
+import {deployJs} from './gulp/tasks/deployJs'
 
 // Передаем значения в глобальную переменную
 global.app = {
@@ -42,9 +43,10 @@ const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server))
 const build = gulp.series(reset,  mainTasks)
 const deployZIP = gulp.series(reset, mainTasks, zip)
 const deployFTP = gulp.series(reset, mainTasks, ftp)
+const deployJS = gulp.series(reset, mainTasks, deployJs)
 
 // Выполнение сценария по умолчанию
 gulp.task('default', dev)
 
 // Экспорт сценариев
-export { dev, build, deployZIP, deployFTP, svgSprive }
+export { dev, build, deployZIP, deployFTP, svgSprive, deployJS }
