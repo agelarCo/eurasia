@@ -64,6 +64,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "jquery": "^3.6.4",
     "photoswipe": "^5.3.6",
     "simplebar": "^6.2.1",
     "swiper": "^9.1.0",

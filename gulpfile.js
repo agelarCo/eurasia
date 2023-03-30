@@ -14,7 +14,7 @@ import { otfToTtf, ttfToWoff, fontStyle } from './gulp/tasks/fonts.js'
 import { svgSprive } from './gulp/tasks/svgSprive.js'
 import { zip } from './gulp/tasks/zip.js'
 import { ftp } from './gulp/tasks/ftp.js'
-import {deployJs} from './gulp/tasks/deployJs'
+import {deployJs} from './gulp/tasks/deployJs.js'
 
 // Передаем значения в глобальную переменную
 global.app = {
