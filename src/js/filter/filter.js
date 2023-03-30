@@ -1,5 +1,5 @@
 import Floating from "./FloatingAvailabilityGoods";
-import $ from "jquery";
+
 class Filter {
   constructor(filterSelector) {
     this.filterSelector = filterSelector;
@@ -24,7 +24,7 @@ class Filter {
   async onChangeFilter(element) {
     const coords = element.getBoundingClientRect();
     const wrapperBtn = element.closest(".filter-btn");
-    let response = await fetch("./fake-data.json", {
+    let response = await fetch("assets/sfa/snippets/sfa_getCountAndLink.php", {
       method: "POST",
       headers: {
         // 'Content-Type': 'application/json;charset=utf-8'
@@ -54,7 +54,7 @@ class Filter {
       //data.append('price', [priceRange.result.from, priceRange.result.to]);
     }
 
-    console.log(this.inputs);
+   
 
     this.inputs.forEach((input) => {
       if (input.checked) {
@@ -75,6 +75,7 @@ class Filter {
     return data;
   }
   showFoundBtn(count, link, coords, wrapperBtn) {
+    console.log(wrapperBtn)
     Floating.deatroyThis();
     new Floating(wrapperBtn, count, link)
     /* const previousBtn = document.querySelector(".found-btn");
