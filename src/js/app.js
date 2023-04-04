@@ -128,8 +128,8 @@ function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
     ${sliderColor} 100%)`;
 }
 
-function setToggleAccessible(currentTarget) {
-  const toSlider = document.querySelector(
+function setToggleAccessible(currentTarget, item) {
+  const toSlider = item.querySelector(
     ".filter-btn-dropdown-range__input-range--from"
   );
   if (Number(currentTarget.value) <= 0) {
@@ -139,27 +139,29 @@ function setToggleAccessible(currentTarget) {
   }
 }
 
-const fromSlider = document.querySelector(
-  ".filter-btn-dropdown-range__input-range--from"
-);
-const toSlider = document.querySelector(
-  ".filter-btn-dropdown-range__input-range--to"
-);
-const fromInput = document.querySelector(
-  ".filter-btn-dropdown-range__input--from"
-);
-const toInput = document.querySelector(".filter-btn-dropdown-range__input--to");
+const boxRangeFilter = document.querySelectorAll(".filter-btn-dropdown-range").forEach(function(item){
+  const fromSlider = item.querySelector(
+    ".filter-btn-dropdown-range__input-range--from"
+  );
+  const toSlider = item.querySelector(
+    ".filter-btn-dropdown-range__input-range--to"
+  );
+  const fromInput = item.querySelector(
+    ".filter-btn-dropdown-range__input--from"
+  );
+  const toInput = item.querySelector(".filter-btn-dropdown-range__input--to");
 
-if (toInput) {
-  fillSlider(fromSlider, toSlider, "transparent", "#ff3048", toSlider);
-  setToggleAccessible(toSlider);
-  fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
-  toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
-  fromInput.oninput = () =>
-    controlFromInput(fromSlider, fromInput, toInput, toSlider);
-  toInput.oninput = () =>
-    controlToInput(toSlider, fromInput, toInput, toSlider);
-}
+  if (toInput) {
+    fillSlider(fromSlider, toSlider, "transparent", "#ff3048", toSlider);
+    setToggleAccessible(toSlider, item);
+    fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
+    toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+    fromInput.oninput = () =>
+      controlFromInput(fromSlider, fromInput, toInput, toSlider);
+    toInput.oninput = () =>
+      controlToInput(toSlider, fromInput, toInput, toSlider);
+  }
+});
 
 const btnColExpand = document.querySelector(".filter-line-btn--col");
 const btnRowExpand = document.querySelector(".filter-line-btn--row");
@@ -265,6 +267,9 @@ if (window.innerWidth <= 1200) {
 document
   .querySelectorAll(".breadcrumb-list__sublinks-scrollbox")
   .forEach((elem, index) => {
+    if(elem.parentElement.clientHeight < elem.clientHeight)
+      elem.parentElement.style.height = elem.parentElement.clientHeight + "px";
+
     new SimpleBar(elem);
   });
 
@@ -273,16 +278,25 @@ let filterBlock = document.querySelector(".filter-block");
 if (filterBtnMore) {
   filterBtnMore.addEventListener("click", () => {
     let textBtn = filterBtnMore.querySelector("span");
+    let toggleText = filterBtnMore.getAttribute("data-toggle-text");
+    filterBtnMore.setAttribute("data-toggle-text", textBtn.textContent);
+    textBtn.textContent = toggleText;
 
-    switch (textBtn.textContent) {
-      case "Развернуть ещё":
-        textBtn.textContent = "Свернуть";
-        break;
+    let open = !Boolean(Number(filterBtnMore.getAttribute("data-open")));
+    filterBtnMore.setAttribute("data-open", Number(open));
+    
+    let start = Number(filterBtnMore.dataset.start);
+    if(isNaN(start))
+      start = 0;
 
-      case "Свернуть":
-        textBtn.textContent = "Развернуть ещё";
-        break;
+    for(let i = start; i < filterBlock.children.length-1; i++){
+      if(open){
+        filterBlock.children[i].classList.remove("d-none");
+      }else{
+        filterBlock.children[i].classList.add("d-none");
+      }
     }
+
     filterBlock.classList.toggle("filter-block--rolled");
   });
 }
@@ -313,18 +327,19 @@ filterExpandBtns.forEach((element) => {
 
 headerMenuDropdownListsLinks.forEach((element) => {
   let btnExpand = element.querySelector(".header-menu-dropdown-btn-expand");
-  btnExpand.addEventListener("click", (event) => {
-    switch (event.target.textContent) {
-      case "Ещё":
-        event.target.textContent = "Свернуть";
-        break;
+  if(btnExpand)
+    btnExpand.addEventListener("click", (event) => {
+      switch (event.target.textContent) {
+        case "Ещё":
+          event.target.textContent = "Свернуть";
+          break;
 
-      case "Свернуть":
-        event.target.textContent = "Ещё";
-        break;
-    }
-    element.classList.toggle("header-menu-dropdown__list-link--expand");
-  });
+        case "Свернуть":
+          event.target.textContent = "Ещё";
+          break;
+      }
+      element.classList.toggle("header-menu-dropdown__list-link--expand");
+    });
 });
 
 document.querySelectorAll(".products-card-char-list").forEach((elem, index) => {
@@ -641,21 +656,82 @@ let inputFile = document.querySelector(".input-file");
 let blockContainer = document.querySelector(
   ".modal-custom-attach__inner-image"
 );
-inputFile.addEventListener("input", (e) => {
-  const unraw = e.target.files[0];
-  let image = blockContainer.querySelector("img");
-  if (image) {
-    image.remove();
+if(inputFile){
+  inputFile.addEventListener("input", (e) => {
+    const unraw = e.target.files[0];
+    let image = blockContainer.querySelector("img");
+    if (image) {
+      image.remove();
+    }
+    let reader = new FileReader();
+    reader.readAsDataURL(unraw);
+    reader.onload = (e) => {
+      let images = document.createElement("img");
+      images.width = 150;
+      images.style.cssText = "margin: 10px 0";
+      images.src = e.target.result;
+      blockContainer.append(images);
+    };
+  });
+}
+document.querySelectorAll(".sort-products--js").forEach(function(item){
+  item.querySelectorAll("[name='sort'").forEach(function(input){
+    input.addEventListener("input", function(){
+      let url = new URL(window.location.href);
+      url.searchParams.set("sort", this.value);
+      window.location.href = url.href;
+    });
+  });
+});
+
+const bannerCategory = document.querySelector("#banner-category--js");
+if(bannerCategory){
+  let image = bannerCategory.dataset.image;
+  let imageMobile = bannerCategory.dataset.imageMobile;
+  bannerCategory.remove();
+  let picture = `
+    <div class="products-grid-image">
+      <picture>
+        <source srcset="${imageMobile}" media="(max-width: 768px)">
+        <img class="wp-100" src="${image}" alt="Баннер">
+      </picture>
+    </div>
+  `;
+
+  const productContainer = document.querySelector("#products-container--js");
+  if(productContainer){
+    let products = productContainer.querySelectorAll(".products-card");
+    let pos = -1;
+    if(products.length > 3){
+      if(products.length%2){
+        pos = (products.length - products.length%2)/2;
+      }else{
+        pos = products.length/2;
+      }
+      pos -= 1;
+    }else if(products.length == 1){
+      pos = 0;
+    }
+
+    console.log(pos, image);
+    if(pos != -1){
+      products[pos].insertAdjacentHTML('afterend', picture);
+    }else{
+      productContainer.insertAdjacentHTML("beforeend",picture)
+    }
   }
-  let reader = new FileReader();
-  reader.readAsDataURL(unraw);
-  reader.onload = (e) => {
-    let images = document.createElement("img");
-    images.width = 150;
-    images.style.cssText = "margin: 10px 0";
-    images.src = e.target.result;
-    blockContainer.append(images);
-  };
+}
+
+
+let btnsByOneClick = document.querySelectorAll("[data-bs-target='#modalOrder'], [data-bs-target='#modalQuestionProduct'], [data-bs-target='#modalGetPriceProduct']");
+btnsByOneClick.forEach(function(el){
+  let form = document.querySelector(el.dataset.bsTarget + ' form');
+  if(form){
+    let input = form.querySelector("[name='product']");
+    if(input && el.dataset.product){
+      input.value = el.dataset.product;
+    }
+  }
 });
 
 window["FLS"] = location.hostname === "localhost";

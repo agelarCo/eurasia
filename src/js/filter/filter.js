@@ -54,18 +54,17 @@ class Filter {
       //data.append('price', [priceRange.result.from, priceRange.result.to]);
     }
 
-   
+    console.log(this.inputs);
 
     this.inputs.forEach((input) => {
       if (input.checked) {
-        if (data.has(input.name)) {
-          let was = data.get(input.name);
-          data.delete(input.name);
-          const now = (was += `;${input.value}`);
-          data.append(input.name, now);
-        } else {
-          data.append(input.name, input.value);
-        }
+        this._addToData(data, input);
+      }else if(input.getAttribute("type") == "range"){
+        this._addToData(data, input);
+        this._addToData(data, {
+          name: input.name+"_default",
+          value: input.dataset.default
+        });
       }
     });
 
@@ -74,8 +73,20 @@ class Filter {
     }
     return data;
   }
+
+  _addToData(data, input){
+    if (data.has(input.name)) {
+      let was = data.get(input.name);
+      data.delete(input.name);
+      const now = (was += `;${input.value}`);
+      data.append(input.name, now);
+    } else {
+      data.append(input.name, input.value);
+    }
+
+    return data;
+  }
   showFoundBtn(count, link, coords, wrapperBtn) {
-    console.log(wrapperBtn)
     Floating.deatroyThis();
     new Floating(wrapperBtn, count, link)
     /* const previousBtn = document.querySelector(".found-btn");
