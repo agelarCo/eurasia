@@ -754,18 +754,27 @@ filterButtons.forEach((btn, idx) => {
   console.log(btn);
   btn.addEventListener("input", (e) => {
     let currentBtn = btn.closest(".filter-btn");
-    console.log(currentBtn);
     
-    let counterActive = currentBtn.querySelectorAll(
-      ".custom-checkbox input[type=checkbox]:checked"
-    );
-    if (counterActive.length) {
-      currentBtn.classList.add("filter-btn--inside-active");
-    } else {
-      currentBtn.classList.remove("filter-btn--inside-active");
-    }
+    isActiveFilterBtn()
   });
 });
+
+window.addEventListener('load', (e) => {
+  isActiveFilterBtn()
+})
+
+
+
+function isActiveFilterBtn() {
+  let counterActive = currentBtn.querySelectorAll(
+    ".custom-checkbox input[type=checkbox]:checked"
+  );
+  if (counterActive.length) {
+    currentBtn.classList.add("filter-btn--inside-active");
+  } else {
+    currentBtn.classList.remove("filter-btn--inside-active");
+  }
+}
 
 window["FLS"] = location.hostname === "localhost";
 
