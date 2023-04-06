@@ -71,10 +71,14 @@
 @media (max-width: 992px) {
   .category-line-grid {
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    grid-template-rows: 1fr 1fr;
     grid-auto-flow: column;
     gap: 10px 15px;
   }
+
+  .category-line-grid-row-2{ 
+    grid-template-rows: 1fr 1fr; 
+  }
+
   .category-line-block {
     min-width: 170px;
     padding: 10px;

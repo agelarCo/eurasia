@@ -1,5 +1,5 @@
 import Floating from "./FloatingAvailabilityGoods";
-import $ from "jquery";
+
 class Filter {
   constructor(filterSelector) {
     this.filterSelector = filterSelector;
@@ -24,7 +24,7 @@ class Filter {
   async onChangeFilter(element) {
     const coords = element.getBoundingClientRect();
     const wrapperBtn = element.closest(".filter-btn");
-    let response = await fetch("./fake-data.json", {
+    let response = await fetch("assets/sfa/snippets/sfa_getCountAndLink.php", {
       method: "POST",
       headers: {
         // 'Content-Type': 'application/json;charset=utf-8'
@@ -58,20 +58,32 @@ class Filter {
 
     this.inputs.forEach((input) => {
       if (input.checked) {
-        if (data.has(input.name)) {
-          let was = data.get(input.name);
-          data.delete(input.name);
-          const now = (was += `;${input.value}`);
-          data.append(input.name, now);
-        } else {
-          data.append(input.name, input.value);
-        }
+        this._addToData(data, input);
+      }else if(input.getAttribute("type") == "range"){
+        this._addToData(data, input);
+        this._addToData(data, {
+          name: input.name+"_default",
+          value: input.dataset.default
+        });
       }
     });
 
     for (let [name, value] of data) {
       //console.log(`${name} = ${value}`); // key1=value1, потом key2=value2
     }
+    return data;
+  }
+
+  _addToData(data, input){
+    if (data.has(input.name)) {
+      let was = data.get(input.name);
+      data.delete(input.name);
+      const now = (was += `;${input.value}`);
+      data.append(input.name, now);
+    } else {
+      data.append(input.name, input.value);
+    }
+
     return data;
   }
   showFoundBtn(count, link, coords, wrapperBtn) {

@@ -43,7 +43,8 @@
     transform: rotate(-180deg);
   }
   &__link:hover &__sublinks {
-    display: block;
+    // display: block;
+    opacity:1;
   }
   &__sublinks {
     position: absolute;
@@ -52,9 +53,10 @@
     padding: 20px 30px;
     background-color: $system-component;
     width: 260px;
-    height: 230px;
+    max-height: 230px;
     border-radius: 5px;
-    display: none;
+    // display: none;
+    opacity: 0;
     z-index: 10;
     &::before {
       content: "";

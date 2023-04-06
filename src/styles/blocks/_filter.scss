@@ -90,9 +90,9 @@
   gap: 10px;
   flex-wrap: wrap;
   padding-right: 50px;
-  &--rolled .filter-btn:nth-child(n + 23) {
-    display: none;
-  }
+  // &--rolled .filter-btn:nth-child(n + 23) {
+  //   display: none;
+  // }
 }
 .filter-btn {
   border-radius: 5px;
