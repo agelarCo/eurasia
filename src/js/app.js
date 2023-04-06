@@ -313,7 +313,7 @@ if (filterBtnMore) {
  */
 
 let headerMenuDropdownListsLinks = document.querySelectorAll(
-  ".header-menu-dropdown__list-link"
+  ".header-menu-dropdown__list-link--js"
 );
 
 let filter = document.querySelector(".filter");
@@ -338,7 +338,10 @@ headerMenuDropdownListsLinks.forEach((element) => {
           event.target.textContent = "Ещё";
           break;
       }
-      element.classList.toggle("header-menu-dropdown__list-link--expand");
+
+      let linksContaainer = element.querySelector(".header-menu-dropdown__list-link");
+      if(linksContaainer)
+        linksContaainer.classList.toggle("header-menu-dropdown__list-link--expand");
     });
 });
 
@@ -722,7 +725,6 @@ if(bannerCategory){
   }
 }
 
-
 let btnsByOneClick = document.querySelectorAll("[data-bs-target='#modalOrder'], [data-bs-target='#modalQuestionProduct'], [data-bs-target='#modalGetPriceProduct']");
 btnsByOneClick.forEach(function(el){
   let form = document.querySelector(el.dataset.bsTarget + ' form');
@@ -732,6 +734,15 @@ btnsByOneClick.forEach(function(el){
       input.value = el.dataset.product;
     }
   }
+});
+
+document.querySelectorAll(".agelarForm").forEach(function(item){
+  item.addEventListener("agelar-form-before-success", function(e){
+    const closeBtn = this.querySelector(".modal-custom-close");
+    if(closeBtn){
+      closeBtn.click();
+    }
+  });
 });
 
 window["FLS"] = location.hostname === "localhost";

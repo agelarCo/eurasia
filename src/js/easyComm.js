@@ -49,7 +49,7 @@ let easyComm = {
                                 if(ecFormSuccess){
                                     let title = ecFormSuccess.querySelector(".modal-custom__title");
                                     if(title)
-                                        title.innerHTML = result.data;
+                                        title.innerHTML = result.message;
                                 
                                     let modal = new Modal(ecFormSuccess);
                                     
@@ -61,10 +61,12 @@ let easyComm = {
                                     }, 200)
                                 }
                                 let parentContainer = document.querySelector(form.dataset.parentContainer);
-                                if(parentContainer)
-                                    parentContainer.style.display = 'none';
-                                else 
-                                    form.style.display = "none";  
+                                if(!parentContainer)
+                                    parentContainer = form;
+                                
+                                parentContainer.parentElement.insertAdjacentHTML('afterbegin', result.data);
+                                parentContainer.style.display = 'none';
+                                
                             }else {
                                 easyComm.notice.show(result.message);
                             }
