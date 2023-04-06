@@ -1,5 +1,5 @@
 .filter-btn-details-avialable {
-  padding: 10px;
+  padding: 10px 20px 10px 10px;
   background-color: $system-component;
   position: absolute;
   top: -80px;
@@ -7,7 +7,7 @@
   left: 0;
   z-index: 100;
   &::after {
-    content: '';
+    content: "";
     display: block;
     left: 50%;
     transform: translateX(-50%);
@@ -30,16 +30,24 @@
   &__link {
     text-decoration: underline;
   }
+  &__close {
+    cursor: pointer;
+    top: 8px;
+    right: 8px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+  }
 }
 
 @media (max-width: 1200px) {
   .filter-btn-details-avialable {
     top: 100%;
-    
+
     left: 50%;
     transform: translateX(-50%);
 
-    &::after { 
+    &::after {
       top: auto;
       bottom: 67px;
       transform: rotate(180deg);
