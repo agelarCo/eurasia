@@ -14,18 +14,17 @@ import { Modal } from "bootstrap";
 import LazyLoad from "vanilla-lazyload";
 
 /* import './filter/Filter.js' */
-import StarRating from './starRating.js';
-import easyComm from './easyComm.js';
+import StarRating from "./starRating.js";
+import easyComm from "./easyComm.js";
 
-let ratings = document.querySelectorAll('.rating')
+let ratings = document.querySelectorAll(".rating");
 if (ratings) {
   ratings.forEach((elem, index) => {
-    new StarRating(elem)
-  })
+    new StarRating(elem);
+  });
 }
 
-
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
   easyComm.initialize();
 });
 
@@ -139,29 +138,32 @@ function setToggleAccessible(currentTarget, item) {
   }
 }
 
-const boxRangeFilter = document.querySelectorAll(".filter-btn-dropdown-range").forEach(function(item){
-  const fromSlider = item.querySelector(
-    ".filter-btn-dropdown-range__input-range--from"
-  );
-  const toSlider = item.querySelector(
-    ".filter-btn-dropdown-range__input-range--to"
-  );
-  const fromInput = item.querySelector(
-    ".filter-btn-dropdown-range__input--from"
-  );
-  const toInput = item.querySelector(".filter-btn-dropdown-range__input--to");
+const boxRangeFilter = document
+  .querySelectorAll(".filter-btn-dropdown-range")
+  .forEach(function (item) {
+    const fromSlider = item.querySelector(
+      ".filter-btn-dropdown-range__input-range--from"
+    );
+    const toSlider = item.querySelector(
+      ".filter-btn-dropdown-range__input-range--to"
+    );
+    const fromInput = item.querySelector(
+      ".filter-btn-dropdown-range__input--from"
+    );
+    const toInput = item.querySelector(".filter-btn-dropdown-range__input--to");
 
-  if (toInput) {
-    fillSlider(fromSlider, toSlider, "transparent", "#ff3048", toSlider);
-    setToggleAccessible(toSlider, item);
-    fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
-    toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
-    fromInput.oninput = () =>
-      controlFromInput(fromSlider, fromInput, toInput, toSlider);
-    toInput.oninput = () =>
-      controlToInput(toSlider, fromInput, toInput, toSlider);
-  }
-});
+    if (toInput) {
+      fillSlider(fromSlider, toSlider, "transparent", "#ff3048", toSlider);
+      setToggleAccessible(toSlider, item);
+      fromSlider.oninput = () =>
+        controlFromSlider(fromSlider, toSlider, fromInput);
+      toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+      fromInput.oninput = () =>
+        controlFromInput(fromSlider, fromInput, toInput, toSlider);
+      toInput.oninput = () =>
+        controlToInput(toSlider, fromInput, toInput, toSlider);
+    }
+  });
 
 const btnColExpand = document.querySelector(".filter-line-btn--col");
 const btnRowExpand = document.querySelector(".filter-line-btn--row");
@@ -235,7 +237,11 @@ document.querySelectorAll(".reviwe-block-scroller").forEach((elem, index) => {
   new SimpleBar(elem);
 });
 document.querySelectorAll("table").forEach((elem, index) => {
-  if(elem.dataset.tableScroller == false || elem.parentElement.parentElement.classList.contains("table-scroller")) return;
+  if (
+    elem.dataset.tableScroller == false ||
+    elem.parentElement.parentElement.classList.contains("table-scroller")
+  )
+    return;
 
   let scrollerContainer = document.createElement("div");
   scrollerContainer.classList.add("table-scroller");
@@ -248,26 +254,27 @@ document.querySelectorAll("table").forEach((elem, index) => {
   new SimpleBar(scrollerContainer);
 });
 
-
-document.querySelectorAll(".header-menu-simple-dropdown__scroller").forEach((elem, index) => {
-  new SimpleBar(elem);
-});
-
+document
+  .querySelectorAll(".header-menu-simple-dropdown__scroller")
+  .forEach((elem, index) => {
+    new SimpleBar(elem);
+  });
 
 if (window.innerWidth <= 1200) {
-  let buttonHeaderForExpand = document.querySelectorAll('.header-menu__list-item--deep')
+  let buttonHeaderForExpand = document.querySelectorAll(
+    ".header-menu__list-item--deep"
+  );
   buttonHeaderForExpand.forEach((btn, idx) => {
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('header-menu__list-item--active-js')
-    })
-  })
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("header-menu__list-item--active-js");
+    });
+  });
 }
-
 
 document
   .querySelectorAll(".breadcrumb-list__sublinks-scrollbox")
   .forEach((elem, index) => {
-    if(elem.parentElement.clientHeight < elem.clientHeight)
+    if (elem.parentElement.clientHeight < elem.clientHeight)
       elem.parentElement.style.height = elem.parentElement.clientHeight + "px";
 
     new SimpleBar(elem);
@@ -284,15 +291,14 @@ if (filterBtnMore) {
 
     let open = !Boolean(Number(filterBtnMore.getAttribute("data-open")));
     filterBtnMore.setAttribute("data-open", Number(open));
-    
-    let start = Number(filterBtnMore.dataset.start);
-    if(isNaN(start))
-      start = 0;
 
-    for(let i = start; i < filterBlock.children.length-1; i++){
-      if(open){
+    let start = Number(filterBtnMore.dataset.start);
+    if (isNaN(start)) start = 0;
+
+    for (let i = start; i < filterBlock.children.length - 1; i++) {
+      if (open) {
         filterBlock.children[i].classList.remove("d-none");
-      }else{
+      } else {
         filterBlock.children[i].classList.add("d-none");
       }
     }
@@ -327,7 +333,7 @@ filterExpandBtns.forEach((element) => {
 
 headerMenuDropdownListsLinks.forEach((element) => {
   let btnExpand = element.querySelector(".header-menu-dropdown-btn-expand");
-  if(btnExpand)
+  if (btnExpand)
     btnExpand.addEventListener("click", (event) => {
       switch (event.target.textContent) {
         case "Ещё":
@@ -339,9 +345,13 @@ headerMenuDropdownListsLinks.forEach((element) => {
           break;
       }
 
-      let linksContaainer = element.querySelector(".header-menu-dropdown__list-link");
-      if(linksContaainer)
-        linksContaainer.classList.toggle("header-menu-dropdown__list-link--expand");
+      let linksContaainer = element.querySelector(
+        ".header-menu-dropdown__list-link"
+      );
+      if (linksContaainer)
+        linksContaainer.classList.toggle(
+          "header-menu-dropdown__list-link--expand"
+        );
     });
 });
 
@@ -659,7 +669,7 @@ let inputFile = document.querySelector(".input-file");
 let blockContainer = document.querySelector(
   ".modal-custom-attach__inner-image"
 );
-if(inputFile){
+if (inputFile) {
   inputFile.addEventListener("input", (e) => {
     const unraw = e.target.files[0];
     let image = blockContainer.querySelector("img");
@@ -677,9 +687,9 @@ if(inputFile){
     };
   });
 }
-document.querySelectorAll(".sort-products--js").forEach(function(item){
-  item.querySelectorAll("[name='sort'").forEach(function(input){
-    input.addEventListener("input", function(){
+document.querySelectorAll(".sort-products--js").forEach(function (item) {
+  item.querySelectorAll("[name='sort'").forEach(function (input) {
+    input.addEventListener("input", function () {
       let url = new URL(window.location.href);
       url.searchParams.set("sort", this.value);
       window.location.href = url.href;
@@ -688,7 +698,7 @@ document.querySelectorAll(".sort-products--js").forEach(function(item){
 });
 
 const bannerCategory = document.querySelector("#banner-category--js");
-if(bannerCategory){
+if (bannerCategory) {
   let image = bannerCategory.dataset.image;
   let imageMobile = bannerCategory.dataset.imageMobile;
   bannerCategory.remove();
@@ -702,49 +712,50 @@ if(bannerCategory){
   `;
 
   const productContainer = document.querySelector("#products-container--js");
-  if(productContainer){
+  if (productContainer) {
     let products = productContainer.querySelectorAll(".products-card");
     let pos = -1;
-    if(products.length > 3){
-      if(products.length%2){
-        pos = (products.length - products.length%2)/2;
-      }else{
-        pos = products.length/2;
+    if (products.length > 3) {
+      if (products.length % 2) {
+        pos = (products.length - (products.length % 2)) / 2;
+      } else {
+        pos = products.length / 2;
       }
       pos -= 1;
-    }else if(products.length == 1){
+    } else if (products.length == 1) {
       pos = 0;
     }
 
     console.log(pos, image);
-    if(pos != -1){
-      products[pos].insertAdjacentHTML('afterend', picture);
-    }else{
-      productContainer.insertAdjacentHTML("beforeend",picture)
+    if (pos != -1) {
+      products[pos].insertAdjacentHTML("afterend", picture);
+    } else {
+      productContainer.insertAdjacentHTML("beforeend", picture);
     }
   }
 }
 
-let btnsByOneClick = document.querySelectorAll("[data-bs-target='#modalOrder'], [data-bs-target='#modalQuestionProduct'], [data-bs-target='#modalGetPriceProduct']");
-btnsByOneClick.forEach(function(el){
-  let form = document.querySelector(el.dataset.bsTarget + ' form');
-  if(form){
+let btnsByOneClick = document.querySelectorAll(
+  "[data-bs-target='#modalOrder'], [data-bs-target='#modalQuestionProduct'], [data-bs-target='#modalGetPriceProduct']"
+);
+btnsByOneClick.forEach(function (el) {
+  let form = document.querySelector(el.dataset.bsTarget + " form");
+  if (form) {
     let input = form.querySelector("[name='product']");
-    if(input && el.dataset.product){
+    if (input && el.dataset.product) {
       input.value = el.dataset.product;
     }
   }
 });
 
-document.querySelectorAll(".agelarForm").forEach(function(item){
-  item.addEventListener("agelar-form-before-success", function(e){
+document.querySelectorAll(".agelarForm").forEach(function (item) {
+  item.addEventListener("agelar-form-before-success", function (e) {
     const closeBtn = this.querySelector(".modal-custom-close");
-    if(closeBtn){
+    if (closeBtn) {
       closeBtn.click();
     }
   });
 });
-
 
 let filterButtons = document.querySelectorAll(
   ".filter-btn input[type=checkbox]"
@@ -755,7 +766,7 @@ filterButtons.forEach((btn, idx) => {
   btn.addEventListener("input", (e) => {
     let currentBtn = btn.closest(".filter-btn");
     console.log(currentBtn);
-    
+
     let counterActive = currentBtn.querySelectorAll(
       ".custom-checkbox input[type=checkbox]:checked"
     );
@@ -768,5 +779,3 @@ filterButtons.forEach((btn, idx) => {
 });
 
 window["FLS"] = location.hostname === "localhost";
-
-
