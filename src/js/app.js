@@ -13,7 +13,7 @@ import Tabs from "./tabs.js";
 import { Modal } from "bootstrap";
 import LazyLoad from "vanilla-lazyload";
 
-import './filter/Filter.js'
+/* import './filter/Filter.js' */
 import StarRating from './starRating.js';
 import easyComm from './easyComm.js';
 
@@ -741,6 +741,28 @@ document.querySelectorAll(".agelarForm").forEach(function(item){
     const closeBtn = this.querySelector(".modal-custom-close");
     if(closeBtn){
       closeBtn.click();
+    }
+  });
+});
+
+
+let filterButtons = document.querySelectorAll(
+  ".filter-btn input[type=checkbox]"
+);
+
+filterButtons.forEach((btn, idx) => {
+  console.log(btn);
+  btn.addEventListener("input", (e) => {
+    let currentBtn = btn.closest(".filter-btn");
+    console.log(currentBtn);
+    
+    let counterActive = currentBtn.querySelectorAll(
+      ".custom-checkbox input[type=checkbox]:checked"
+    );
+    if (counterActive.length) {
+      currentBtn.classList.add("filter-btn--inside-active");
+    } else {
+      currentBtn.classList.remove("filter-btn--inside-active");
     }
   });
 });
