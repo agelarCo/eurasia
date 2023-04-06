@@ -44,11 +44,12 @@
   }
   &__link:hover &__sublinks {
     // display: block;
+    top:34px;
     opacity:1;
   }
   &__sublinks {
     position: absolute;
-    top: 34px;
+    top: -99999999px;
     left: 0;
     padding: 20px 30px;
     background-color: $system-component;

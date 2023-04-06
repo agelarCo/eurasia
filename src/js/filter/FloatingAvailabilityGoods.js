@@ -18,6 +18,11 @@ class FloatingAvailabilityGoods {
             this.selector.insertAdjacentHTML('afterbegin', `<div
         class="filter-btn-details-avialable filter-btn-details-avialable--js"
       >
+          <div class="filter-btn-details-avialable__close filter-btn-details-avialable__close--js">
+              <svg style="width: 10px; height: 10px" class="img">
+                <use xlink:href="/assets/template/images/icons/icons.svg#close"></use>
+            </svg>
+        </div>
         <div class="filter-btn-details-avialable__inner-state">
           <div class="filter-btn-details-avialable__find-value">
             Ничего не найдено
@@ -28,6 +33,11 @@ class FloatingAvailabilityGoods {
             this.selector.insertAdjacentHTML('afterbegin', `<div
         class="filter-btn-details-avialable filter-btn-details-avialable--js"
       >
+      <div class="filter-btn-details-avialable__close filter-btn-details-avialable__close--js">
+              <svg style="width: 10px; height: 10px" class="img">
+                <use xlink:href="/assets/template/images/icons/icons.svg#close"></use>
+            </svg>
+        </div>
         <div class="filter-btn-details-avialable__inner-state">
           <div class="filter-btn-details-avialable__find-value">
             Найдено: <span>${this.value}</span>
@@ -39,6 +49,12 @@ class FloatingAvailabilityGoods {
       </div>`);
         }
         
+        const closeBtn = document.querySelector(".filter-btn-details-avialable__close--js");
+        if(closeBtn){
+          closeBtn.addEventListener("click", () => {
+            FloatingAvailabilityGoods.deatroyThis();
+          })
+        }
     }
     _init() {
         this._createFloatChecker()

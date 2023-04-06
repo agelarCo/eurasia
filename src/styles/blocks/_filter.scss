@@ -141,8 +141,9 @@
 }
 .filter-btn-dropdown {
   position: absolute;
-  top: 44px;
-  display: none;
+  top: -9999999px;
+  // display: none;
+  opacity: 0;
   left: 0;
   padding: 20px 15px;
   z-index: 10;
@@ -167,6 +168,8 @@
     left: 0;
   }
   &:hover {
+    top:44px;
+    opacity: 1;
     display: block;
   }
 }
