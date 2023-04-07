@@ -24,6 +24,11 @@ class Filter {
   async onChangeFilter(element) {
     const coords = element.getBoundingClientRect();
     const wrapperBtn = element.closest(".filter-btn");
+    
+    const floating = new Floating(wrapperBtn);
+    Floating.deatroyThis();
+    floating.createLoadedData();
+
     let response = await fetch("assets/sfa/snippets/sfa_getCountAndLink.php", {
       method: "POST",
       headers: {
@@ -37,7 +42,9 @@ class Filter {
     if (result.success) {
       //console.log('успех', result.link);
       //alert(result.link);
-      this.showFoundBtn(result.count, result.link, coords, wrapperBtn);
+      Floating.deatroyThis();
+      floating.createFloatChecker(result.count, result.link)
+      //this.showFoundBtn(result.count, result.link, coords, wrapperBtn);
     } else {
       //console.log('неудача');
     }
@@ -87,8 +94,8 @@ class Filter {
     return data;
   }
   showFoundBtn(count, link, coords, wrapperBtn) {
-    Floating.deatroyThis();
-    new Floating(wrapperBtn, count, link)
+    //Floating.deatroyThis();
+    //new Floating(wrapperBtn, count, link)
     /* const previousBtn = document.querySelector(".found-btn");
     if (previousBtn) previousBtn.remove(); */
 

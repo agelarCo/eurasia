@@ -102,6 +102,8 @@
   color: $secondary;
   cursor: pointer;
   &:hover .filter-btn-dropdown {
+    opacity: 1;
+    top:44px;
     display: block;
   }
 
@@ -150,7 +152,7 @@
   background-color: $system-component;
   border-radius: 5px;
   &__scroller {
-    height: 260px;
+    max-height: 260px;
     width: 260px;
   }
   &__container {
@@ -292,7 +294,9 @@
     display: flex;
     flex-direction: column;
     &:hover .filter-btn-dropdown {
-      display: block;
+      // display: block;
+      opacity: 1;
+      position: static;
     }
     &__title {
       justify-content: space-between;
@@ -305,16 +309,17 @@
   }
 
   .filter-btn-dropdown {
-    position: static;
+    position: absolute;
     width: 100%;
-    display: none;
+    opacity: 0;
+    top: -99999999px;
     padding: 10px;
     z-index: 10;
     border-radius: 5px;
 
     &__scroller {
       width: 100%;
-      height: 190px;
+      max-height: 190px;
     }
     &__container {
     }

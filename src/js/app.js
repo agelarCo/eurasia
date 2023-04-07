@@ -13,7 +13,7 @@ import Tabs from "./tabs.js";
 import { Modal } from "bootstrap";
 import LazyLoad from "vanilla-lazyload";
 
-/* import './filter/Filter.js' */
+import './filter/Filter.js' 
 import StarRating from './starRating.js';
 import easyComm from './easyComm.js';
 
@@ -269,6 +269,15 @@ document
   .forEach((elem, index) => {
     if(elem.parentElement.clientHeight < elem.clientHeight)
       elem.parentElement.style.height = elem.parentElement.clientHeight + "px";
+
+    new SimpleBar(elem);
+  });
+
+document
+  .querySelectorAll(".filter-btn-dropdown__scroller")
+  .forEach((elem, index) => {
+    // if(elem.parentElement.clientHeight < elem.clientHeight)
+    //   elem.parentElement.style.height = elem.parentElement.clientHeight + "px";
 
     new SimpleBar(elem);
   });
