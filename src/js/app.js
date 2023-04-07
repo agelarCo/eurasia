@@ -276,7 +276,7 @@ if (window.innerWidth <= 1200) {
   );
   buttonHeaderForExpand.forEach((btn, idx) => {
     btn.addEventListener("click", (e) => {
-      dropdownHeaderForExpand[idx].classList.toggle('header-all-dropdown--active')
+      btn.classList.toggle('header-all-dropdown--active')
     });
   });
 }
