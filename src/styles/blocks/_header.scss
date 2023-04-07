@@ -119,24 +119,26 @@
   top: 100%;
   right: 0;
   width: 200px;
-  max-height: 250px;
-  padding: 10px;
+  
+  padding: 20px;
   border-radius: 5px;
-  background-color: $opposite;
+  background-color: $system-component;
   opacity: 0;
   z-index: -100;
   &__scroller {
-    
+    max-height: 200px;
   }
   &:hover {
     opacity: 1;
   z-index: 10;
   }
   ul {
+    list-style: none;
     padding: 0;
     margin: 0;
     li + li {
       margin-top: 10px;
+      padding-right: 5px;
     }
     a {
       color: $body-color;
