@@ -233,6 +233,13 @@ document
     new SimpleBar(elem);
   });
 
+
+  document
+  .querySelectorAll(".drop-normal-menu__scroller")
+  .forEach((elem, index) => {
+    new SimpleBar(elem);
+  });
+
 document.querySelectorAll(".reviwe-block-scroller").forEach((elem, index) => {
   new SimpleBar(elem);
 });
@@ -262,11 +269,14 @@ document
 
 if (window.innerWidth <= 1200) {
   let buttonHeaderForExpand = document.querySelectorAll(
-    ".header-menu__list-item--deep"
+    ".header-menu__list-item-arrow"
+  );
+  let dropdownHeaderForExpand = document.querySelectorAll(
+    ".header-all-dropdown"
   );
   buttonHeaderForExpand.forEach((btn, idx) => {
-    btn.addEventListener("click", () => {
-      btn.classList.toggle("header-menu__list-item--active-js");
+    btn.addEventListener("click", (e) => {
+      dropdownHeaderForExpand[idx].classList.toggle('header-all-dropdown--active')
     });
   });
 }
@@ -785,5 +795,22 @@ function isActiveFilterBtn(elem) {
     elem.classList.remove("filter-btn--inside-active");
   }
 }
+
+/* if (window.innerWidth < 1200) {
+  let arrowExpandForMenu = document.querySelectorAll(
+  ".header-menu__list-item .header-menu__list-item-arrow"
+);
+
+let dropdownForMenu = document.querySelectorAll(
+  ".header-all-dropdown"
+);
+
+arrowExpandForMenu.forEach((elem, index) => {
+  elem.addEventListener('click', () => {
+    elem.classList.toggle('header-menu__list-item-arrow--active')
+    dropdownForMenu[index].classList.toggle('header-all-dropdown--active')
+  })
+})
+} */
 
 window["FLS"] = location.hostname === "localhost";

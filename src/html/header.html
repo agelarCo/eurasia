@@ -14,12 +14,21 @@
         Доставка по всей России
       </div>
     </div>
-    <div
-      class="header-icon-button header-icon-button--callback-menu"
-      data-bs-toggle="modal"
-      data-bs-target="#modalCallback"
-    >
-      @@include('./sprite.html', { 'id': 'callback' })
+    <div class="d-flex gap-10">
+      <div id="msMiniCart" class="full d-md-none header-cart-button">
+        <a href="korzina.html" target="_blank" class="not_empty">
+          <span class="ms2_total_count">1</span>
+          @@include('./sprite.html', { 'id': 'shop' })
+        </a>
+      </div>
+
+      <div
+        class="header-icon-button header-icon-button--callback-menu"
+        data-bs-toggle="modal"
+        data-bs-target="#modalCallback"
+      >
+        @@include('./sprite.html', { 'id': 'callback' })
+      </div>
     </div>
     <nav class="header__menu header-menu">
       <div class="header-menu-close-button header-menu-close">
@@ -48,8 +57,26 @@
           </div>
           <div class="header-menu-vertical-separator"></div>
         </div>
+
         <div class="header-menu-vidgets__toponim">
           @@include('./sprite.html', { 'id': 'gps' }) Москва
+          <div class="drop-normal-menu">
+            <div class="drop-normal-menu__sroller">
+              <ul>
+                <li><a href="">Москва</a></li>
+                <li><a href="">Москва</a></li>
+                <li><a href="">Москва</a></li>
+                <li><a href="">Москва</a></li>
+                <li><a href="">Москва</a></li>
+                <li><a href="">Москва</a></li>
+                <li><a href="">Москва</a></li>
+                <li><a href="">Москва</a></li>
+                <li><a href="">Москва</a></li>
+
+                <li><a href="">Москва</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <ul class="header-menu__list">
@@ -60,7 +87,7 @@
               @@include('./sprite.html', { 'id': 'down' })
             </div>
           </div>
-          <div class="header-menu-dropdown">
+          <div class="header-menu-dropdown header-all-dropdown">
             <div class="header-menu-dropdown__scrollbox">
               <div class="header-menu-dropdown__container">
                 <div class="header-menu-dropdown__box">
@@ -459,19 +486,20 @@
             </div>
           </div>
         </li>
-        <li class="header-menu__list-item header-menu__list-item--deep position-relative">
+        <li
+          class="header-menu__list-item header-menu__list-item--deep position-relative"
+        >
           <div class="d-flex gap-5 align-items-center">
             <a href="sevices-page.html" class="max-z-index">Услуги </a>
             <div class="header-menu__list-item-arrow">
               @@include('./sprite.html', { 'id': 'down' })
             </div>
           </div>
-          <div class="header-menu-simple-dropdown">
+          <div class="header-menu-simple-dropdown header-all-dropdown">
             <div class="header-menu-simple-dropdown__scroller">
               <ul>
                 <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
                 <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-                
               </ul>
             </div>
           </div>

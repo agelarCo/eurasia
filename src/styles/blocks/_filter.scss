@@ -6,6 +6,7 @@
   border-radius: 10px;
   left: 0;
   z-index: 100;
+  color: white;
   &::after {
     content: '';
     display: block;
@@ -29,6 +30,7 @@
   }
   &__link {
     text-decoration: underline;
+    color: white;
   }
 }
 
