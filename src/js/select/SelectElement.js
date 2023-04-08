@@ -31,6 +31,8 @@ class SelectElement{
         if(this.options.input)
             this.__createInput();
 
+        this.container = this.elementDom.querySelector("."+this.options.classSelectedContainer);
+
         this.init();
     }
 
@@ -53,8 +55,7 @@ class SelectElement{
                 this.input.value = option.innerHTML;
         }
 
-        const selectedContainer = this.getContainer();
-        if(selectedContainer && option){
+        if(this.container && option){
             selectedContainer.innerHTML = option.innerHTML;    
         }
 
@@ -73,10 +74,6 @@ class SelectElement{
     
     getOptions(){
         return this.elementDom.querySelectorAll("."+this.options.classOption);
-    }
-
-    getContainer(){
-        return this.elementDom.querySelector("."+this.options.classSelectedContainer);
     }
 
     __setEventSelected(){
