@@ -3,6 +3,7 @@ class SelectElement{
         this.elementDom = elementDom;
         this.mainObject = mainObject;
         this.input = null;
+        this.selectedOption = null;
 
         this.defaultOptions = {
             classSelectedContainer: "agelar-selected-container--js",
@@ -31,12 +32,12 @@ class SelectElement{
         if(this.options.input)
             this.__createInput();
 
-        this.container = this.elementDom.querySelector("."+this.options.classSelectedContainer);
+        this.selectedContainer = this.elementDom.querySelector("."+this.options.classSelectedContainer);
 
         this.init();
     }
 
-    getSelectedOption(){
+    __getSelectedOption(){
         const selectedOption = this.elementDom.querySelector("."+this.options.classSelected);
         if(!selectedOption){
             return this.__initSelectedOption();
@@ -48,52 +49,53 @@ class SelectElement{
     setSelectedOption(option, e = null){
         if(!option || typeof option !== 'object') return;
 
+        if(this.selectedOption){
+            option.parentNode.insertBefore(this.selectedOption, option);
+            this.__setEventSelected(this.selectedOption);
+        }
+
+        this.selectedOption = option.cloneNode(true);
+        option.remove();
+
         if(this.input){
-            if(option.dataset.value)
-                this.input.value = option.dataset.value;
+            if(this.selectedOption.dataset.value)
+                this.input.value = this.selectedOption.dataset.value;
             else
-                this.input.value = option.innerHTML;
+                this.input.value = this.selectedOption.innerHTML;
         }
 
-        if(this.container && option){
-            selectedContainer.innerHTML = option.innerHTML;    
+        if(this.selectedContainer){
+            this.selectedContainer.innerHTML = this.selectedOption.innerHTML;    
         }
 
-        if(option){
-            const eventSelected = new CustomEvent(this.options.events.selected.name, {
-                e: e, 
-                detail:{
-                    selectedContainer:selectedContainer,
-                    option: option
-                }
-            });
+      
+        const eventSelected = new CustomEvent(this.options.events.selected.name, {
+            e: e, 
+            detail:{
+                selectedContainer:this.selectedContainer,
+                option: this.selectedOption,
+                input: this.input
+            }
+        });
 
-            this.elementDom.dispatchEvent(eventSelected);
-        }
+        this.elementDom.dispatchEvent(eventSelected);
+        
     }
     
     getOptions(){
         return this.elementDom.querySelectorAll("."+this.options.classOption);
     }
 
-    __setEventSelected(){
+    __setEventsSelected(){
         this.getOptions().forEach((item) => {
-            item.addEventListener("click", (e) => {
-                this.__toggleSelected(item, e)
-            });
+            this.__setEventSelected(item);
         });
     }
 
-    __toggleSelected(option, e = null){
-        if(!option || typeof option !== 'object') return;
-
-        const selectedOption = this.getSelectedOption();
-        if(selectedOption){
-            selectedOption.classList.remove(this.options.classSelected);
-        }
-
-        option.classList.add(this.options.classSelected);
-        this.setSelectedOption(option, e);
+    __setEventSelected(item){
+        item.addEventListener("click", (e) => {
+            this.setSelectedOption(item, e);
+        });
     }
 
     __initSelectedOption(){
@@ -122,12 +124,12 @@ class SelectElement{
     }
 
     init(){
-        let selectedOption = this.getSelectedOption();
+        let selectedOption = this.__getSelectedOption();
         if(selectedOption){
             this.setSelectedOption(selectedOption);
         }
 
-        this.__setEventSelected();
+        this.__setEventsSelected();
     }
 }
 
