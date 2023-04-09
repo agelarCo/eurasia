@@ -16,9 +16,9 @@ import LazyLoad from "vanilla-lazyload";
 import './filter/Filter.js' 
 import StarRating from './starRating.js';
 import easyComm from './easyComm.js';
-import Select from './select/Select';
+import AgelarSelect from './select/Select.js';
 
-new Select();
+new AgelarSelect();
 
 let ratings = document.querySelectorAll(".rating");
 if (ratings) {
