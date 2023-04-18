@@ -16,6 +16,9 @@ import LazyLoad from "vanilla-lazyload";
 import './filter/Filter.js' 
 import StarRating from './starRating.js';
 import easyComm from './easyComm.js';
+import AgelarSelect from './select/Select.js';
+
+new AgelarSelect();
 
 let ratings = document.querySelectorAll(".rating");
 if (ratings) {
@@ -276,7 +279,9 @@ if (window.innerWidth <= 1200) {
   );
   buttonHeaderForExpand.forEach((btn, idx) => {
     btn.addEventListener("click", (e) => {
-      dropdownHeaderForExpand[idx].classList.toggle('header-all-dropdown--active')
+      console.log(idx, dropdownHeaderForExpand)
+      if(dropdownHeaderForExpand[idx])
+        dropdownHeaderForExpand[idx].classList.toggle('header-all-dropdown--active')
     });
   });
 }
@@ -821,5 +826,7 @@ arrowExpandForMenu.forEach((elem, index) => {
   })
 })
 } */
+
+
 
 window["FLS"] = location.hostname === "localhost";
