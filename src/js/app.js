@@ -13,9 +13,9 @@ import Tabs from "./tabs.js";
 import { Modal } from "bootstrap";
 import LazyLoad from "vanilla-lazyload";
 
-/* import './filter/Filter.js' */
-import StarRating from "./starRating.js";
-import easyComm from "./easyComm.js";
+import './filter/Filter.js' 
+import StarRating from './starRating.js';
+import easyComm from './easyComm.js';
 
 let ratings = document.querySelectorAll(".rating");
 if (ratings) {
@@ -233,6 +233,13 @@ document
     new SimpleBar(elem);
   });
 
+
+  document
+  .querySelectorAll(".drop-normal-menu__scroller")
+  .forEach((elem, index) => {
+    new SimpleBar(elem);
+  });
+
 document.querySelectorAll(".reviwe-block-scroller").forEach((elem, index) => {
   new SimpleBar(elem);
 });
@@ -262,11 +269,14 @@ document
 
 if (window.innerWidth <= 1200) {
   let buttonHeaderForExpand = document.querySelectorAll(
-    ".header-menu__list-item--deep"
+    ".header-menu__list-item-arrow"
+  );
+  let dropdownHeaderForExpand = document.querySelectorAll(
+    ".header-all-dropdown"
   );
   buttonHeaderForExpand.forEach((btn, idx) => {
-    btn.addEventListener("click", () => {
-      btn.classList.toggle("header-menu__list-item--active-js");
+    btn.addEventListener("click", (e) => {
+      dropdownHeaderForExpand[idx].classList.toggle('header-all-dropdown--active')
     });
   });
 }
@@ -276,6 +286,15 @@ document
   .forEach((elem, index) => {
     if (elem.parentElement.clientHeight < elem.clientHeight)
       elem.parentElement.style.height = elem.parentElement.clientHeight + "px";
+
+    new SimpleBar(elem);
+  });
+
+document
+  .querySelectorAll(".filter-btn-dropdown__scroller")
+  .forEach((elem, index) => {
+    // if(elem.parentElement.clientHeight < elem.clientHeight)
+    //   elem.parentElement.style.height = elem.parentElement.clientHeight + "px";
 
     new SimpleBar(elem);
   });
@@ -762,20 +781,45 @@ let filterButtons = document.querySelectorAll(
 );
 
 filterButtons.forEach((btn, idx) => {
-  console.log(btn);
   btn.addEventListener("input", (e) => {
     let currentBtn = btn.closest(".filter-btn");
-    console.log(currentBtn);
 
-    let counterActive = currentBtn.querySelectorAll(
-      ".custom-checkbox input[type=checkbox]:checked"
-    );
-    if (counterActive.length) {
-      currentBtn.classList.add("filter-btn--inside-active");
-    } else {
-      currentBtn.classList.remove("filter-btn--inside-active");
-    }
+    isActiveFilterBtn(currentBtn);
   });
 });
+
+window.addEventListener("load", (e) => {
+  document.querySelectorAll(".filter-btn").forEach((btn, idx) => {
+    isActiveFilterBtn(btn);
+  });
+});
+
+function isActiveFilterBtn(elem) {
+  let counterActive = elem.querySelectorAll(
+    ".custom-checkbox input[type=checkbox]:checked"
+  );
+  if (counterActive.length) {
+    elem.classList.add("filter-btn--inside-active");
+  } else {
+    elem.classList.remove("filter-btn--inside-active");
+  }
+}
+
+/* if (window.innerWidth < 1200) {
+  let arrowExpandForMenu = document.querySelectorAll(
+  ".header-menu__list-item .header-menu__list-item-arrow"
+);
+
+let dropdownForMenu = document.querySelectorAll(
+  ".header-all-dropdown"
+);
+
+arrowExpandForMenu.forEach((elem, index) => {
+  elem.addEventListener('click', () => {
+    elem.classList.toggle('header-menu__list-item-arrow--active')
+    dropdownForMenu[index].classList.toggle('header-all-dropdown--active')
+  })
+})
+} */
 
 window["FLS"] = location.hostname === "localhost";

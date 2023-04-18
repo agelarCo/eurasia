@@ -25,10 +25,12 @@
       </div>
       <div class="submit-agree fs-8 fs-lg-7 mb-30">
         <label class="custom-checkbox">
-          <input type="checkbox" name="agree" />
-          <svg class="img">
-            <use xlink:href="images/icons/icons.svg#check-mark"></use>
-          </svg> </label
+          <div>
+            <input type="checkbox" name="agree" />
+            <svg class="img">
+              <use xlink:href="images/icons/icons.svg#check-mark"></use>
+            </svg>
+          </div> </label
         >Согласен на обработку персональных данных
       </div>
       <div class="d-flex justify-content-center">
@@ -41,8 +43,6 @@
     </form>
   </div>
 </div>
-
-
 
 <div
   class="modal fade"
@@ -71,16 +71,18 @@
         <textarea
           type="text"
           class="custom-input mb-30"
-          style="height: 100px; resize: none;"
+          style="height: 100px; resize: none"
           placeholder="Текст отзыва"
         ></textarea>
       </div>
       <div class="submit-agree fs-8 fs-lg-7 mb-30">
         <label class="custom-checkbox">
-          <input type="checkbox" name="agree" />
-          <svg class="img">
-            <use xlink:href="images/icons/icons.svg#check-mark"></use>
-          </svg> </label
+          <div>
+            <input type="checkbox" name="agree" />
+            <svg class="img">
+              <use xlink:href="images/icons/icons.svg#check-mark"></use>
+            </svg>
+          </div> </label
         >Согласен на обработку персональных данных
       </div>
       <div class="d-flex justify-content-center">
@@ -121,10 +123,12 @@
       </div>
       <div class="submit-agree fs-8 fs-lg-7 mb-30">
         <label class="custom-checkbox">
-          <input type="checkbox" name="agree" />
-          <svg class="img">
-            <use xlink:href="images/icons/icons.svg#check-mark"></use>
-          </svg> </label
+          <div>
+            <input type="checkbox" name="agree" />
+            <svg class="img">
+              <use xlink:href="images/icons/icons.svg#check-mark"></use>
+            </svg>
+          </div> </label
         >Согласен на обработку персональных данных
       </div>
       <div class="d-flex justify-content-center">
@@ -170,10 +174,12 @@
       </div>
       <div class="submit-agree fs-8 fs-lg-7 mb-30">
         <label class="custom-checkbox">
-          <input type="checkbox" name="agree" />
-          <svg class="img">
-            <use xlink:href="images/icons/icons.svg#check-mark"></use>
-          </svg> </label
+          <div>
+            <input type="checkbox" name="agree" />
+            <svg class="img">
+              <use xlink:href="images/icons/icons.svg#check-mark"></use>
+            </svg>
+          </div> </label
         >Согласен на обработку персональных данных
       </div>
       <div class="d-flex justify-content-center">
@@ -207,56 +213,58 @@
           placeholder="Имя"
         />
         <div class="modal-custom-attach mb-30">
-            <div class="modal-custom-attach__inner-image"></div>
-            <label class="modal-custom-attach__button">
-                <input type="file" class="input-file d-none">
-                @@include('./sprite.html', { 'id': 'attach' })
-                Прикрепить аватар
-            </label>
+          <div class="modal-custom-attach__inner-image"></div>
+          <label class="modal-custom-attach__button">
+            <input type="file" class="input-file d-none" />
+            @@include('./sprite.html', { 'id': 'attach' }) Прикрепить аватар
+          </label>
         </div>
         <div class="d-flex mb-30 gap-30 flex-column flex-lg-row">
           <input type="text" class="text-center custom-input" placeholder="@" />
-          <div class="d-flex align-items-center gap-5  flex-column flex-sm-row ">
-            <p class="ws-nowrap d-flex flex-row flex-sm-column mb-0"
-              ><span>На сколько вы </span> <span>довольны покупкой?</span>
-              </p
-            >
+          <div class="d-flex align-items-center gap-5 flex-column flex-sm-row">
+            <p class="ws-nowrap d-flex flex-row flex-sm-column mb-0">
+              <span>На сколько вы </span> <span>довольны покупкой?</span>
+            </p>
             <div class="reviwes-stars reviwes-stars--big">
-                <div class="reviwes-stars__star reviwes-stars__star--active">
-                    @@include('./sprite.html', { 'id': 'star' })
-                </div>
-                <div class="reviwes-stars__star reviwes-stars__star--active">
-                    @@include('./sprite.html', { 'id': 'star' })
-                </div>
-                <div class="reviwes-stars__star reviwes-stars__star--active">
-                    @@include('./sprite.html', { 'id': 'star' })
-                </div>
-                <div class="reviwes-stars__star reviwes-stars__star--active">
-                    @@include('./sprite.html', { 'id': 'star' })
-                </div>
-                <div class="reviwes-stars__star">
-                    @@include('./sprite.html', { 'id': 'star' })
-                </div>
+              <div class="reviwes-stars__star reviwes-stars__star--active">
+                @@include('./sprite.html', { 'id': 'star' })
+              </div>
+              <div class="reviwes-stars__star reviwes-stars__star--active">
+                @@include('./sprite.html', { 'id': 'star' })
+              </div>
+              <div class="reviwes-stars__star reviwes-stars__star--active">
+                @@include('./sprite.html', { 'id': 'star' })
+              </div>
+              <div class="reviwes-stars__star reviwes-stars__star--active">
+                @@include('./sprite.html', { 'id': 'star' })
+              </div>
+              <div class="reviwes-stars__star">
+                @@include('./sprite.html', { 'id': 'star' })
+              </div>
             </div>
           </div>
         </div>
         <textarea
           type="text"
           class="custom-input mb-30"
-          style="height: 100px; resize: none;"
+          style="height: 100px; resize: none"
           placeholder="Текст отзыва"
         ></textarea>
       </div>
-      
-      <div class="d-flex justify-content-between flex-column flex-sm-row align-items-center">
+
+      <div
+        class="d-flex justify-content-between flex-column flex-sm-row align-items-center"
+      >
         <div class="submit-agree fs-8 fs-lg-7 mb-10 mb-sm-0">
-            <label class="custom-checkbox">
+          <label class="custom-checkbox">
+            <div>
               <input type="checkbox" name="agree" />
               <svg class="img">
                 <use xlink:href="images/icons/icons.svg#check-mark"></use>
-              </svg> </label
-            >Согласен на обработку персональных данных
-          </div>
+              </svg>
+            </div> </label
+          >Согласен на обработку персональных данных
+        </div>
         <input
           class="btn btn-outline-primary bg-primary-hover text-body-color text-white-hover"
           value="Отправить"

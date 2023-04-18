@@ -112,6 +112,41 @@
   width: 1px;
   background-color: $opposite;
 }
+
+
+.drop-normal-menu {
+  position: absolute;
+  
+  right: 0;
+  width: 200px;
+  
+  padding: 20px;
+  border-radius: 5px;
+  background-color: $system-component;
+  opacity: 0;
+  z-index: -100;
+  top: -90000px;
+  &__scroller {
+    max-height: 200px;
+  }
+  &:hover {
+    opacity: 1;
+  z-index: 10;
+  top: 100%;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li + li {
+      margin-top: 10px;
+      padding-right: 5px;
+    }
+    a {
+      color: $body-color;
+    }
+  }
+}
 .header-menu-vidgets {
   display: flex;
   align-items: center;
@@ -139,7 +174,14 @@
       height: 20px;
     }
   }
+  &__toponim:hover .drop-normal-menu  {
+    opacity: 1;
+    z-index: 10;
+    top: 100%;
+  }
 }
+
+
 
 @media (max-width: 1200px) {
   .header {
@@ -351,7 +393,7 @@
     margin: 0;
     list-style: none;
     & li + li {
-      margin-bottom: 10px;
+      margin-top: 10px;
     }
   }
   & a {
@@ -395,13 +437,11 @@
     &__list {
     }
     &__list-item {
-      
-
       &:hover > .header-menu-dropdown {
-        display: initial;
+        display: none;
       }
       &:hover > .header-menu-simple-dropdown {
-        display: initial;
+        display: none;
       }
     }
   }
@@ -454,10 +494,50 @@
     &__list-link {
     }
   }
+  .header-all-dropdown {
+    display: none !important;
+    &--active {
+      display: block !important;
+    }
+  }
 }
 
 @media (max-width: 1200px) {
   .header-menu-dropdown {
     padding: 0;
+  }
+}
+
+.header-cart-button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: block;
+  span {
+    display: flex;
+    border-radius: 50%;
+    color: black;
+    border: 1px solid #5a5a79;
+    background-color: white;
+    width: 20px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 12px;
+    height: 20px;
+    flex: 0;
+    padding-top: 3px;
+    justify-content: center;
+    align-items: center;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+  &--active {
+    span {
+      color: white;
+      background-color: #ff3048;
+    }
   }
 }
