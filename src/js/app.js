@@ -13,10 +13,10 @@ import Tabs from "./tabs.js";
 import { Modal } from "bootstrap";
 import LazyLoad from "vanilla-lazyload";
 
-import './filter/Filter.js' 
-import StarRating from './starRating.js';
-import easyComm from './easyComm.js';
-import AgelarSelect from './select/Select.js';
+import "./filter/Filter.js";
+import StarRating from "./starRating.js";
+import easyComm from "./easyComm.js";
+import AgelarSelect from "./select/Select.js";
 
 new AgelarSelect();
 
@@ -61,6 +61,10 @@ if (
       block: "center",
     });
   });
+}
+
+if (document.querySelector(".product-detail-tabs")) {
+  let newTabs = new Tabs(".product-detail-tabs");
 }
 
 function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
@@ -236,8 +240,7 @@ document
     new SimpleBar(elem);
   });
 
-
-  document
+document
   .querySelectorAll(".drop-normal-menu__scroller")
   .forEach((elem, index) => {
     new SimpleBar(elem);
@@ -279,9 +282,11 @@ if (window.innerWidth <= 1200) {
   );
   buttonHeaderForExpand.forEach((btn, idx) => {
     btn.addEventListener("click", (e) => {
-      console.log(idx, dropdownHeaderForExpand)
-      if(dropdownHeaderForExpand[idx])
-        dropdownHeaderForExpand[idx].classList.toggle('header-all-dropdown--active')
+      console.log(idx, dropdownHeaderForExpand);
+      if (dropdownHeaderForExpand[idx])
+        dropdownHeaderForExpand[idx].classList.toggle(
+          "header-all-dropdown--active"
+        );
     });
   });
 }
@@ -826,7 +831,5 @@ arrowExpandForMenu.forEach((elem, index) => {
   })
 })
 } */
-
-
 
 window["FLS"] = location.hostname === "localhost";
