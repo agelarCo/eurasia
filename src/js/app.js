@@ -214,7 +214,7 @@ if (cartControlValueDecr && cartControlValueIncrem) {
 }
 
 window.addEventListener("scroll", () => {
-  console.log(document.body.scrollTop);
+  
 });
 
 let headerMenu = document.querySelector(".header-menu");
@@ -279,7 +279,7 @@ if (window.innerWidth <= 1200) {
   );
   buttonHeaderForExpand.forEach((btn, idx) => {
     btn.addEventListener("click", (e) => {
-      console.log(idx, dropdownHeaderForExpand)
+      //console.log(idx, dropdownHeaderForExpand)
       if(dropdownHeaderForExpand[idx])
         dropdownHeaderForExpand[idx].classList.toggle('header-all-dropdown--active')
     });
@@ -750,7 +750,7 @@ if (bannerCategory) {
       pos = 0;
     }
 
-    console.log(pos, image);
+    
     if (pos != -1) {
       products[pos].insertAdjacentHTML("afterend", picture);
     } else {

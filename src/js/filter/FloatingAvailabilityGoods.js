@@ -30,6 +30,7 @@ class FloatingAvailabilityGoods {
     }
 
     createFloatChecker(value, link) {
+        
         if (value == 0) {
             this.selector.insertAdjacentHTML('afterbegin', `<div
         class="filter-btn-details-avialable filter-btn-details-avialable--js"
