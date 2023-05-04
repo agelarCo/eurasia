@@ -1,0 +1,4129 @@
+<html lang="ru" class="js">
+  <head>
+    <base href="http://neweuarasia.webtm.ru/" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/assets/template/css/style.min.css?v=1" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Главная</title>
+    <link
+      rel="stylesheet"
+      href="/assets/components/minishop2/css/web/default.css?v=883e1a339c"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/components/minishop2/css/web/lib/jquery.jgrowl.min.css"
+      type="text/css"
+    />
+    <script>
+      miniShop2Config = {
+        close_all_message:
+          "\u0437\u0430\u043a\u0440\u044b\u0442\u044c \u0432\u0441\u0435",
+        cssUrl: "\/assets\/components\/minishop2\/css\/web\/",
+        jsUrl: "\/assets\/components\/minishop2\/js\/web\/",
+        actionUrl: "\/assets\/components\/minishop2\/action.php",
+        ctx: "web",
+        price_format: [2, ".", " "],
+        price_format_no_zeros: true,
+        weight_format: [3, ".", " "],
+        weight_format_no_zeros: true,
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="/assets/components/easycomm/css/web/ec.default.css"
+      type="text/css"
+    />
+    <script type="text/javascript">
+      easyCommConfig = {
+        ctx: "web",
+        jsUrl: "\/assets\/components\/easycomm\/js\/web\/",
+        cssUrl: "\/assets\/components\/easycomm\/css\/web\/",
+        imgUrl: "\/assets\/components\/easycomm\/img\/web\/",
+        actionUrl: "\/assets\/components\/easycomm\/action.php",
+        reCaptchaSiteKey: "",
+      };
+    </script>
+  </head>
+
+  <body class="page">
+    <header class="header header--main-page header--fixed">
+      <div class="container header__container">
+        <div
+          class="header-icon-button header-icon-button--burger-menu header-menu-close"
+        >
+          <svg style="width: @@width; height: @@height" class="img">
+            <use
+              xlink:href="/assets/template/images/icons/icons.svg#burger"
+            ></use>
+          </svg>
+        </div>
+        <div class="header-logo">
+          <a class="header__logo">
+            <img src="/assets/template/images/logo.svg" alt="Логотип" />
+          </a>
+          <div class="header-logo__desc">
+            Оптовая торговля металлопрокатом <br />Доставка по всей России
+          </div>
+        </div>
+        <div class="d-flex gap-10">
+          <div class="msMiniCart d-md-none header-cart-button">
+            <div href="korzina.html" target="_blank" class="empty">
+              <span class="ms2_total_count">0</span>
+              <svg
+                style="width: @@width; height: @@height; color: #5a5a79"
+                class="img"
+              >
+                <use
+                  xlink:href="/assets/template/images/icons/icons.svg#shop"
+                ></use>
+              </svg>
+            </div>
+            <a href="korzina.html" target="_blank" class="not_empty">
+              <span class="ms2_total_count">0</span>
+              <svg
+                style="width: @@width; height: @@height; color: #5a5a79"
+                class="img"
+              >
+                <use
+                  xlink:href="/assets/template/images/icons/icons.svg#shop"
+                ></use>
+              </svg>
+            </a>
+          </div>
+
+          <div
+            class="header-icon-button header-icon-button--callback-menu"
+            data-bs-toggle="modal"
+            data-bs-target="#modalCallback"
+          >
+            <svg style="width: @@width; height: @@height" class="img">
+              <use
+                xlink:href="/assets/template/images/icons/icons.svg#callback"
+              ></use>
+            </svg>
+          </div>
+        </div>
+        <nav class="header-menu header__menu">
+          <div class="header-menu-close header-menu-close-button">
+            <svg style="width: @@width; height: @@height" class="img">
+              <use
+                xlink:href="/assets/template/images/icons/icons.svg#close"
+              ></use>
+            </svg>
+          </div>
+
+          <div class="header-menu-vidgets">
+            <a class="header-menu-vidgets__tel" href="tel:+7 (499) 302-36-30"
+              >+7 (499) 302-36-30</a
+            >
+            <div class="header-menu-vidgets__container">
+              <div class="header-menu-vertical-separator"></div>
+              <div
+                class="header-menu-vidgets__callback text-primary"
+                style="cursor: pointer"
+                data-bs-toggle="modal"
+                data-bs-target="#modalCallback"
+              >
+                Заказать звонок
+              </div>
+              <div class="header-menu-vertical-separator"></div>
+              <div
+                class="btn btn-primary header-menu-vidgets__get-btn py-10 text-white"
+                data-bs-toggle="modal"
+                data-bs-target="#modalGetPrice"
+              >
+                Запросить прайс
+              </div>
+              <div class="header-menu-vertical-separator"></div>
+            </div>
+
+            <div
+              class="agelar-select--js header-menu-vidgets__toponim position-relative"
+            >
+              <svg style="width: @@width; height: @@height" class="img">
+                <use
+                  xlink:href="/assets/template/images/icons/icons.svg#gps"
+                ></use>
+              </svg>
+              <span class="cursor-pointer agelar-selected-container--js"
+                >Москва</span
+              >
+
+              <div class="drop-normal-menu">
+                <div class="drop-normal-menu__scroller" data-simplebar="init">
+                  <div class="simplebar-wrapper" style="margin: 0px">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                      <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                      <div
+                        class="simplebar-offset"
+                        style="right: 0px; bottom: 0px"
+                      >
+                        <div
+                          class="simplebar-content-wrapper"
+                          tabindex="0"
+                          role="region"
+                          aria-label="scrollable content"
+                          style="height: auto; overflow: hidden"
+                        >
+                          <div class="simplebar-content" style="padding: 0px">
+                            <ul>
+                              <li
+                                class="cursor-pointer agelar-select-option--js"
+                              >
+                                Самара
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="simplebar-placeholder"
+                      style="width: 160px; height: 24px"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-horizontal"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="width: 0px; display: none"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-vertical"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="height: 0px; display: none"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <input type="hidden" value="Москва" />
+            </div>
+          </div>
+
+          <ul class="header-menu__list">
+            <li class="header-menu__list-item header-menu__list-item--deep">
+              <div class="d-flex align-items-center gap-5">
+                <a href="/catalog/" class="">Каталог</a>
+                <div class="header-menu__list-item-arrow">
+                  <svg style="width: @@width; height: @@height" class="img">
+                    <use
+                      xlink:href="/assets/template/images/icons/icons.svg#down"
+                    ></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="header-menu-dropdown header-all-dropdown">
+                <div
+                  class="header-menu-dropdown__scrollbox"
+                  data-simplebar="init"
+                >
+                  <div class="simplebar-wrapper" style="margin: 0px">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                      <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                      <div
+                        class="simplebar-offset"
+                        style="right: 0px; bottom: 0px"
+                      >
+                        <div
+                          class="simplebar-content-wrapper"
+                          tabindex="0"
+                          role="region"
+                          aria-label="scrollable content"
+                          style="height: auto; overflow: hidden"
+                        >
+                          <div class="simplebar-content" style="padding: 0px">
+                            <div class="header-menu-dropdown__container">
+                              <div class="header-menu-dropdown__box">
+                                <div class="header-menu-dropdown__inner-image">
+                                  <img
+                                    width="120"
+                                    height="95"
+                                    class="header-menu-dropdown__image"
+                                    src="/assets/template/images/catalog/catalog-1.png"
+                                    alt="Нержавеющая сталь"
+                                  />
+                                </div>
+                                <div class="header-menu-dropdown__title-list">
+                                  <a
+                                    href="catalog/nerzhaveyushhaya-stal/"
+                                    class="header-menu-dropdown__title"
+                                    >Нержавеющая сталь</a
+                                  >
+                                  <div
+                                    class="header-menu-dropdown__list-link--js"
+                                  >
+                                    <ul class="header-menu-dropdown__list-link">
+                                      <li class="first">
+                                        <a
+                                          href="/catalog/nerzhaveyushhaya-stal/krug-nerzhaveyushhij/"
+                                        >
+                                          Круг нержавеющий
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/nerzhaveyushhaya-stal/truba-nerzhaveyushhaya/"
+                                        >
+                                          Труба нержавеющая
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/nerzhaveyushhaya-stal/list-nerzhaveyushhij/"
+                                        >
+                                          Лист нержавеющий
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/nerzhaveyushhaya-stal/rulon-nerzhaveyushhij/"
+                                        >
+                                          Рулон нержавеющий
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/nerzhaveyushhaya-stal/kvadrat-nerzhaveyushhij/"
+                                        >
+                                          Квадрат нержавеющий
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/nerzhaveyushhaya-stal/polosa-nerzhaveyushhaya/"
+                                        >
+                                          Полоса нержавеющая
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/nerzhaveyushhaya-stal/provoloka-nerzhaveyushhaya/"
+                                        >
+                                          Проволока нержавеющая
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/nerzhaveyushhaya-stal/setka-nerzhaveyushhaya/"
+                                        >
+                                          Сетка нержавеющая
+                                        </a>
+                                      </li>
+                                      <li class="last">
+                                        <a
+                                          href="/catalog/nerzhaveyushhaya-stal/shestigrannik-nerzhaveyushhij/"
+                                        >
+                                          Шестигранник нержавеющий
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="header-menu-dropdown__box">
+                                <div class="header-menu-dropdown__inner-image">
+                                  <img
+                                    width="120"
+                                    height="95"
+                                    class="header-menu-dropdown__image"
+                                    src="/assets/template/images/catalog/catalog-2.png"
+                                    alt="Цветной прокат"
+                                  />
+                                </div>
+                                <div class="header-menu-dropdown__title-list">
+                                  <a
+                                    href="catalog/czvetnoj-prokat/"
+                                    class="header-menu-dropdown__title"
+                                    >Цветной прокат</a
+                                  >
+                                  <div
+                                    class="header-menu-dropdown__list-link--js"
+                                  >
+                                    <ul class="header-menu-dropdown__list-link">
+                                      <li class="first">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/krug-bronza/"
+                                        >
+                                          Круг бронза
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/krug-latun/"
+                                        >
+                                          Круг латунь
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/krug-med/"
+                                        >
+                                          Круг медь
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/lenta-latun/"
+                                        >
+                                          Лента латунь
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/list-latun/"
+                                        >
+                                          Лист латунь
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/lenta-med/"
+                                        >
+                                          Лента медь
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/list-med/"
+                                        >
+                                          Лист медь
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/truba-latun/"
+                                        >
+                                          Труба латунь
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/truba-med/"
+                                        >
+                                          Труба медь
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/shestigrannik-latun/"
+                                        >
+                                          Шестигранник латунь
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/shina-med/"
+                                        >
+                                          Шина медь
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/krug-alyuminij/"
+                                        >
+                                          Круг алюминий
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/plita-alyuminij/"
+                                        >
+                                          Плита алюминий
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/list-alyuminij/"
+                                        >
+                                          Лист алюминий
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/krug-dyural/"
+                                        >
+                                          Круг дюраль
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/plita-dyural/"
+                                        >
+                                          Плита дюраль
+                                        </a>
+                                      </li>
+                                      <li class="last">
+                                        <a
+                                          href="/catalog/czvetnoj-prokat/list-dyural/"
+                                        >
+                                          Лист дюраль
+                                        </a>
+                                      </li>
+                                    </ul>
+                                    <div
+                                      class="header-menu-dropdown-btn-expand"
+                                    >
+                                      Ещё
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="header-menu-dropdown__box">
+                                <div class="header-menu-dropdown__inner-image">
+                                  <img
+                                    width="120"
+                                    height="95"
+                                    class="header-menu-dropdown__image"
+                                    src="/assets/template/images/catalog/catalog-5.png"
+                                    alt="Сортовой прокат"
+                                  />
+                                </div>
+                                <div class="header-menu-dropdown__title-list">
+                                  <a
+                                    href="catalog/sortovyij-prokat/"
+                                    class="header-menu-dropdown__title"
+                                    >Сортовой прокат</a
+                                  >
+                                  <div
+                                    class="header-menu-dropdown__list-link--js"
+                                  >
+                                    <ul class="header-menu-dropdown__list-link">
+                                      <li class="first">
+                                        <a
+                                          href="/catalog/sortovyij-prokat/armatura/"
+                                        >
+                                          Арматура
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/sortovyij-prokat/balka/"
+                                        >
+                                          Балка
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/sortovyij-prokat/shveller/"
+                                        >
+                                          Швеллер
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/sortovyij-prokat/ugolok/"
+                                        >
+                                          Уголок
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/sortovyij-prokat/krug/"
+                                        >
+                                          Круг
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/sortovyij-prokat/polosa/"
+                                        >
+                                          Полоса
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/sortovyij-prokat/kvadrat/"
+                                        >
+                                          Квадрат
+                                        </a>
+                                      </li>
+                                      <li class="last">
+                                        <a
+                                          href="/catalog/sortovyij-prokat/provoloka/"
+                                        >
+                                          Проволока
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="header-menu-dropdown__box">
+                                <div class="header-menu-dropdown__inner-image">
+                                  <img
+                                    width="120"
+                                    height="95"
+                                    class="header-menu-dropdown__image"
+                                    src="/assets/template/images/catalog/catalog-7.png"
+                                    alt="Листовой прокат"
+                                  />
+                                </div>
+                                <div class="header-menu-dropdown__title-list">
+                                  <a
+                                    href="catalog/listovoj-prokat/"
+                                    class="header-menu-dropdown__title"
+                                    >Листовой прокат</a
+                                  >
+                                  <div
+                                    class="header-menu-dropdown__list-link--js"
+                                  >
+                                    <ul class="header-menu-dropdown__list-link">
+                                      <li class="first">
+                                        <a
+                                          href="/catalog/listovoj-prokat/list-xolodnokatanyij/"
+                                        >
+                                          Лист холоднокатаный
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/listovoj-prokat/list-goryachekatanyij/"
+                                        >
+                                          Лист горячекатаный
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/listovoj-prokat/list-riflenyij/"
+                                        >
+                                          Лист рифленый
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/listovoj-prokat/list-perforirovannyij/"
+                                        >
+                                          Лист перфорированный
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/listovoj-prokat/list-prosechno-vyityazhnoj-(pvl)/"
+                                        >
+                                          Лист просечно-вытяжной (ПВЛ)
+                                        </a>
+                                      </li>
+                                      <li class="last">
+                                        <a
+                                          href="/catalog/listovoj-prokat/rulonnyij-prokat/"
+                                        >
+                                          Рулонный прокат
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="header-menu-dropdown__box">
+                                <div class="header-menu-dropdown__inner-image">
+                                  <img
+                                    width="120"
+                                    height="95"
+                                    class="header-menu-dropdown__image"
+                                    src="/assets/template/images/catalog/catalog-3.png"
+                                    alt="Трубный прокат"
+                                  />
+                                </div>
+                                <div class="header-menu-dropdown__title-list">
+                                  <a
+                                    href="catalog/trubnyij-prokat/"
+                                    class="header-menu-dropdown__title"
+                                    >Трубный прокат</a
+                                  >
+                                  <div
+                                    class="header-menu-dropdown__list-link--js"
+                                  >
+                                    <ul class="header-menu-dropdown__list-link">
+                                      <li class="first">
+                                        <a
+                                          href="/catalog/trubnyij-prokat/truba-elektrosvarnaya/"
+                                        >
+                                          Труба электросварная
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/trubnyij-prokat/truba-profilnaya/"
+                                        >
+                                          Труба профильная
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/trubnyij-prokat/truba-vgp/"
+                                        >
+                                          Труба ВГП
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/trubnyij-prokat/truba-besshovnaya/"
+                                        >
+                                          Труба бесшовная
+                                        </a>
+                                      </li>
+                                      <li class="last">
+                                        <a
+                                          href="/catalog/trubnyij-prokat/truba-oczinkovannaya/"
+                                        >
+                                          Труба оцинкованная
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="header-menu-dropdown__box">
+                                <div class="header-menu-dropdown__inner-image">
+                                  <img
+                                    width="120"
+                                    height="95"
+                                    class="header-menu-dropdown__image"
+                                    src="/assets/template/images/catalog/catalog-6.png"
+                                    alt="Сетка металлическая"
+                                  />
+                                </div>
+                                <div class="header-menu-dropdown__title-list">
+                                  <a
+                                    href="catalog/steka-metellicheskaya/"
+                                    class="header-menu-dropdown__title"
+                                    >Сетка металлическая</a
+                                  >
+                                  <div
+                                    class="header-menu-dropdown__list-link--js"
+                                  >
+                                    <ul class="header-menu-dropdown__list-link">
+                                      <li class="first">
+                                        <a
+                                          href="/catalog/steka-metellicheskaya/setka-czpvs/"
+                                        >
+                                          Сетка ЦПВС
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/steka-metellicheskaya/setka-pletenaya/"
+                                        >
+                                          Сетка плетеная
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/steka-metellicheskaya/setka-svarnaya/"
+                                        >
+                                          Сетка сварная
+                                        </a>
+                                      </li>
+                                      <li class="last">
+                                        <a
+                                          href="/catalog/steka-metellicheskaya/setka-tkanaya/"
+                                        >
+                                          Сетка тканая
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="header-menu-dropdown__box">
+                                <div class="header-menu-dropdown__inner-image">
+                                  <img
+                                    width="120"
+                                    height="95"
+                                    class="header-menu-dropdown__image"
+                                    src="/assets/template/images/catalog/catalog-4.webp"
+                                    alt="Профнастил"
+                                  />
+                                </div>
+                                <div class="header-menu-dropdown__title-list">
+                                  <a
+                                    href="catalog/profnastil/"
+                                    class="header-menu-dropdown__title"
+                                    >Профнастил</a
+                                  >
+                                  <div
+                                    class="header-menu-dropdown__list-link--js"
+                                  >
+                                    <ul class="header-menu-dropdown__list-link">
+                                      <li class="first">
+                                        <a
+                                          href="/catalog/profnastil/komplektuyushhie/"
+                                        >
+                                          Комплектующие
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-c21/"
+                                        >
+                                          Профнастил C21
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-n114/"
+                                        >
+                                          Профнастил Н114
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-n57/"
+                                        >
+                                          Профнастил Н57
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-n60/"
+                                        >
+                                          Профнастил Н60
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-n75/"
+                                        >
+                                          Профнастил Н75
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-ns35/"
+                                        >
+                                          Профнастил НС35
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-ns44/"
+                                        >
+                                          Профнастил НС44
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-s10/"
+                                        >
+                                          Профнастил С10
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-s15/"
+                                        >
+                                          Профнастил С15
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-s20/"
+                                        >
+                                          Профнастил С20
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-s8/"
+                                        >
+                                          Профнастил С8
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-skn127/"
+                                        >
+                                          Профнастил СКН127
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-skn153/"
+                                        >
+                                          Профнастил СКН153
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-skn157/"
+                                        >
+                                          Профнастил СКН157
+                                        </a>
+                                      </li>
+                                      <li class=" ">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-skn50z/"
+                                        >
+                                          Профнастил СКН50Z
+                                        </a>
+                                      </li>
+                                      <li class="last">
+                                        <a
+                                          href="/catalog/profnastil/profnastil-skn90z/"
+                                        >
+                                          Профнастил СКН90Z
+                                        </a>
+                                      </li>
+                                    </ul>
+                                    <div
+                                      class="header-menu-dropdown-btn-expand"
+                                    >
+                                      Ещё
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="simplebar-placeholder"
+                      style="width: 0px; height: 0px"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-horizontal"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="width: 0px; display: none"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-vertical"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="height: 0px; display: none"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="header-menu__list-item header-menu__list-item--deep position-relative"
+            >
+              <div class="d-flex align-items-center gap-5">
+                <a href="/uslugi/" class="max-z-index">Услуги</a>
+                <div class="header-menu__list-item-arrow">
+                  <svg style="width: @@width; height: @@height" class="img">
+                    <use
+                      xlink:href="/assets/template/images/icons/icons.svg#down"
+                    ></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="header-menu-simple-dropdown header-all-dropdown">
+                <div
+                  class="header-menu-simple-dropdown__scroller"
+                  data-simplebar="init"
+                >
+                  <div class="simplebar-wrapper" style="margin: 0px">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                      <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                      <div
+                        class="simplebar-offset"
+                        style="right: 0px; bottom: 0px"
+                      >
+                        <div
+                          class="simplebar-content-wrapper"
+                          tabindex="0"
+                          role="region"
+                          aria-label="scrollable content"
+                          style="height: auto; overflow: hidden"
+                        >
+                          <div class="simplebar-content" style="padding: 0px">
+                            <ul class="">
+                              <li>
+                                <a href="/uslugi/plazmennaya-rezka.html"
+                                  >Плазменная резка</a
+                                >
+                              </li>
+                              <li>
+                                <a href="/uslugi/lazernaya-rezka.html"
+                                  >Лазерная резка</a
+                                >
+                              </li>
+                              <li>
+                                <a href="/uslugi/poroshkovaya-pokraska.html"
+                                  >Порошковая покраска</a
+                                >
+                              </li>
+                              <li>
+                                <a href="/uslugi/gibka-i-valczovka.html"
+                                  >Гибка и вальцовка</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="simplebar-placeholder"
+                      style="width: 0px; height: 0px"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-horizontal"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="width: 0px; display: none"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-vertical"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="height: 0px; display: none"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="header-menu__list-item">
+              <a href="/o-kompanii/">Компания</a>
+            </li>
+
+            <li class="header-menu__list-item">
+              <a href="/informacziya/">Информация</a>
+            </li>
+
+            <li class="header-menu__list-item">
+              <a href="/contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="float-menu">
+      <div class="msMiniCart">
+        <div class="empty float-menu__btn float-menu__btn--shop">
+          <span class="ms2_total_count">0</span>
+          <svg style="width: @@width; height: @@height" class="img">
+            <use
+              xlink:href="/assets/template/images/icons/icons.svg#shop"
+            ></use>
+          </svg>
+        </div>
+
+        <a
+          href="korzina.html"
+          target="_blank"
+          class="not_empty float-menu__btn float-menu__btn--shop float-menu__btn--shop-active"
+        >
+          <span class="ms2_total_count">0</span>
+          <svg style="width: @@width; height: @@height" class="img">
+            <use
+              xlink:href="/assets/template/images/icons/icons.svg#shop"
+            ></use>
+          </svg>
+        </a>
+      </div>
+
+      <a
+        href="#"
+        class="float-menu__btn"
+        data-bs-toggle="modal"
+        data-bs-target="#modalCallback"
+      >
+        <svg style="width: @@width; height: @@height" class="img">
+          <use xlink:href="/assets/template/images/icons/icons.svg#phone"></use>
+        </svg>
+      </a>
+      <a
+        href="#"
+        class="float-menu__btn"
+        data-bs-toggle="modal"
+        data-bs-target="#modalGetPrice"
+      >
+        <svg style="width: @@width; height: @@height" class="img">
+          <use xlink:href="/assets/template/images/icons/icons.svg#ruble"></use>
+        </svg>
+      </a>
+      <a
+        href="#"
+        class="float-menu__btn"
+        data-bs-toggle="modal"
+        data-bs-target="#modalQuestion"
+      >
+        <svg style="width: @@width; height: @@height" class="img">
+          <use
+            xlink:href="/assets/template/images/icons/icons.svg#question"
+          ></use>
+        </svg>
+      </a>
+    </nav>
+
+    <section class="section-top-slider">
+      <div
+        class="swiper-slider overflow-hidden top-slider swiper-initialized swiper-horizontal swiper-autoheight swiper-backface-hidden"
+      >
+        <div
+          class="swiper-wrapper"
+          style="height: 282px; transform: translate3d(0px, 0px, 0px)"
+        >
+          <div
+            class="responsive-img swiper-slide top-slider__slide swiper-slide-active"
+            style="width: 2500px"
+          >
+            <picture>
+              <source
+                srcset="assets/template/images/top-slider/top-slider.webp"
+                media="(min-width: 992px)"
+              />
+              <img
+                class="responsive-img__image top-slider-block__image"
+                src="assets/template/images/top-slider/top-slider-mobile.webp"
+                alt="Работаем с проверенными"
+              />
+            </picture>
+            <div class="container top-slider-block">
+              <div class="top-slider-content">
+                <div class="top-slider-content__title">
+                  Работаем с проверенными
+                </div>
+                <p class="top-slider-content__subtitle">
+                  Металлопрокат изготовлен в строгом
+                </p>
+                <div class="top-slider-content__buttons">
+                  <a
+                    href="#"
+                    class="btn py-10 py-lg-15 btn-primary px-30 px-lg-70 text-white"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalConsultation"
+                    >Оставить заявку</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="slider-pagination-dot top-slider__pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-lock"
+        >
+          <span
+            class="swiper-pagination-bullet swiper-pagination-bullet-active"
+          ></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-system-component advantages">
+      <div class="container py-15 py-md-30">
+        <div class="row gy-5 gx-30">
+          <div class="col-md-4">
+            <div
+              class="text-center advantages-block d-flex flex-column text-md-start"
+            >
+              <span class="fs-6 fs-md-5">Большой выбор продукции</span>
+              <p
+                class="mb-0 fs-5 fs-md-3 fs-xl-1 fw-bold fw-md-normal mt-0 mt-md-15 text-primary"
+              >
+                &gt; 1 500 позиций
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="text-center advantages-block d-flex flex-column text-md-start"
+            >
+              <span class="fs-6 fs-md-5">Опытные специалисты</span>
+              <p
+                class="mb-0 fs-5 fs-md-3 fs-xl-1 fw-bold fw-md-normal mt-0 mt-md-15 text-primary"
+              >
+                от 5 лет стаж
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="text-center advantages-block d-flex flex-column text-md-start"
+            >
+              <span class="fs-6 fs-md-5">Быстрый отклик на заявку</span>
+              <p
+                class="mb-0 fs-5 fs-md-3 fs-xl-1 fw-bold fw-md-normal mt-0 mt-md-15 text-primary"
+              >
+                в течение 5 минут
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-lg-70 py-30 catalog">
+      <div class="container">
+        <div class="row gy-5 gx-30">
+          <div class="box-title">
+            <div class="box-title__container">
+              <div class="box-title__title-decorate"></div>
+              <h2 class="box-title__title">Каталог металлопроката</h2>
+            </div>
+          </div>
+          <div class="catalog-grid">
+            <div class="catalog-card catalog-card--horizont">
+              <div class="catalog-card__inner-image responsive-img">
+                <img
+                  width="295"
+                  height="210"
+                  class="catalog-card__image lazy responsive-img__image entered loaded"
+                  data-src="/assets/template/images/catalog/catalog-1.png"
+                  alt="Нержавеющая сталь"
+                  data-ll-status="loaded"
+                  src="/assets/template/images/catalog/catalog-1.png"
+                />
+                <div class="lazy-load-spinner"></div>
+              </div>
+
+              <div class="catalog-card__inner-title">
+                <p class="catalog-card__title">Нержавеющая сталь</p>
+                <span class="catalog-card__subtitle">490 товаров</span>
+              </div>
+
+              <div class="catalog-card-overlay catalog-card__overlay">
+                <div class="catalog-card-overlay__inner-title">
+                  <div>
+                    <a href="/catalog/nerzhaveyushhaya-stal/"
+                      >Нержавеющая сталь</a
+                    >
+                    <span>490 товаров</span>
+                  </div>
+                </div>
+                <div
+                  class="catalog-card-overlay__scrollbox"
+                  data-simplebar="init"
+                >
+                  <div class="simplebar-wrapper" style="margin: 0px">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                      <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                      <div
+                        class="simplebar-offset"
+                        style="right: 0px; bottom: 0px"
+                      >
+                        <div
+                          class="simplebar-content-wrapper"
+                          tabindex="0"
+                          role="region"
+                          aria-label="scrollable content"
+                          style="height: auto; overflow: hidden"
+                        >
+                          <div class="simplebar-content" style="padding: 0px">
+                            <div class="catalog-card-overlay__list-links">
+                              <a
+                                href="catalog/nerzhaveyushhaya-stal/krug-nerzhaveyushhij/"
+                                >Круг нержавеющий</a
+                              >
+                              <a
+                                href="catalog/nerzhaveyushhaya-stal/truba-nerzhaveyushhaya/"
+                                >Труба нержавеющая</a
+                              >
+                              <a
+                                href="catalog/nerzhaveyushhaya-stal/list-nerzhaveyushhij/"
+                                >Лист нержавеющий</a
+                              >
+                              <a
+                                href="catalog/nerzhaveyushhaya-stal/rulon-nerzhaveyushhij/"
+                                >Рулон нержавеющий</a
+                              >
+                              <a
+                                href="catalog/nerzhaveyushhaya-stal/kvadrat-nerzhaveyushhij/"
+                                >Квадрат нержавеющий</a
+                              >
+                              <a
+                                href="catalog/nerzhaveyushhaya-stal/polosa-nerzhaveyushhaya/"
+                                >Полоса нержавеющая</a
+                              >
+                              <a
+                                href="catalog/nerzhaveyushhaya-stal/provoloka-nerzhaveyushhaya/"
+                                >Проволока нержавеющая</a
+                              >
+                              <a
+                                href="catalog/nerzhaveyushhaya-stal/setka-nerzhaveyushhaya/"
+                                >Сетка нержавеющая</a
+                              >
+                              <a
+                                href="catalog/nerzhaveyushhaya-stal/shestigrannik-nerzhaveyushhij/"
+                                >Шестигранник нержавеющий</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="simplebar-placeholder"
+                      style="width: 0px; height: 0px"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-horizontal"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="width: 0px; display: none"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-vertical"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="height: 0px; display: none"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-card catalog-card--horizont">
+              <div class="catalog-card__inner-image responsive-img">
+                <img
+                  width="295"
+                  height="210"
+                  class="catalog-card__image lazy responsive-img__image entered loaded"
+                  data-src="/assets/template/images/catalog/catalog-2.webp"
+                  alt="Цветной прокат"
+                  data-ll-status="loaded"
+                  src="/assets/template/images/catalog/catalog-2.webp"
+                />
+                <div class="lazy-load-spinner"></div>
+              </div>
+
+              <div class="catalog-card__inner-title">
+                <p class="catalog-card__title">Цветной прокат</p>
+                <span class="catalog-card__subtitle">0 товаров</span>
+              </div>
+
+              <div class="catalog-card-overlay catalog-card__overlay">
+                <div class="catalog-card-overlay__inner-title">
+                  <div>
+                    <a href="/catalog/czvetnoj-prokat/">Цветной прокат</a>
+                    <span>0 товаров</span>
+                  </div>
+                </div>
+                <div
+                  class="catalog-card-overlay__scrollbox"
+                  data-simplebar="init"
+                >
+                  <div class="simplebar-wrapper" style="margin: 0px">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                      <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                      <div
+                        class="simplebar-offset"
+                        style="right: 0px; bottom: 0px"
+                      >
+                        <div
+                          class="simplebar-content-wrapper"
+                          tabindex="0"
+                          role="region"
+                          aria-label="scrollable content"
+                          style="height: auto; overflow: hidden"
+                        >
+                          <div class="simplebar-content" style="padding: 0px">
+                            <div class="catalog-card-overlay__list-links">
+                              <a href="catalog/czvetnoj-prokat/krug-bronza/"
+                                >Круг бронза</a
+                              >
+                              <a href="catalog/czvetnoj-prokat/krug-latun/"
+                                >Круг латунь</a
+                              >
+                              <a href="catalog/czvetnoj-prokat/krug-med/"
+                                >Круг медь</a
+                              >
+                              <a href="catalog/czvetnoj-prokat/lenta-latun/"
+                                >Лента латунь</a
+                              >
+                              <a href="catalog/czvetnoj-prokat/list-latun/"
+                                >Лист латунь</a
+                              >
+                              <a href="catalog/czvetnoj-prokat/lenta-med/"
+                                >Лента медь</a
+                              >
+                              <a href="catalog/czvetnoj-prokat/list-med/"
+                                >Лист медь</a
+                              >
+                              <a href="catalog/czvetnoj-prokat/truba-latun/"
+                                >Труба латунь</a
+                              >
+                              <a href="catalog/czvetnoj-prokat/truba-med/"
+                                >Труба медь</a
+                              >
+                              <a
+                                href="catalog/czvetnoj-prokat/shestigrannik-latun/"
+                                >Шестигранник латунь</a
+                              >
+                              <a href="catalog/czvetnoj-prokat/shina-med/"
+                                >Шина медь</a
+                              >
+                              <a href="catalog/czvetnoj-prokat/krug-alyuminij/"
+                                >Круг алюминий</a
+                              >
+                              <a href="catalog/czvetnoj-prokat/plita-alyuminij/"
+                                >Плита алюминий</a
+                              >
+                              <a href="catalog/czvetnoj-prokat/list-alyuminij/"
+                                >Лист алюминий</a
+                              >
+                              <a href="catalog/czvetnoj-prokat/krug-dyural/"
+                                >Круг дюраль</a
+                              >
+                              <a href="catalog/czvetnoj-prokat/plita-dyural/"
+                                >Плита дюраль</a
+                              >
+                              <a href="catalog/czvetnoj-prokat/list-dyural/"
+                                >Лист дюраль</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="simplebar-placeholder"
+                      style="width: 0px; height: 0px"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-horizontal"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="width: 0px; display: none"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-vertical"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="height: 0px; display: none"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-card catalog-card--horizont">
+              <div class="catalog-card__inner-image responsive-img">
+                <img
+                  width="295"
+                  height="210"
+                  class="catalog-card__image lazy responsive-img__image entered loaded"
+                  data-src="/assets/template/images/catalog/catalog-5.webp"
+                  alt="Сортовой прокат"
+                  data-ll-status="loaded"
+                  src="/assets/template/images/catalog/catalog-5.webp"
+                />
+                <div class="lazy-load-spinner"></div>
+              </div>
+
+              <div class="catalog-card__inner-title">
+                <p class="catalog-card__title">Сортовой прокат</p>
+                <span class="catalog-card__subtitle">0 товаров</span>
+              </div>
+
+              <div class="catalog-card-overlay catalog-card__overlay">
+                <div class="catalog-card-overlay__inner-title">
+                  <div>
+                    <a href="/catalog/sortovyij-prokat/">Сортовой прокат</a>
+                    <span>0 товаров</span>
+                  </div>
+                </div>
+                <div
+                  class="catalog-card-overlay__scrollbox"
+                  data-simplebar="init"
+                >
+                  <div class="simplebar-wrapper" style="margin: 0px">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                      <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                      <div
+                        class="simplebar-offset"
+                        style="right: 0px; bottom: 0px"
+                      >
+                        <div
+                          class="simplebar-content-wrapper"
+                          tabindex="0"
+                          role="region"
+                          aria-label="scrollable content"
+                          style="height: auto; overflow: hidden"
+                        >
+                          <div class="simplebar-content" style="padding: 0px">
+                            <div class="catalog-card-overlay__list-links">
+                              <a href="catalog/sortovyij-prokat/armatura/"
+                                >Арматура</a
+                              >
+                              <a href="catalog/sortovyij-prokat/balka/"
+                                >Балка</a
+                              >
+                              <a href="catalog/sortovyij-prokat/shveller/"
+                                >Швеллер</a
+                              >
+                              <a href="catalog/sortovyij-prokat/ugolok/"
+                                >Уголок</a
+                              >
+                              <a href="catalog/sortovyij-prokat/krug/">Круг</a>
+                              <a href="catalog/sortovyij-prokat/polosa/"
+                                >Полоса</a
+                              >
+                              <a href="catalog/sortovyij-prokat/kvadrat/"
+                                >Квадрат</a
+                              >
+                              <a href="catalog/sortovyij-prokat/provoloka/"
+                                >Проволока</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="simplebar-placeholder"
+                      style="width: 0px; height: 0px"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-horizontal"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="width: 0px; display: none"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-vertical"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="height: 0px; display: none"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-card">
+              <div class="catalog-card__inner-image responsive-img">
+                <img
+                  width="295"
+                  height="210"
+                  class="catalog-card__image lazy responsive-img__image entered loaded"
+                  data-src="/assets/template/images/catalog/catalog-7.webp"
+                  alt="Листовой прокат"
+                  data-ll-status="loaded"
+                  src="/assets/template/images/catalog/catalog-7.webp"
+                />
+                <div class="lazy-load-spinner"></div>
+              </div>
+
+              <div class="catalog-card__inner-title">
+                <p class="catalog-card__title">Листовой прокат</p>
+                <span class="catalog-card__subtitle">490 товаров</span>
+              </div>
+
+              <div class="catalog-card-overlay catalog-card__overlay">
+                <div class="catalog-card-overlay__inner-title">
+                  <div>
+                    <a href="/catalog/listovoj-prokat/">Листовой прокат</a>
+                    <span>490 товаров</span>
+                  </div>
+                </div>
+                <div
+                  class="catalog-card-overlay__scrollbox"
+                  data-simplebar="init"
+                >
+                  <div class="simplebar-wrapper" style="margin: 0px">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                      <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                      <div
+                        class="simplebar-offset"
+                        style="right: 0px; bottom: 0px"
+                      >
+                        <div
+                          class="simplebar-content-wrapper"
+                          tabindex="0"
+                          role="region"
+                          aria-label="scrollable content"
+                          style="height: auto; overflow: hidden"
+                        >
+                          <div class="simplebar-content" style="padding: 0px">
+                            <div class="catalog-card-overlay__list-links">
+                              <a
+                                href="catalog/listovoj-prokat/list-xolodnokatanyij/"
+                                >Лист холоднокатаный</a
+                              >
+                              <a
+                                href="catalog/listovoj-prokat/list-goryachekatanyij/"
+                                >Лист горячекатаный</a
+                              >
+                              <a href="catalog/listovoj-prokat/list-riflenyij/"
+                                >Лист рифленый</a
+                              >
+                              <a
+                                href="catalog/listovoj-prokat/list-perforirovannyij/"
+                                >Лист перфорированный</a
+                              >
+                              <a
+                                href="catalog/listovoj-prokat/list-prosechno-vyityazhnoj-(pvl)/"
+                                >Лист просечно-вытяжной (ПВЛ)</a
+                              >
+                              <a
+                                href="catalog/listovoj-prokat/rulonnyij-prokat/"
+                                >Рулонный прокат</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="simplebar-placeholder"
+                      style="width: 0px; height: 0px"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-horizontal"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="width: 0px; display: none"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-vertical"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="height: 0px; display: none"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-card">
+              <div class="catalog-card__inner-image responsive-img">
+                <img
+                  width="295"
+                  height="210"
+                  class="catalog-card__image lazy responsive-img__image entered loaded"
+                  data-src="/assets/template/images/catalog/catalog-3.webp"
+                  alt="Трубный прокат"
+                  data-ll-status="loaded"
+                  src="/assets/template/images/catalog/catalog-3.webp"
+                />
+                <div class="lazy-load-spinner"></div>
+              </div>
+
+              <div class="catalog-card__inner-title">
+                <p class="catalog-card__title">Трубный прокат</p>
+                <span class="catalog-card__subtitle">0 товаров</span>
+              </div>
+
+              <div class="catalog-card-overlay catalog-card__overlay">
+                <div class="catalog-card-overlay__inner-title">
+                  <div>
+                    <a href="/catalog/trubnyij-prokat/">Трубный прокат</a>
+                    <span>0 товаров</span>
+                  </div>
+                </div>
+                <div
+                  class="catalog-card-overlay__scrollbox"
+                  data-simplebar="init"
+                >
+                  <div class="simplebar-wrapper" style="margin: 0px">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                      <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                      <div
+                        class="simplebar-offset"
+                        style="right: 0px; bottom: 0px"
+                      >
+                        <div
+                          class="simplebar-content-wrapper"
+                          tabindex="0"
+                          role="region"
+                          aria-label="scrollable content"
+                          style="height: auto; overflow: hidden"
+                        >
+                          <div class="simplebar-content" style="padding: 0px">
+                            <div class="catalog-card-overlay__list-links">
+                              <a
+                                href="catalog/trubnyij-prokat/truba-elektrosvarnaya/"
+                                >Труба электросварная</a
+                              >
+                              <a
+                                href="catalog/trubnyij-prokat/truba-profilnaya/"
+                                >Труба профильная</a
+                              >
+                              <a href="catalog/trubnyij-prokat/truba-vgp/"
+                                >Труба ВГП</a
+                              >
+                              <a
+                                href="catalog/trubnyij-prokat/truba-besshovnaya/"
+                                >Труба бесшовная</a
+                              >
+                              <a
+                                href="catalog/trubnyij-prokat/truba-oczinkovannaya/"
+                                >Труба оцинкованная</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="simplebar-placeholder"
+                      style="width: 0px; height: 0px"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-horizontal"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="width: 0px; display: none"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-vertical"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="height: 0px; display: none"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-card">
+              <div class="catalog-card__inner-image responsive-img">
+                <img
+                  width="295"
+                  height="210"
+                  class="catalog-card__image lazy responsive-img__image entered loaded"
+                  data-src="/assets/template/images/catalog/catalog-6.webp"
+                  alt="Сетка металлическая"
+                  data-ll-status="loaded"
+                  src="/assets/template/images/catalog/catalog-6.webp"
+                />
+                <div class="lazy-load-spinner"></div>
+              </div>
+
+              <div class="catalog-card__inner-title">
+                <p class="catalog-card__title">Сетка металлическая</p>
+                <span class="catalog-card__subtitle">0 товаров</span>
+              </div>
+
+              <div class="catalog-card-overlay catalog-card__overlay">
+                <div class="catalog-card-overlay__inner-title">
+                  <div>
+                    <a href="/catalog/steka-metellicheskaya/"
+                      >Сетка металлическая</a
+                    >
+                    <span>0 товаров</span>
+                  </div>
+                </div>
+                <div
+                  class="catalog-card-overlay__scrollbox"
+                  data-simplebar="init"
+                >
+                  <div class="simplebar-wrapper" style="margin: 0px">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                      <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                      <div
+                        class="simplebar-offset"
+                        style="right: 0px; bottom: 0px"
+                      >
+                        <div
+                          class="simplebar-content-wrapper"
+                          tabindex="0"
+                          role="region"
+                          aria-label="scrollable content"
+                          style="height: auto; overflow: hidden"
+                        >
+                          <div class="simplebar-content" style="padding: 0px">
+                            <div class="catalog-card-overlay__list-links">
+                              <a
+                                href="catalog/steka-metellicheskaya/setka-czpvs/"
+                                >Сетка ЦПВС</a
+                              >
+                              <a
+                                href="catalog/steka-metellicheskaya/setka-pletenaya/"
+                                >Сетка плетеная</a
+                              >
+                              <a
+                                href="catalog/steka-metellicheskaya/setka-svarnaya/"
+                                >Сетка сварная</a
+                              >
+                              <a
+                                href="catalog/steka-metellicheskaya/setka-tkanaya/"
+                                >Сетка тканая</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="simplebar-placeholder"
+                      style="width: 0px; height: 0px"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-horizontal"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="width: 0px; display: none"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-vertical"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="height: 0px; display: none"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-card">
+              <div class="catalog-card__inner-image responsive-img">
+                <img
+                  width="295"
+                  height="210"
+                  class="catalog-card__image lazy responsive-img__image entered loaded"
+                  data-src="/assets/template/images/catalog/catalog-4.webp"
+                  alt="Профнастил"
+                  data-ll-status="loaded"
+                  src="/assets/template/images/catalog/catalog-4.webp"
+                />
+                <div class="lazy-load-spinner"></div>
+              </div>
+
+              <div class="catalog-card__inner-title">
+                <p class="catalog-card__title">Профнастил</p>
+                <span class="catalog-card__subtitle">0 товаров</span>
+              </div>
+
+              <div class="catalog-card-overlay catalog-card__overlay">
+                <div class="catalog-card-overlay__inner-title">
+                  <div>
+                    <a href="/catalog/profnastil/">Профнастил</a>
+                    <span>0 товаров</span>
+                  </div>
+                </div>
+                <div
+                  class="catalog-card-overlay__scrollbox"
+                  data-simplebar="init"
+                >
+                  <div class="simplebar-wrapper" style="margin: 0px">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                      <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                      <div
+                        class="simplebar-offset"
+                        style="right: 0px; bottom: 0px"
+                      >
+                        <div
+                          class="simplebar-content-wrapper"
+                          tabindex="0"
+                          role="region"
+                          aria-label="scrollable content"
+                          style="height: auto; overflow: hidden"
+                        >
+                          <div class="simplebar-content" style="padding: 0px">
+                            <div class="catalog-card-overlay__list-links">
+                              <a href="catalog/profnastil/komplektuyushhie/"
+                                >Комплектующие</a
+                              >
+                              <a href="catalog/profnastil/profnastil-c21/"
+                                >Профнастил C21</a
+                              >
+                              <a href="catalog/profnastil/profnastil-n114/"
+                                >Профнастил Н114</a
+                              >
+                              <a href="catalog/profnastil/profnastil-n57/"
+                                >Профнастил Н57</a
+                              >
+                              <a href="catalog/profnastil/profnastil-n60/"
+                                >Профнастил Н60</a
+                              >
+                              <a href="catalog/profnastil/profnastil-n75/"
+                                >Профнастил Н75</a
+                              >
+                              <a href="catalog/profnastil/profnastil-ns35/"
+                                >Профнастил НС35</a
+                              >
+                              <a href="catalog/profnastil/profnastil-ns44/"
+                                >Профнастил НС44</a
+                              >
+                              <a href="catalog/profnastil/profnastil-s10/"
+                                >Профнастил С10</a
+                              >
+                              <a href="catalog/profnastil/profnastil-s15/"
+                                >Профнастил С15</a
+                              >
+                              <a href="catalog/profnastil/profnastil-s20/"
+                                >Профнастил С20</a
+                              >
+                              <a href="catalog/profnastil/profnastil-s8/"
+                                >Профнастил С8</a
+                              >
+                              <a href="catalog/profnastil/profnastil-skn127/"
+                                >Профнастил СКН127</a
+                              >
+                              <a href="catalog/profnastil/profnastil-skn153/"
+                                >Профнастил СКН153</a
+                              >
+                              <a href="catalog/profnastil/profnastil-skn157/"
+                                >Профнастил СКН157</a
+                              >
+                              <a href="catalog/profnastil/profnastil-skn50z/"
+                                >Профнастил СКН50Z</a
+                              >
+                              <a href="catalog/profnastil/profnastil-skn90z/"
+                                >Профнастил СКН90Z</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="simplebar-placeholder"
+                      style="width: 0px; height: 0px"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-horizontal"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="width: 0px; display: none"
+                    ></div>
+                  </div>
+                  <div
+                    class="simplebar-track simplebar-vertical"
+                    style="visibility: hidden"
+                  >
+                    <div
+                      class="simplebar-scrollbar"
+                      style="height: 0px; display: none"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-30 pb-lg-60 products">
+      <div class="section-decorate"></div>
+      <div class="container">
+        <div class="box-title">
+          <div class="box-title__container">
+            <div class="box-title__title-decorate"></div>
+            <h2 class="box-title__title">Продукция</h2>
+          </div>
+        </div>
+        <div
+          class="swiper-slider products-slider swiper-initialized swiper-horizontal swiper-autoheight swiper-backface-hidden"
+        >
+          <div
+            class="swiper-wrapper"
+            style="height: 282px; transform: translate3d(0px, 0px, 0px)"
+          >
+            <div
+              class="swiper-slide swiper-slide-active"
+              style="width: 1386px; margin-right: 30px"
+            >
+              <div class="products-grid">
+                <form class="products-card ms2_form" method="post">
+                  <input type="hidden" name="id" value="384" />
+                  <input type="hidden" name="count" value="1" />
+                  <a
+                    href="/catalog/nerzhaveyushhaya-stal/list-nerzhaveyushhij/list-nerzhaveyushhij-aisi-310s-10x1500x3000-mm,-goryachekatanyij.html"
+                    class="box-aspect box-aspect--square responsive-img products-card__inner-image"
+                  >
+                    <img
+                      width="320"
+                      height="320"
+                      data-src="/uploads/products/384/list-nerj.jpg"
+                      class="responsive-img__image lazy entered loaded"
+                      alt="Лист нержавеющий AISI 310S 10x1500x3000 мм, горячекатаный"
+                      data-ll-status="loaded"
+                      src="/uploads/products/384/list-nerj.jpg"
+                    />
+                    <div class="lazy-load-spinner"></div>
+                  </a>
+                  <div class="products-card-content">
+                    <div class="products-card-content__container-title">
+                      <a
+                        href="/catalog/nerzhaveyushhaya-stal/list-nerzhaveyushhij/list-nerzhaveyushhij-aisi-310s-10x1500x3000-mm,-goryachekatanyij.html"
+                        class="products-card-content__name"
+                      >
+                        Лист нержавеющий AISI 310S 10x1500x3000 мм,
+                        горячекатаный
+                      </a>
+
+                      <div
+                        class="products-card-content__stock products-card-content__stock--stock"
+                      >
+                        В наличии
+                      </div>
+                      <div class="products-card-char-list-row">
+                        <span class="products-card-char-list-row__name">
+                          Вид проката
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          горячекатаный (г/к)
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Марка стали
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          AISI 310S
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Толщина, мм
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          10
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Ширина, мм
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          1500
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Длина, мм
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          3000
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Поверхность
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          No1
+                        </span>
+                      </div>
+                    </div>
+                    <div class="products-card-content__container-button-price">
+                      <div class="products-card-content__price">
+                        <span class="products-card-content__price-sign"
+                          >Цена</span
+                        >
+                        <div class="products-card-content__current-price">
+                          810000 ₽/т
+                        </div>
+                      </div>
+                      <div class="products-card-buttons">
+                        <div
+                          class="products-card-buttons__button products-card-buttons__button--question products-card-overflow-toggle"
+                          data-product="Лист нержавеющий AISI 310S 10x1500x3000 мм, горячекатаный"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalQuestionProduct"
+                        >
+                          <svg
+                            style="width: @@width; height: @@height"
+                            class="img"
+                          >
+                            <use
+                              xlink:href="/assets/template/images/icons/icons.svg#question"
+                            ></use>
+                          </svg>
+                        </div>
+                        <div
+                          class="products-card-buttons__button products-card-buttons__button--order"
+                          data-product="Лист нержавеющий AISI 310S 10x1500x3000 мм, горячекатаный"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalOrder"
+                        >
+                          Заказать в 1 клик
+                        </div>
+
+                        <button
+                          class="products-card-buttons__button products-card-buttons__button--to-cart products-card-buttons__button--to-cart--active"
+                          name="ms2_action"
+                          value="cart/add"
+                          type="submit"
+                        >
+                          <svg
+                            style="width: @@width; height: @@height"
+                            class="img"
+                          >
+                            <use
+                              xlink:href="/assets/template/images/icons/icons.svg#shop"
+                            ></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="products-card__overflow">
+                    <div class="products-card-char-list" data-simplebar="init">
+                      <div class="simplebar-wrapper" style="margin: 0px">
+                        <div class="simplebar-height-auto-observer-wrapper">
+                          <div class="simplebar-height-auto-observer"></div>
+                        </div>
+                        <div class="simplebar-mask">
+                          <div
+                            class="simplebar-offset"
+                            style="right: 0px; bottom: 0px"
+                          >
+                            <div
+                              class="simplebar-content-wrapper"
+                              tabindex="0"
+                              role="region"
+                              aria-label="scrollable content"
+                              style="height: 100%; overflow: hidden"
+                            >
+                              <div
+                                class="simplebar-content"
+                                style="padding: 0px"
+                              >
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Вид проката
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    горячекатаный (г/к)
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Марка стали
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    AISI 310S
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Толщина, мм
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    10
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Ширина, мм
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    1500
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Длина, мм
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    3000
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Поверхность
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    No1
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="simplebar-placeholder"
+                          style="width: 262px; height: 186px"
+                        ></div>
+                      </div>
+                      <div
+                        class="simplebar-track simplebar-horizontal"
+                        style="visibility: hidden"
+                      >
+                        <div
+                          class="simplebar-scrollbar"
+                          style="width: 0px; display: none"
+                        ></div>
+                      </div>
+                      <div
+                        class="simplebar-track simplebar-vertical"
+                        style="visibility: hidden"
+                      >
+                        <div
+                          class="simplebar-scrollbar"
+                          style="height: 0px; display: none"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <form class="products-card ms2_form" method="post">
+                  <input type="hidden" name="id" value="640" />
+                  <input type="hidden" name="count" value="1" />
+                  <a
+                    href="/catalog/nerzhaveyushhaya-stal/list-nerzhaveyushhij/list-nerzhaveyushhij-aisi-316l-1,5x1500x3000-mm,-xolodnokatanyij,-matovyij.html"
+                    class="box-aspect box-aspect--square responsive-img products-card__inner-image"
+                  >
+                    <img
+                      width="320"
+                      height="320"
+                      data-src="/uploads/products/640/list-nerj-mat.jpg"
+                      class="responsive-img__image lazy entered loaded"
+                      alt="Лист нержавеющий AISI 316L 1,5x1500x3000 мм, холоднокатаный, матовый"
+                      data-ll-status="loaded"
+                      src="/uploads/products/640/list-nerj-mat.jpg"
+                    />
+                    <div class="lazy-load-spinner"></div>
+                  </a>
+                  <div class="products-card-content">
+                    <div class="products-card-content__container-title">
+                      <a
+                        href="/catalog/nerzhaveyushhaya-stal/list-nerzhaveyushhij/list-nerzhaveyushhij-aisi-316l-1,5x1500x3000-mm,-xolodnokatanyij,-matovyij.html"
+                        class="products-card-content__name"
+                      >
+                        Лист нержавеющий AISI 316L 1,5x1500x3000 мм,
+                        холоднокатаный, матовый
+                      </a>
+
+                      <div
+                        class="products-card-content__stock products-card-content__stock--stock"
+                      >
+                        В наличии
+                      </div>
+                      <div class="products-card-char-list-row">
+                        <span class="products-card-char-list-row__name">
+                          Вид проката
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          холоднокатаный (х/к)
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Марка стали
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          AISI 316L
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Толщина, мм
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          1,5
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Ширина, мм
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          1500
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Длина, мм
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          3000
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Поверхность
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          2B (матовый)
+                        </span>
+                      </div>
+                    </div>
+                    <div class="products-card-content__container-button-price">
+                      <div class="products-card-content__price">
+                        <span class="products-card-content__price-sign"
+                          >Цена</span
+                        >
+                        <div class="products-card-content__current-price">
+                          600000 ₽/т
+                        </div>
+                      </div>
+                      <div class="products-card-buttons">
+                        <div
+                          class="products-card-buttons__button products-card-buttons__button--question products-card-overflow-toggle"
+                          data-product="Лист нержавеющий AISI 316L 1,5x1500x3000 мм, холоднокатаный, матовый"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalQuestionProduct"
+                        >
+                          <svg
+                            style="width: @@width; height: @@height"
+                            class="img"
+                          >
+                            <use
+                              xlink:href="/assets/template/images/icons/icons.svg#question"
+                            ></use>
+                          </svg>
+                        </div>
+                        <div
+                          class="products-card-buttons__button products-card-buttons__button--order"
+                          data-product="Лист нержавеющий AISI 316L 1,5x1500x3000 мм, холоднокатаный, матовый"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalOrder"
+                        >
+                          Заказать в 1 клик
+                        </div>
+
+                        <button
+                          class="products-card-buttons__button products-card-buttons__button--to-cart products-card-buttons__button--to-cart--active"
+                          name="ms2_action"
+                          value="cart/add"
+                          type="submit"
+                        >
+                          <svg
+                            style="width: @@width; height: @@height"
+                            class="img"
+                          >
+                            <use
+                              xlink:href="/assets/template/images/icons/icons.svg#shop"
+                            ></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="products-card__overflow">
+                    <div class="products-card-char-list" data-simplebar="init">
+                      <div class="simplebar-wrapper" style="margin: 0px">
+                        <div class="simplebar-height-auto-observer-wrapper">
+                          <div class="simplebar-height-auto-observer"></div>
+                        </div>
+                        <div class="simplebar-mask">
+                          <div
+                            class="simplebar-offset"
+                            style="right: 0px; bottom: 0px"
+                          >
+                            <div
+                              class="simplebar-content-wrapper"
+                              tabindex="0"
+                              role="region"
+                              aria-label="scrollable content"
+                              style="height: 100%; overflow: hidden"
+                            >
+                              <div
+                                class="simplebar-content"
+                                style="padding: 0px"
+                              >
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Вид проката
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    холоднокатаный (х/к)
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Марка стали
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    AISI 316L
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Толщина, мм
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    1,5
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Ширина, мм
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    1500
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Длина, мм
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    3000
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Поверхность
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    2B (матовый)
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="simplebar-placeholder"
+                          style="width: 262px; height: 186px"
+                        ></div>
+                      </div>
+                      <div
+                        class="simplebar-track simplebar-horizontal"
+                        style="visibility: hidden"
+                      >
+                        <div
+                          class="simplebar-scrollbar"
+                          style="width: 0px; display: none"
+                        ></div>
+                      </div>
+                      <div
+                        class="simplebar-track simplebar-vertical"
+                        style="visibility: hidden"
+                      >
+                        <div
+                          class="simplebar-scrollbar"
+                          style="height: 0px; display: none"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <form class="products-card ms2_form" method="post">
+                  <input type="hidden" name="id" value="522" />
+                  <input type="hidden" name="count" value="1" />
+                  <a
+                    href="/catalog/nerzhaveyushhaya-stal/rulon-nerzhaveyushhij/list-nerzhaveyushhij-v-rulone-aisi-304-2x1000-mm,-goryachekatanyij.html"
+                    class="box-aspect box-aspect--square responsive-img products-card__inner-image"
+                  >
+                    <img
+                      width="320"
+                      height="320"
+                      data-src="/uploads/products/522/list-nerj-v-rulone.jpg"
+                      class="responsive-img__image lazy entered loaded"
+                      alt="Лист нержавеющий в рулоне AISI 304 2x1000 мм, горячекатаный"
+                      data-ll-status="loaded"
+                      src="/uploads/products/522/list-nerj-v-rulone.jpg"
+                    />
+                    <div class="lazy-load-spinner"></div>
+                  </a>
+                  <div class="products-card-content">
+                    <div class="products-card-content__container-title">
+                      <a
+                        href="/catalog/nerzhaveyushhaya-stal/rulon-nerzhaveyushhij/list-nerzhaveyushhij-v-rulone-aisi-304-2x1000-mm,-goryachekatanyij.html"
+                        class="products-card-content__name"
+                      >
+                        Лист нержавеющий в рулоне AISI 304 2x1000 мм,
+                        горячекатаный
+                      </a>
+
+                      <div
+                        class="products-card-content__stock products-card-content__stock--stock"
+                      >
+                        В наличии
+                      </div>
+                      <div class="products-card-char-list-row">
+                        <span class="products-card-char-list-row__name">
+                          Толщина, мм
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          2
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Поверхность
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          No1
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Вид проката
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          горячекатаный (г/к)
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Марка стали
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          AISI 304
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Ширина, мм
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          1000
+                        </span>
+                      </div>
+                    </div>
+                    <div class="products-card-content__container-button-price">
+                      <div class="products-card-content__price">
+                        <span class="products-card-content__price-sign"
+                          >Цена</span
+                        >
+                        <div class="products-card-content__current-price">
+                          350000 ₽/т
+                        </div>
+                      </div>
+                      <div class="products-card-buttons">
+                        <div
+                          class="products-card-buttons__button products-card-buttons__button--question products-card-overflow-toggle"
+                          data-product="Лист нержавеющий в рулоне AISI 304 2x1000 мм, горячекатаный"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalQuestionProduct"
+                        >
+                          <svg
+                            style="width: @@width; height: @@height"
+                            class="img"
+                          >
+                            <use
+                              xlink:href="/assets/template/images/icons/icons.svg#question"
+                            ></use>
+                          </svg>
+                        </div>
+                        <div
+                          class="products-card-buttons__button products-card-buttons__button--order"
+                          data-product="Лист нержавеющий в рулоне AISI 304 2x1000 мм, горячекатаный"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalOrder"
+                        >
+                          Заказать в 1 клик
+                        </div>
+
+                        <button
+                          class="products-card-buttons__button products-card-buttons__button--to-cart products-card-buttons__button--to-cart--active"
+                          name="ms2_action"
+                          value="cart/add"
+                          type="submit"
+                        >
+                          <svg
+                            style="width: @@width; height: @@height"
+                            class="img"
+                          >
+                            <use
+                              xlink:href="/assets/template/images/icons/icons.svg#shop"
+                            ></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="products-card__overflow">
+                    <div class="products-card-char-list" data-simplebar="init">
+                      <div class="simplebar-wrapper" style="margin: 0px">
+                        <div class="simplebar-height-auto-observer-wrapper">
+                          <div class="simplebar-height-auto-observer"></div>
+                        </div>
+                        <div class="simplebar-mask">
+                          <div
+                            class="simplebar-offset"
+                            style="right: 0px; bottom: 0px"
+                          >
+                            <div
+                              class="simplebar-content-wrapper"
+                              tabindex="0"
+                              role="region"
+                              aria-label="scrollable content"
+                              style="height: 100%; overflow: hidden"
+                            >
+                              <div
+                                class="simplebar-content"
+                                style="padding: 0px"
+                              >
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Толщина, мм
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    2
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Поверхность
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    No1
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Вид проката
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    горячекатаный (г/к)
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Марка стали
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    AISI 304
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Ширина, мм
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    1000
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="simplebar-placeholder"
+                          style="width: 262px; height: 155px"
+                        ></div>
+                      </div>
+                      <div
+                        class="simplebar-track simplebar-horizontal"
+                        style="visibility: hidden"
+                      >
+                        <div
+                          class="simplebar-scrollbar"
+                          style="width: 0px; display: none"
+                        ></div>
+                      </div>
+                      <div
+                        class="simplebar-track simplebar-vertical"
+                        style="visibility: hidden"
+                      >
+                        <div
+                          class="simplebar-scrollbar"
+                          style="height: 0px; display: none"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <form class="products-card ms2_form" method="post">
+                  <input type="hidden" name="id" value="322" />
+                  <input type="hidden" name="count" value="1" />
+                  <a
+                    href="/catalog/nerzhaveyushhaya-stal/list-nerzhaveyushhij/list-nerzhaveyushhij-12x18n10t-0,8x1250x2500-mm,-xolodnokatanyij.html"
+                    class="box-aspect box-aspect--square responsive-img products-card__inner-image"
+                  >
+                    <img
+                      width="320"
+                      height="320"
+                      data-src="/uploads/products/322/list-nerj.jpg"
+                      class="responsive-img__image lazy entered loaded"
+                      alt="Лист нержавеющий 12Х18Н10Т 0,8x1250x2500 мм, холоднокатаный"
+                      data-ll-status="loaded"
+                      src="/uploads/products/322/list-nerj.jpg"
+                    />
+                    <div class="lazy-load-spinner"></div>
+                  </a>
+                  <div class="products-card-content">
+                    <div class="products-card-content__container-title">
+                      <a
+                        href="/catalog/nerzhaveyushhaya-stal/list-nerzhaveyushhij/list-nerzhaveyushhij-12x18n10t-0,8x1250x2500-mm,-xolodnokatanyij.html"
+                        class="products-card-content__name"
+                      >
+                        Лист нержавеющий 12Х18Н10Т 0,8x1250x2500 мм,
+                        холоднокатаный
+                      </a>
+
+                      <div
+                        class="products-card-content__stock products-card-content__stock--stock"
+                      >
+                        В наличии
+                      </div>
+                      <div class="products-card-char-list-row">
+                        <span class="products-card-char-list-row__name">
+                          Вид проката
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          холоднокатаный (х/к)
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Марка стали
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          12Х18Н10Т
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Толщина, мм
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          0,8
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Ширина, мм
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          1250
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Длина, мм
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          2500
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Поверхность
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          М2А
+                        </span>
+                      </div>
+                    </div>
+                    <div class="products-card-content__container-button-price">
+                      <div class="products-card-content__price">
+                        <span class="products-card-content__price-sign"
+                          >Цена</span
+                        >
+                        <div class="products-card-content__current-price">
+                          490000 ₽/т
+                        </div>
+                      </div>
+                      <div class="products-card-buttons">
+                        <div
+                          class="products-card-buttons__button products-card-buttons__button--question products-card-overflow-toggle"
+                          data-product="Лист нержавеющий 12Х18Н10Т 0,8x1250x2500 мм, холоднокатаный"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalQuestionProduct"
+                        >
+                          <svg
+                            style="width: @@width; height: @@height"
+                            class="img"
+                          >
+                            <use
+                              xlink:href="/assets/template/images/icons/icons.svg#question"
+                            ></use>
+                          </svg>
+                        </div>
+                        <div
+                          class="products-card-buttons__button products-card-buttons__button--order"
+                          data-product="Лист нержавеющий 12Х18Н10Т 0,8x1250x2500 мм, холоднокатаный"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalOrder"
+                        >
+                          Заказать в 1 клик
+                        </div>
+
+                        <button
+                          class="products-card-buttons__button products-card-buttons__button--to-cart products-card-buttons__button--to-cart--active"
+                          name="ms2_action"
+                          value="cart/add"
+                          type="submit"
+                        >
+                          <svg
+                            style="width: @@width; height: @@height"
+                            class="img"
+                          >
+                            <use
+                              xlink:href="/assets/template/images/icons/icons.svg#shop"
+                            ></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="products-card__overflow">
+                    <div class="products-card-char-list" data-simplebar="init">
+                      <div class="simplebar-wrapper" style="margin: 0px">
+                        <div class="simplebar-height-auto-observer-wrapper">
+                          <div class="simplebar-height-auto-observer"></div>
+                        </div>
+                        <div class="simplebar-mask">
+                          <div
+                            class="simplebar-offset"
+                            style="right: 0px; bottom: 0px"
+                          >
+                            <div
+                              class="simplebar-content-wrapper"
+                              tabindex="0"
+                              role="region"
+                              aria-label="scrollable content"
+                              style="height: 100%; overflow: hidden"
+                            >
+                              <div
+                                class="simplebar-content"
+                                style="padding: 0px"
+                              >
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Вид проката
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    холоднокатаный (х/к)
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Марка стали
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    12Х18Н10Т
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Толщина, мм
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    0,8
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Ширина, мм
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    1250
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Длина, мм
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    2500
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Поверхность
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    М2А
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="simplebar-placeholder"
+                          style="width: 262px; height: 186px"
+                        ></div>
+                      </div>
+                      <div
+                        class="simplebar-track simplebar-horizontal"
+                        style="visibility: hidden"
+                      >
+                        <div
+                          class="simplebar-scrollbar"
+                          style="width: 0px; display: none"
+                        ></div>
+                      </div>
+                      <div
+                        class="simplebar-track simplebar-vertical"
+                        style="visibility: hidden"
+                      >
+                        <div
+                          class="simplebar-scrollbar"
+                          style="height: 0px; display: none"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <form class="products-card ms2_form" method="post">
+                  <input type="hidden" name="id" value="367" />
+                  <input type="hidden" name="count" value="1" />
+                  <a
+                    href="/catalog/nerzhaveyushhaya-stal/rulon-nerzhaveyushhij/list-nerzhaveyushhij-v-rulone-aisi-310s-0,8x1000-mm,-xolodnokatanyij,-matovyij.html"
+                    class="box-aspect box-aspect--square responsive-img products-card__inner-image"
+                  >
+                    <img
+                      width="320"
+                      height="320"
+                      data-src="/uploads/products/367/list-nerj-v-rulone.jpg"
+                      class="responsive-img__image lazy entered loaded"
+                      alt="Лист нержавеющий в рулоне AISI 310S 0,8x1000 мм, холоднокатаный, матовый"
+                      data-ll-status="loaded"
+                      src="/uploads/products/367/list-nerj-v-rulone.jpg"
+                    />
+                    <div class="lazy-load-spinner"></div>
+                  </a>
+                  <div class="products-card-content">
+                    <div class="products-card-content__container-title">
+                      <a
+                        href="/catalog/nerzhaveyushhaya-stal/rulon-nerzhaveyushhij/list-nerzhaveyushhij-v-rulone-aisi-310s-0,8x1000-mm,-xolodnokatanyij,-matovyij.html"
+                        class="products-card-content__name"
+                      >
+                        Лист нержавеющий в рулоне AISI 310S 0,8x1000 мм,
+                        холоднокатаный, матовый
+                      </a>
+
+                      <div
+                        class="products-card-content__stock products-card-content__stock--stock"
+                      >
+                        В наличии
+                      </div>
+                      <div class="products-card-char-list-row">
+                        <span class="products-card-char-list-row__name">
+                          Толщина, мм
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          0,8
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Поверхность
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          2B (матовый)
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Вид проката
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          холоднокатаный (х/к)
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Марка стали
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          AISI 310S
+                        </span>
+                        <span class="products-card-char-list-row__name">
+                          Ширина, мм
+                        </span>
+                        <span class="products-card-char-list-row__value">
+                          1000
+                        </span>
+                      </div>
+                    </div>
+                    <div class="products-card-content__container-button-price">
+                      <div class="products-card-content__price">
+                        <span class="products-card-content__price-sign"
+                          >Цена</span
+                        >
+                        <div class="products-card-content__current-price">
+                          980000 ₽/т
+                        </div>
+                      </div>
+                      <div class="products-card-buttons">
+                        <div
+                          class="products-card-buttons__button products-card-buttons__button--question products-card-overflow-toggle"
+                          data-product="Лист нержавеющий в рулоне AISI 310S 0,8x1000 мм, холоднокатаный, матовый"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalQuestionProduct"
+                        >
+                          <svg
+                            style="width: @@width; height: @@height"
+                            class="img"
+                          >
+                            <use
+                              xlink:href="/assets/template/images/icons/icons.svg#question"
+                            ></use>
+                          </svg>
+                        </div>
+                        <div
+                          class="products-card-buttons__button products-card-buttons__button--order"
+                          data-product="Лист нержавеющий в рулоне AISI 310S 0,8x1000 мм, холоднокатаный, матовый"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalOrder"
+                        >
+                          Заказать в 1 клик
+                        </div>
+
+                        <button
+                          class="products-card-buttons__button products-card-buttons__button--to-cart products-card-buttons__button--to-cart--active"
+                          name="ms2_action"
+                          value="cart/add"
+                          type="submit"
+                        >
+                          <svg
+                            style="width: @@width; height: @@height"
+                            class="img"
+                          >
+                            <use
+                              xlink:href="/assets/template/images/icons/icons.svg#shop"
+                            ></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="products-card__overflow">
+                    <div class="products-card-char-list" data-simplebar="init">
+                      <div class="simplebar-wrapper" style="margin: 0px">
+                        <div class="simplebar-height-auto-observer-wrapper">
+                          <div class="simplebar-height-auto-observer"></div>
+                        </div>
+                        <div class="simplebar-mask">
+                          <div
+                            class="simplebar-offset"
+                            style="right: 0px; bottom: 0px"
+                          >
+                            <div
+                              class="simplebar-content-wrapper"
+                              tabindex="0"
+                              role="region"
+                              aria-label="scrollable content"
+                              style="height: 100%; overflow: hidden"
+                            >
+                              <div
+                                class="simplebar-content"
+                                style="padding: 0px"
+                              >
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Толщина, мм
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    0,8
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Поверхность
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    2B (матовый)
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Вид проката
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    холоднокатаный (х/к)
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Марка стали
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    AISI 310S
+                                  </span>
+                                </div>
+                                <div class="products-card-char-list__item">
+                                  <span class="products-card-char-list__name">
+                                    Ширина, мм
+                                  </span>
+                                  <span class="products-card-char-list__value">
+                                    1000
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="simplebar-placeholder"
+                          style="width: 262px; height: 155px"
+                        ></div>
+                      </div>
+                      <div
+                        class="simplebar-track simplebar-horizontal"
+                        style="visibility: hidden"
+                      >
+                        <div
+                          class="simplebar-scrollbar"
+                          style="width: 0px; display: none"
+                        ></div>
+                      </div>
+                      <div
+                        class="simplebar-track simplebar-vertical"
+                        style="visibility: hidden"
+                      >
+                        <div
+                          class="simplebar-scrollbar"
+                          style="height: 0px; display: none"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="slider-pagination-dot mt-15 mt-lg-30 products-slider__pagination"
+        ></div>
+      </div>
+    </section>
+
+    <section class="py-lg-70 py-30 service">
+      <div class="container gx-xl-0 position-relative">
+        <div class="box-title">
+          <div class="box-title__container">
+            <div class="box-title__title-decorate"></div>
+            <h2 class="box-title__title">Наши услуги</h2>
+          </div>
+        </div>
+        <div
+          class="swiper-slider overflow-hidden service-slider swiper-initialized swiper-horizontal swiper-backface-hidden"
+        >
+          <div
+            class="swiper-wrapper"
+            style="transform: translate3d(0px, 0px, 0px)"
+          >
+            <div
+              class="swiper-slide swiper-slide-active"
+              style="width: 1410px; margin-right: 30px"
+            >
+              <div class="row g-15 g-lg-30">
+                <div class="col-6 col-lg-3">
+                  <a href="uslugi/plazmennaya-rezka.html" class="service-block">
+                    <div class="service-block__inner-image">
+                      <img
+                        src="assets/template/images/service/sevice-1.svg"
+                        width="200"
+                        height="200"
+                        class="service-block__inner-image"
+                      />
+                    </div>
+                    <div class="service-block__inner-title">
+                      <span>Плазменная резка</span>
+                      <div class="service-block__animate-dot">
+                        <span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <a href="uslugi/lazernaya-rezka.html" class="service-block">
+                    <div class="service-block__inner-image">
+                      <img
+                        src="assets/template/images/service/sevice-2.svg"
+                        width="200"
+                        height="200"
+                        class="service-block__inner-image"
+                      />
+                    </div>
+                    <div class="service-block__inner-title">
+                      <span>Лазерная резка</span>
+                      <div class="service-block__animate-dot">
+                        <span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <a
+                    href="uslugi/poroshkovaya-pokraska.html"
+                    class="service-block"
+                  >
+                    <div class="service-block__inner-image">
+                      <img
+                        src="assets/template/images/service/sevice-3.svg"
+                        width="200"
+                        height="200"
+                        class="service-block__inner-image"
+                      />
+                    </div>
+                    <div class="service-block__inner-title">
+                      <span>Порошковая покраска</span>
+                      <div class="service-block__animate-dot">
+                        <span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <a href="uslugi/gibka-i-valczovka.html" class="service-block">
+                    <div class="service-block__inner-image">
+                      <img
+                        src="assets/template/images/service/sevice-4.svg"
+                        width="200"
+                        height="200"
+                        class="service-block__inner-image"
+                      />
+                    </div>
+                    <div class="service-block__inner-title">
+                      <span>Гибка и вальцовка</span>
+                      <div class="service-block__animate-dot">
+                        <span></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="slider-pagination-dot mt-15 mt-lg-30 products-slider__pagination"
+        ></div>
+      </div>
+    </section>
+
+    <section class="py-lg-70 about bg-system-component py-15">
+      <div class="container">
+        <div class="row gx-lg-30 gy-10">
+          <div class="col-xl-6">
+            <div class="about-block about-block--desc">
+              <div>
+                <div class="box-title">
+                  <div class="box-title__container">
+                    <div class="box-title__title-decorate"></div>
+                    <h2 class="box-title__title">
+                      Металлобаза Евразия крупнейший торго-складской и
+                      производительный комплекс в России.
+                    </h2>
+                  </div>
+                </div>
+                <div class="about-block__desc">
+                  <p>
+                    ООО «Евразия» — компания, которой вы можете доверить
+                    поставки металлопроката для своего предприятия. Наша
+                    деятельность направлена на комплексное решение задач по
+                    снабжению металлопродукцией.
+                  </p>
+                </div>
+              </div>
+              <a
+                href="o-kompanii/"
+                class="btn text-body-color btn-opposite d-none d-xl-block"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="about-block about-block--image">
+              <picture>
+                <source
+                  srcset="assets/template/images/about/about.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="assets/template/images/about/about.png"
+                  alt="Металлобаза Евразия крупнейший торго-складской и производительный комплекс в России."
+                />
+              </picture>
+            </div>
+            <div class="d-flex d-xl-none">
+              <a
+                href="o-kompanii/"
+                class="btn text-body-color btn-opposite mt-10"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="bg-body-color footer__container">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-xl-6">
+              <div class="text-white gx-10 gy-15 gy-lg-30 row">
+                <div class="col-xl-6 order-5 order-lg-last order-xl-3">
+                  <div class="footer-menu footer-menu--contact">
+                    <p class="footer-menu__title">Контакты</p>
+                    <div class="footer-menu__contact-list">
+                      <div>
+                        <svg
+                          style="width: @@width; height: @@height"
+                          class="img"
+                        >
+                          <use xlink:href="images/icons/icons.svg#map"></use>
+                        </svg>
+                        Москва, Волгоградский проспект, д. 45
+                      </div>
+                      <a href="tel:+7 (499) 302-36-30">
+                        <svg
+                          style="width: @@width; height: @@height"
+                          class="img"
+                        >
+                          <use xlink:href="images/icons/icons.svg#phone"></use>
+                        </svg>
+                        +7 (499) 302-36-30
+                      </a>
+                      <div>
+                        <svg
+                          style="width: @@width; height: @@height"
+                          class="img"
+                        >
+                          <use xlink:href="images/icons/icons.svg#time"></use>
+                        </svg>
+                        Время работы (пн-пт 8.00-18.00)
+                      </div>
+                    </div>
+                    <div class="footer-menu__list-social list-social"></div>
+                  </div>
+                </div>
+
+                <div class="col-xl-6 order-last">
+                  <div class="fs-8 text-center text-lg-start">
+                    <p class="mb-10 mb-lg-30">
+                      Все права защищены © 2022 - 2023
+                    </p>
+                    <div
+                      class="d-flex flex-column gap-5 gap-lg-15 mb-10 mb-md-30"
+                    >
+                      <a
+                        href="politika-konfidenczialnosti.html"
+                        class="text-white"
+                        target="_blank"
+                        >Политика конфиденциальности</a
+                      >
+                      <a
+                        href="polzovatelskoe-soglashenie.html"
+                        class="text-white"
+                        target="_blank"
+                        >Пользовательское соглашение</a
+                      >
+                    </div>
+                    <a
+                      href="//agelar.ru"
+                      target="_blank"
+                      class="d-flex align-items-center gap-10 justify-content-center justify-content-lg-start text-white"
+                      >Разработано и продвигается в
+                      <img
+                        src="/assets/template/images/agelar-logo.png"
+                        alt="Agelar"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              id="consultation-form"
+              class="col-xl-6 order-first order-xl-last position-relative"
+            >
+              <form class="footer-form agelarForm">
+                <div class="footer-form__title">
+                  <p class="mb-5 fs-6 fs-lg-5">
+                    Оставьте заявку и получите подробную консультацию
+                  </p>
+                  <p class="mb-0 fs-9 fs-lg-8">
+                    и мы Вам перезвоним в удобное для Вас время
+                  </p>
+                </div>
+                <div class="footer-form__inputs-grid">
+                  <input
+                    type="text"
+                    name="username"
+                    class="custom-input text-center text-xl-start footer-form__input"
+                    placeholder="Имя"
+                  />
+                  <input
+                    type="email"
+                    name="useremail"
+                    class="custom-input text-center footer-form__input"
+                    placeholder="@"
+                    required=""
+                  />
+                  <input
+                    type="tel"
+                    name="userphone"
+                    class="input-phone custom-input text-center text-xl-start footer-form__input"
+                    placeholder="+7 (       )         -       - "
+                    required=""
+                    autocomplete="off"
+                  />
+                  <input
+                    type="submit"
+                    class="validator-submit btn btn-outline-primary"
+                    value="Отправить"
+                    placeholder="Отправить"
+                  />
+                </div>
+                <div class="footer-form__submit-agree submit-agree">
+                  <label class="custom-checkbox">
+                    <div>
+                      <input
+                        type="checkbox"
+                        name="agree"
+                        checked=""
+                        disabled=""
+                      />
+                      <svg style="width: @@width; height: @@height" class="img">
+                        <use
+                          xlink:href="/assets/template/images/icons/icons.svg#check-mark"
+                        ></use>
+                      </svg>
+                    </div> </label
+                  >Согласен на обработку персональных данных
+                </div>
+
+                <input
+                  type="hidden"
+                  name="form_id"
+                  value="09fb06fbd2fd7be77002aa6b664eea4f"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="fade modal"
+      id="modalCallback"
+      tabindex="-1"
+      aria-labelledby="modalCallback"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content modal-custom agelarForm">
+          <div class="modal-custom-close" data-bs-dismiss="modal">
+            <svg style="width: @@width; height: @@height" class="img">
+              <use
+                xlink:href="/assets/template/images/icons/icons.svg#close"
+              ></use>
+            </svg>
+          </div>
+          <p class="modal-custom__title">Перезвоните мне</p>
+          <div>
+            <input
+              type="text"
+              name="username"
+              class="mb-30 custom-input text-center text-xl-start"
+              placeholder="Имя"
+            />
+            <input
+              type="text"
+              name="userphone"
+              class="input-phone mb-30 custom-input text-center text-xl-start"
+              placeholder="+7 (       )         -       - "
+              required=""
+              autocomplete="off"
+            />
+          </div>
+          <div class="mb-30 fs-8 fs-lg-7 submit-agree">
+            <label class="custom-checkbox">
+              <div>
+                <input type="checkbox" name="agree" checked="" disabled="" />
+                <svg class="img">
+                  <use
+                    xlink:href="/assets/template/images/icons/icons.svg#check-mark"
+                  ></use>
+                </svg>
+              </div> </label
+            >Согласен на обработку персональных данных
+          </div>
+          <div class="d-flex justify-content-center">
+            <input
+              class="validator-submit btn btn-outline-primary bg-primary-hover text-body-color text-white-hover"
+              value="Отправить"
+              type="submit"
+            />
+          </div>
+
+          <input
+            type="hidden"
+            name="form_id"
+            value="9879e0ce6832bbaecee9f455a2d9c097"
+          />
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="fade modal"
+      id="modalQuestion"
+      tabindex="-1"
+      aria-labelledby="modalQuestion"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content modal-custom agelarForm">
+          <div class="modal-custom-close" data-bs-dismiss="modal">
+            <svg style="width: @@width; height: @@height" class="img">
+              <use
+                xlink:href="/assets/template/images/icons/icons.svg#close"
+              ></use>
+            </svg>
+          </div>
+          <p class="modal-custom__title">Задать вопрос</p>
+          <div>
+            <input
+              type="text"
+              name="username"
+              class="mb-30 custom-input text-center text-xl-start"
+              placeholder="Имя"
+            />
+            <input
+              type="tel"
+              name="userphone"
+              class="inout-phone mb-30 custom-input text-center text-xl-start"
+              placeholder="+7 (       )         -       - "
+              required=""
+            />
+            <textarea
+              type="text"
+              name="usertext"
+              class="mb-30 custom-input"
+              style="height: 100px; resize: none"
+              placeholder="Текст вопроса"
+            ></textarea>
+          </div>
+          <div class="mb-30 fs-8 fs-lg-7 submit-agree">
+            <label class="custom-checkbox">
+              <div>
+                <input type="checkbox" name="agree" checked="" disabled="" />
+                <svg class="img">
+                  <use
+                    xlink:href="/assets/template/images/icons/icons.svg#check-mark"
+                  ></use>
+                </svg>
+              </div> </label
+            >Согласен на обработку персональных данных
+          </div>
+          <div class="d-flex justify-content-center">
+            <input
+              class="validator-submit btn btn-outline-primary bg-primary-hover text-body-color text-white-hover"
+              value="Отправить"
+              type="submit"
+            />
+          </div>
+
+          <input
+            type="hidden"
+            name="form_id"
+            value="58e980406fd63748bc5e5d1ace37b223"
+          />
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="fade modal"
+      id="modalGetPrice"
+      tabindex="-1"
+      aria-labelledby="modalGetPrice"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content modal-custom agelarForm">
+          <div class="modal-custom-close" data-bs-dismiss="modal">
+            <svg style="width: @@width; height: @@height" class="img">
+              <use
+                xlink:href="/assets/template/images/icons/icons.svg#close"
+              ></use>
+            </svg>
+          </div>
+          <p class="modal-custom__title">Заказать прайс</p>
+          <div>
+            <input
+              type="email"
+              name="email"
+              class="mb-30 custom-input text-center"
+              placeholder="@"
+              required=""
+            />
+          </div>
+          <div class="mb-30 fs-8 fs-lg-7 submit-agree">
+            <label class="custom-checkbox">
+              <div>
+                <input type="checkbox" name="agree" checked="" disabled="" />
+                <svg class="img">
+                  <use
+                    xlink:href="/assets/template/images/icons/icons.svg#check-mark"
+                  ></use>
+                </svg>
+              </div> </label
+            >Согласен на обработку персональных данных
+          </div>
+          <div class="d-flex justify-content-center">
+            <input
+              class="btn btn-outline-primary bg-primary-hover text-body-color text-white-hover"
+              value="Отправить"
+              type="submit"
+            />
+          </div>
+
+          <input
+            type="hidden"
+            name="form_id"
+            value="2ed0ceb1200e6ce5800ceaa3b4fc6b19"
+          />
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="fade modal"
+      id="modalOrder"
+      tabindex="-1"
+      aria-labelledby="modalOrder"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content modal-custom agelarForm">
+          <div class="modal-custom-close" data-bs-dismiss="modal">
+            <svg style="width: @@width; height: @@height" class="img">
+              <use
+                xlink:href="/assets/template/images/icons/icons.svg#close"
+              ></use>
+            </svg>
+          </div>
+          <p class="modal-custom__title">Заказать в один клик</p>
+          <div>
+            <input
+              type="text"
+              name="product"
+              class="mb-30 custom-input text-center text-xl-start"
+              placeholder="Продукт"
+              readonly=""
+            />
+            <input
+              type="text"
+              name="username"
+              class="mb-30 custom-input text-center text-xl-start"
+              placeholder="Имя"
+            />
+            <input
+              type="email"
+              name="useremail"
+              class="mb-30 custom-input text-center"
+              placeholder="@"
+              required=""
+            />
+            <input
+              type="tel"
+              name="userphone"
+              class="input-phone mb-30 custom-input text-center text-xl-start"
+              placeholder="+7 (       )         -       - "
+              required=""
+              autocomplete="off"
+            />
+          </div>
+          <div class="mb-30 fs-8 fs-lg-7 submit-agree">
+            <label class="custom-checkbox">
+              <div>
+                <input type="checkbox" name="agree" checked="" disabled="" />
+                <svg class="img">
+                  <use
+                    xlink:href="/assets/template/images/icons/icons.svg#check-mark"
+                  ></use>
+                </svg>
+              </div> </label
+            >Согласен на обработку персональных данных
+          </div>
+          <div class="d-flex justify-content-center">
+            <input
+              class="btn btn-outline-primary bg-primary-hover text-body-color text-white-hover"
+              value="Отправить"
+              type="submit"
+            />
+          </div>
+
+          <input
+            type="hidden"
+            name="form_id"
+            value="9a174d95a5c830da9310eb00765d002b"
+          />
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="fade modal"
+      id="modalGetPriceProduct"
+      tabindex="-1"
+      aria-labelledby="modalGetPriceProduct"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content modal-custom agelarForm">
+          <div class="modal-custom-close" data-bs-dismiss="modal">
+            <svg style="width: @@width; height: @@height" class="img">
+              <use
+                xlink:href="/assets/template/images/icons/icons.svg#close"
+              ></use>
+            </svg>
+          </div>
+          <p class="modal-custom__title">Заказать прайс</p>
+          <div>
+            <input
+              type="text"
+              name="product"
+              class="mb-30 custom-input text-center"
+              placeholder="Продукт"
+              readonly=""
+            />
+            <input
+              type="text"
+              name="email"
+              class="mb-30 custom-input text-center"
+              placeholder="@"
+            />
+          </div>
+          <div class="mb-30 fs-8 fs-lg-7 submit-agree">
+            <label class="custom-checkbox">
+              <input type="checkbox" name="agree" checked="" />
+              <svg class="img">
+                <use
+                  xlink:href="/assets/template/images/icons/icons.svg#check-mark"
+                ></use>
+              </svg> </label
+            >Согласен на обработку персональных данных
+          </div>
+          <div class="d-flex justify-content-center">
+            <input
+              class="btn btn-outline-primary bg-primary-hover text-body-color text-white-hover"
+              value="Отправить"
+              type="submit"
+            />
+          </div>
+
+          <input
+            type="hidden"
+            name="form_id"
+            value="a97fc489f06dc9e988c54132419d714f"
+          />
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="fade modal"
+      id="modalQuestionProduct"
+      tabindex="-1"
+      aria-labelledby="modalQuestionProduct"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content modal-custom agelarForm">
+          <div class="modal-custom-close" data-bs-dismiss="modal">
+            <svg style="width: @@width; height: @@height" class="img">
+              <use
+                xlink:href="/assets/template/images/icons/icons.svg#close"
+              ></use>
+            </svg>
+          </div>
+          <p class="modal-custom__title">Задать вопрос</p>
+          <div>
+            <input
+              type="text"
+              name="product"
+              class="mb-30 custom-input text-center text-xl-start"
+              placeholder="Продукт"
+              readonly=""
+            />
+            <input
+              type="text"
+              name="username"
+              class="mb-30 custom-input text-center text-xl-start"
+              placeholder="Имя"
+            />
+            <input
+              type="tel"
+              name="userphone"
+              class="input-phone mb-30 custom-input text-center text-xl-start"
+              placeholder="+7 (       )         -       - "
+              required=""
+              autocomplete="off"
+            />
+            <textarea
+              type="text"
+              name="text"
+              class="mb-30 custom-input"
+              style="height: 100px; resize: none"
+              placeholder="Текст вопроса"
+            ></textarea>
+          </div>
+          <div class="mb-30 fs-8 fs-lg-7 submit-agree">
+            <label class="custom-checkbox">
+              <div>
+                <input type="checkbox" name="agree" checked="" disabled="" />
+                <svg class="img">
+                  <use
+                    xlink:href="/assets/template/images/icons/icons.svg#check-mark"
+                  ></use>
+                </svg>
+              </div> </label
+            >Согласен на обработку персональных данных
+          </div>
+          <div class="d-flex justify-content-center">
+            <input
+              class=".validator-submit btn btn-outline-primary bg-primary-hover text-body-color text-white-hover"
+              value="Отправить"
+              type="submit"
+            />
+          </div>
+
+          <input
+            type="hidden"
+            name="form_id"
+            value="88dd61faa97299c8176fe8995d07ebad"
+          />
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="fade modal"
+      id="modalConsultation"
+      tabindex="-1"
+      aria-labelledby="modalConsultation"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content modal-custom agelarForm">
+          <div class="modal-custom-close" data-bs-dismiss="modal">
+            <svg style="width: @@width; height: @@height" class="img">
+              <use
+                xlink:href="/assets/template/images/icons/icons.svg#close"
+              ></use>
+            </svg>
+          </div>
+          <p class="modal-custom__title">
+            Оставьте заявку и получите подробную консультацию
+          </p>
+
+          <div>
+            <input
+              type="text"
+              name="username"
+              class="mb-30 custom-input text-center text-xl-start"
+              placeholder="Имя"
+            />
+            <input
+              type="email"
+              name="useremail"
+              class="mb-30 custom-input text-center"
+              placeholder="@"
+              required=""
+            />
+            <input
+              type="tel"
+              name="userphone"
+              class="input-phone mb-30 custom-input text-center text-xl-start"
+              placeholder="+7 (       )         -       - "
+              required=""
+              autocomplete="off"
+            />
+          </div>
+          <div class="mb-30 fs-8 fs-lg-7 submit-agree">
+            <label class="custom-checkbox">
+              <div>
+                <input type="checkbox" name="agree" checked="" disabled="" />
+                <svg class="img">
+                  <use
+                    xlink:href="/assets/template/images/icons/icons.svg#check-mark"
+                  ></use>
+                </svg>
+              </div> </label
+            >Согласен на обработку персональных данных
+          </div>
+          <div class="d-flex justify-content-center">
+            <input
+              class="validator-submit btn btn-outline-primary bg-primary-hover text-body-color text-white-hover"
+              value="Отправить"
+              type="submit"
+            />
+          </div>
+
+          <input
+            type="hidden"
+            name="form_id"
+            value="61b8c41dfac51124882aedc3577b543b"
+          />
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="fade modal modal-lg"
+      id="modalSendReviews"
+      tabindex="-1"
+      aria-labelledby="modalSendReviews"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form
+          class="modal-content modal-custom px-15 px-sm-60 ec-form"
+          method="post"
+          role="form"
+          id="ec-form-resource-134"
+          data-fid="resource-134"
+          action=""
+        >
+          <input type="hidden" name="thread" value="resource-134" />
+          <div class="modal-custom-close" data-bs-dismiss="modal">
+            <svg style="width: @@width; height: @@height" class="img">
+              <use
+                xlink:href="/assets/template/images/icons/icons.svg#close"
+              ></use>
+            </svg>
+          </div>
+          <p class="modal-custom__title">Вы можете написать отзыв о покупке</p>
+          <div>
+            <input
+              type="text"
+              class="mb-30 custom-input text-center text-xl-start"
+              name="user_name"
+              id="ec-user_name-resource-134"
+              value=""
+              placeholder="Имя"
+            />
+            <span
+              class="ec-error help-block"
+              id="ec-user_name-error-resource-134"
+              style="display: none"
+            ></span>
+            <div class="d-flex flex-column flex-lg-row gap-30 mb-30">
+              <input
+                type="text"
+                class="custom-input text-center"
+                placeholder="@"
+                name="user_email"
+                id="ec-user_email-resource-134"
+                value=""
+              />
+              <span
+                class="ec-error help-block"
+                id="ec-user_email-error-resource-134"
+                style="display: none"
+              ></span>
+              <div
+                class="d-flex align-items-center flex-column flex-sm-row gap-5"
+              >
+                <p class="d-flex ws-nowrap flex-row flex-sm-column mb-0">
+                  <span>На сколько вы </span> <span>довольны покупкой?</span>
+                </p>
+                <div class="reviwes-stars reviwes-stars--big">
+                  <div class="rating rating--set">
+                    <div class="rating__body">
+                      <div class="rating__active" style="width: 0%"></div>
+                      <div class="rating__items">
+                        <input
+                          type="radio"
+                          class="rating__item"
+                          value="1"
+                          name="rating"
+                        />
+                        <input
+                          type="radio"
+                          class="rating__item"
+                          value="2"
+                          name="rating"
+                        />
+                        <input
+                          type="radio"
+                          class="rating__item"
+                          value="3"
+                          name="rating"
+                        />
+                        <input
+                          type="radio"
+                          class="rating__item"
+                          value="4"
+                          name="rating"
+                        />
+                        <input
+                          type="radio"
+                          class="rating__item"
+                          value="5"
+                          name="rating"
+                        />
+                      </div>
+                    </div>
+                    <div class="rating__value">0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <textarea
+              type="text"
+              class="mb-30 custom-input"
+              style="height: 100px; resize: none"
+              placeholder="Текст отзыва"
+              name="text"
+              id="ec-text-resource-134"
+            ></textarea>
+            <span
+              class="ec-error help-block"
+              id="ec-text-error-resource-134"
+              style="display: none"
+            ></span>
+          </div>
+
+          <div
+            class="d-flex align-items-center flex-column flex-sm-row justify-content-between"
+          >
+            <div class="fs-8 fs-lg-7 submit-agree mb-10 mb-sm-0">
+              <label class="custom-checkbox">
+                <div>
+                  <input type="checkbox" name="agree" checked="" disabled="" />
+                  <svg class="img">
+                    <use
+                      xlink:href="/assets/template/images/icons/icons.svg#check-mark"
+                    ></use>
+                  </svg>
+                </div> </label
+              >Согласен на обработку персональных данных
+            </div>
+            <input
+              class="btn btn-outline-primary bg-primary-hover text-body-color text-white-hover"
+              name="send"
+              value="Отправить"
+              type="submit"
+            />
+          </div>
+        </form>
+        <div class="fade modal" id="ec-form-success-resource-134" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-custom">
+              <div class="modal-custom-close" data-bs-dismiss="modal">
+                <svg style="width: @@width; height: @@height" class="img">
+                  <use
+                    xlink:href="/assets/template/images/icons/icons.svg#close"
+                  ></use>
+                </svg>
+              </div>
+              <p class="modal-custom__title"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="/assets/components/adminpanel/js/lib/jquery-3.1.1.min.js?v=1"
+      type="text/javascript"
+    ></script>
+    <script
+      type="module"
+      src="/assets/components/agelarPhoneValidator/apv.js?v=1"
+    ></script>
+    <script src="/assets/template/js/app.min.js?v=1"></script>
+    <script src="/assets/components/minishop2/js/web/default.js?v=883e1a339c"></script>
+    <script src="/assets/components/minishop2/js/web/lib/jquery.jgrowl.min.js"></script>
+    <script src="/assets/components/minishop2/js/web/message_settings.js"></script>
+    <script
+      type="module"
+      src="assets/components/agelarform/js/agelarFormClass.js?v=1.1"
+    ></script>
+
+    <link
+      href="/assets/components/adminpanel/css/default.css"
+      rel="stylesheet"
+    />
+    <nav
+      class="adminpanel ap-navbar ap-navbar-fixed-bottom ap-dark ap-opened"
+      role="navigation"
+      style="opacity: 0.9"
+    >
+      <ul class="ap-nav ap-navbar-nav">
+        <li class="ap-link-first">
+          <a
+            href="/manager/index.php?a=resource/update&amp;id=1"
+            class="ap-navbar-link"
+            >Редактировать текущую страницу</a
+          >
+        </li>
+        <li class="ap-dropdown">
+          <a href="#" class="ap-dropdown-toggle" data-toggle="ap_dropdown"
+            >miniShop2 <b class="ap-caret"></b
+          ></a>
+          <ul class="dropdown-menu ap-dropdown-menu ms2">
+            <li class="">
+              <a
+                href="/manager/index.php?a=mgr/orders&amp;namespace=minishop2"
+                target="_top"
+                >Управление заказами</a
+              >
+            </li>
+            <li class="">
+              <a
+                href="/manager/index.php?a=mgr/settings&amp;namespace=minishop2"
+                target="_top"
+                >Настройки магазина</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="ap-nav ap-navbar-nav ap-pull-right">
+        <li>
+          <a
+            href="https://modstore.pro/adminpanel"
+            class="ap-navbar-brand ap-pull-right"
+            target="_blank"
+            >AdminPanel</a
+          >
+        </li>
+        <li>
+          <a href="#" class="ap-scroll-up" style="display: block"> ↑ </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="ap-close ap-dark" style="height: 50px; opacity: 0.9">
+      <b class="ap-caret ap-opened" style="bottom: 20px"></b>
+    </div>
+    <script type="text/javascript">
+      AdminPanelConfig = {
+        cssUrl: "\/assets\/components\/adminpanel\/css\/",
+        jsUrl: "\/assets\/components\/adminpanel\/js\/",
+        inactive_opacity: 0.9,
+        active_opacity: 1,
+      };
+    </script>
+    <script type="text/javascript">
+      if (typeof jQuery == "undefined") {
+        document.write(
+          '<script src="/assets/components/adminpanel/js/lib/jquery-3.1.1.min.js" type="text/javascript"><\/script>'
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="/assets/components/adminpanel/js/default.js"
+    ></script>
+  </body>
+</html>

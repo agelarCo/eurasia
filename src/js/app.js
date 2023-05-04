@@ -480,6 +480,7 @@ const serviceSlider = new Swiper(".service-slider", {
 
 const productsSlider = new Swiper(".products-slider", {
   modules: [Pagination],
+  autoHeight: true,
   slidesPerView: 1,
   spaceBetween: 30,
   pagination: {
@@ -590,6 +591,9 @@ let ourPartners = new Swiper(".our-partners-slider", {
     },
   },
 });
+
+
+
 
 let recomendedSlider = new Swiper(".recomended-slider", {
   modules: [Navigation],

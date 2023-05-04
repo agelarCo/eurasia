@@ -25,9 +25,12 @@
 }
 
 .top-slider-content {
+  max-width: 800px;
   &__title {
     margin-bottom: 10px;
     font-size: 60px;
+    font-weight: bold;
+    line-height: 66px;
   }
   &__subtitle {
     margin-bottom: 0px;
@@ -60,6 +63,7 @@
     &__title {
       margin-bottom: 10px;
       font-size: 30px;
+      line-height: normal;
     }
     &__subtitle {
       margin-bottom: 0px;
