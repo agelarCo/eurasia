@@ -13,7 +13,6 @@
     gap: 5px;
     position: relative;
     border-radius: 5px 0px 0px 5px;
-    white-space: nowrap;
     font-size: 14px;
     &::before {
       content: "";
@@ -44,9 +43,9 @@
   }
   &__link:hover &__sublinks {
     // display: block;
-    top:34px;
+    top: 34px;
     z-index: 10;
-    opacity:1;
+    opacity: 1;
   }
   &__sublinks {
     position: absolute;
